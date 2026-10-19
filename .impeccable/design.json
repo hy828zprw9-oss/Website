@@ -1,652 +1,550 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-19T11:52:20+00:00",
+  "generatedAt": "2026-10-19T12:07:13+00:00",
   "title": "Design System: SPN-Transporte",
   "extensions": {
     "colorMeta": {
-      "asphalt": {
+      "black": {
         "role": "neutral",
-        "displayName": "Asphalt",
-        "canonical": "#2b2b29",
-        "oklch": "oklch(28.8% 0.004 106.6)",
-        "purpose": "Page ground under the grain overlay; theme-color.",
-        "tonalRamp": [
-          "#0b0b0a",
-          "#242422",
-          "#40403e",
-          "#5e5e5b",
-          "#7d7d7b",
-          "#9e9e9c",
-          "#c4c4c2",
-          "#efefec"
-        ]
-      },
-      "asphalt-deep": {
-        "role": "neutral",
-        "displayName": "Deep Asphalt",
-        "canonical": "#222220",
-        "oklch": "oklch(25.1% 0.004 106.7)",
-        "purpose": "Sticky header and footer bands (road shoulder); fleet photo placeholder ground.",
-        "tonalRamp": [
-          "#0b0b09",
-          "#242422",
-          "#40403e",
-          "#5e5e5b",
-          "#7d7d7b",
-          "#9e9e9c",
-          "#c4c4c1",
-          "#efefec"
-        ]
-      },
-      "asphalt-lane": {
-        "role": "neutral",
-        "displayName": "Lane Asphalt",
-        "canonical": "#313130",
-        "oklch": "oklch(31.3% 0.002 106.5)",
-        "purpose": "Surface of drawn lanes: hero lane, vertical road, shuttle road.",
-        "tonalRamp": [
-          "#0b0b0a",
-          "#242423",
-          "#40403f",
-          "#5e5e5c",
-          "#7d7d7c",
-          "#9e9e9d",
-          "#c4c4c3",
-          "#eeeeed"
-        ]
-      },
-      "paint": {
-        "role": "neutral",
-        "displayName": "Road Paint",
-        "canonical": "#eeece4",
-        "oklch": "oklch(94.2% 0.011 95.2)",
-        "purpose": "Text and line work on asphalt: lane edges, dashes, stop line, arrows; global focus ring.",
-        "tonalRamp": [
-          "#0d0b06",
-          "#26241e",
-          "#414039",
-          "#5f5e57",
-          "#7f7d76",
-          "#a09e97",
-          "#c6c4bc",
-          "#f1efe6"
-        ]
-      },
-      "paint-dim": {
-        "role": "neutral",
-        "displayName": "Worn Paint",
-        "canonical": "#bdbab0",
-        "oklch": "oklch(78.9% 0.014 93.0)",
-        "purpose": "Body copy, nav at rest, captions, footer.",
-        "tonalRamp": [
-          "#0d0b05",
-          "#26241c",
-          "#424037",
-          "#605e55",
-          "#807d74",
-          "#a19e95",
-          "#c7c4ba",
-          "#f2eee4"
-        ]
-      },
-      "red": {
-        "role": "primary",
-        "displayName": "SPN Red",
-        "canonical": "#d0111f",
-        "oklch": "oklch(54.4% 0.215 26.3)",
-        "purpose": "Company lettering colour: wordmark fill and every action (call pill, callbox, submit, skip link, selection, legal [todo]); red half of the kerb.",
-        "tonalRamp": [
-          "#240000",
-          "#4c0000",
-          "#7e0000",
-          "#b30004",
-          "#d33c39",
-          "#e7746b",
-          "#f9a9a0",
-          "#ffe5e0"
-        ]
-      },
-      "red-deep": {
-        "role": "primary",
-        "displayName": "Deep SPN Red",
-        "canonical": "#a50c17",
-        "oklch": "oklch(45.9% 0.181 26.3)",
-        "purpose": "Hover/pressed state of every red control.",
-        "tonalRamp": [
-          "#240000",
-          "#4c0000",
-          "#7e0000",
-          "#a9141b",
-          "#d0413c",
-          "#e7746b",
-          "#f9a9a0",
-          "#ffe5e1"
-        ]
-      },
-      "on-red": {
-        "role": "primary",
-        "displayName": "On Red",
-        "canonical": "#ffffff",
-        "oklch": "oklch(100% 0 0)",
-        "purpose": "Text and icons on red; callbox label at 86% white.",
+        "displayName": "True Black",
+        "canonical": "#000000",
+        "oklch": "oklch(0.0% 0.000 0.0)",
+        "purpose": "Dark stage, photo cards, theme colour.",
         "tonalRamp": [
           "#0b0b0b",
-          "#222222",
-          "#3d3d3d",
-          "#5b5b5b",
-          "#7a7a7a",
-          "#9b9b9b",
-          "#c1c1c1",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
           "#eeeeee"
+        ]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#1d1d1f",
+        "oklch": "oklch(23.2% 0.004 286.1)",
+        "purpose": "Ink on mist and white; contact form panel on black.",
+        "tonalRamp": [
+          "#0b0b0d",
+          "#242426",
+          "#3f3f42",
+          "#5d5d60",
+          "#7d7d7f",
+          "#9e9ea1",
+          "#c4c4c6",
+          "#eeeef1"
+        ]
+      },
+      "graphite-raised": {
+        "role": "neutral",
+        "displayName": "Raised Graphite",
+        "canonical": "#2c2c2e",
+        "oklch": "oklch(29.4% 0.004 286.2)",
+        "purpose": "Input wells inside the form panel.",
+        "tonalRamp": [
+          "#0b0b0d",
+          "#242426",
+          "#3f3f42",
+          "#5d5d60",
+          "#7d7d7f",
+          "#9e9ea0",
+          "#c4c4c6",
+          "#eeeef1"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "#f5f5f7",
+        "oklch": "oklch(97.1% 0.003 286.4)",
+        "purpose": "Light stage, footer, legal pages; ink on black.",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#242425",
+          "#3f3f41",
+          "#5d5d5f",
+          "#7d7d7f",
+          "#9e9ea0",
+          "#c4c4c6",
+          "#eeeef0"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "purpose": "Cards on mist; text on red pills.",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
+          "#eeeeee"
+        ]
+      },
+      "muted-on-mist": {
+        "role": "neutral",
+        "displayName": "Muted on Mist",
+        "canonical": "#6e6e73",
+        "oklch": "oklch(54.0% 0.008 286.1)",
+        "purpose": "Second headline lines and body copy on light grounds.",
+        "tonalRamp": [
+          "#0b0b0e",
+          "#242428",
+          "#3f3f44",
+          "#5d5d62",
+          "#7d7d82",
+          "#9e9ea3",
+          "#c3c3c9",
+          "#eeeef4"
+        ]
+      },
+      "muted-on-black": {
+        "role": "neutral",
+        "displayName": "Muted on Black",
+        "canonical": "#a1a1a6",
+        "oklch": "oklch(71.1% 0.007 286.2)",
+        "purpose": "Second headline lines, meta, captions on dark grounds.",
+        "tonalRamp": [
+          "#0b0b0e",
+          "#242427",
+          "#3f3f43",
+          "#5d5d62",
+          "#7d7d81",
+          "#9e9ea3",
+          "#c3c3c9",
+          "#eeeef3"
+        ]
+      },
+      "word-unlit": {
+        "role": "neutral",
+        "displayName": "Unlit Word",
+        "canonical": "#424245",
+        "oklch": "oklch(38.0% 0.005 286.2)",
+        "purpose": "Resting colour of statement words before reveal (motion only).",
+        "tonalRamp": [
+          "#0b0b0d",
+          "#242426",
+          "#3f3f42",
+          "#5d5d60",
+          "#7d7d80",
+          "#9e9ea1",
+          "#c4c4c7",
+          "#eeeef2"
+        ]
+      },
+      "line-on-mist": {
+        "role": "neutral",
+        "displayName": "Line on Mist",
+        "canonical": "#d2d2d7",
+        "oklch": "oklch(86.5% 0.007 286.3)",
+        "purpose": "Shuttle track on light cards.",
+        "tonalRamp": [
+          "#0b0b0e",
+          "#242427",
+          "#3f3f43",
+          "#5d5d61",
+          "#7d7d81",
+          "#9e9ea3",
+          "#c3c3c8",
+          "#eeeef3"
+        ]
+      },
+      "line-on-black": {
+        "role": "neutral",
+        "displayName": "Line on Black",
+        "canonical": "#3a3a3c",
+        "oklch": "oklch(34.9% 0.003 286.2)",
+        "purpose": "Input borders and dividers on dark grounds.",
+        "tonalRamp": [
+          "#0b0b0d",
+          "#242426",
+          "#3f3f41",
+          "#5d5d5f",
+          "#7d7d7f",
+          "#9e9ea0",
+          "#c4c4c6",
+          "#eeeef1"
+        ]
+      },
+      "signal-red": {
+        "role": "primary",
+        "displayName": "Signal Red",
+        "canonical": "#d0111f",
+        "oklch": "oklch(54.4% 0.215 26.3)",
+        "purpose": "Actions, check marks, shuttle dot, list markers, wordmark fill.",
+        "tonalRamp": [
+          "#1f0001",
+          "#4a0205",
+          "#790c11",
+          "#b10416",
+          "#e12c2f",
+          "#f86b62",
+          "#fbada4",
+          "#fee9e6"
+        ]
+      },
+      "signal-red-hover": {
+        "role": "primary",
+        "displayName": "Signal Red Bright",
+        "canonical": "#e5212f",
+        "oklch": "oklch(59.2% 0.225 25.1)",
+        "purpose": "Hover of red pills and the phone number; caret.",
+        "tonalRamp": [
+          "#1e0102",
+          "#480609",
+          "#7b0311",
+          "#ad1721",
+          "#e4202e",
+          "#fb6762",
+          "#fdaca4",
+          "#ffe9e6"
         ]
       },
       "wordmark-outline": {
-        "role": "primary",
+        "role": "neutral",
         "displayName": "Wordmark Outline",
         "canonical": "#050505",
-        "oklch": "oklch(11.5% 0 0)",
-        "purpose": "0.06em black text stroke under the wordmark fill; nowhere else.",
+        "oklch": "oklch(11.5% 0.000 89.9)",
+        "purpose": "Black text-stroke of the Saira wordmark on light grounds.",
         "tonalRamp": [
           "#0b0b0b",
-          "#222222",
-          "#3d3d3d",
-          "#5b5b5b",
-          "#7a7a7a",
-          "#9b9b9b",
-          "#c1c1c1",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#7d7d7d",
+          "#9e9e9e",
+          "#c4c4c4",
           "#eeeeee"
         ]
       },
-      "silver": {
-        "role": "secondary",
-        "displayName": "Fleet Silver",
-        "canonical": "#c9ccce",
-        "oklch": "oklch(84.3% 0.004 236.5)",
-        "purpose": "Contact slab, drawn truck cab, hover of the hero e-mail link.",
+      "focus-blue": {
+        "role": "utility",
+        "displayName": "Focus Blue",
+        "canonical": "#4c9bff",
+        "oklch": "oklch(68.7% 0.167 255.6)",
+        "purpose": "The only focus outline and input focus ring.",
         "tonalRamp": [
-          "#090b0d",
-          "#202223",
-          "#3b3d3f",
-          "#595b5d",
-          "#787b7c",
-          "#999c9e",
-          "#bec1c3",
-          "#eceff1"
-        ]
-      },
-      "silver-light": {
-        "role": "secondary",
-        "displayName": "Light Silver",
-        "canonical": "#e3e5e6",
-        "oklch": "oklch(92.1% 0.003 228.8)",
-        "purpose": "Top of the contact slab gradient (Light Silver to Silver at 55%).",
-        "tonalRamp": [
-          "#0a0b0c",
-          "#202223",
-          "#3c3d3e",
-          "#595b5c",
-          "#797b7b",
-          "#9a9c9c",
-          "#bfc1c2",
-          "#edeff0"
-        ]
-      },
-      "ink": {
-        "role": "neutral",
-        "displayName": "Ink",
-        "canonical": "#16181a",
-        "oklch": "oklch(20.8% 0.005 248.1)",
-        "purpose": "Text on silver; contact focus rings, field borders, hint dashes.",
-        "tonalRamp": [
-          "#0a0b0d",
-          "#202224",
-          "#3b3d40",
-          "#595b5e",
-          "#787b7d",
-          "#999c9e",
-          "#bec1c4",
-          "#eceff2"
-        ]
-      },
-      "ink-soft": {
-        "role": "neutral",
-        "displayName": "Soft Ink",
-        "canonical": "#3b3f43",
-        "oklch": "oklch(36.5% 0.009 248.1)",
-        "purpose": "Small labels on silver, optional markers, form note.",
-        "tonalRamp": [
-          "#080c0f",
-          "#1e2226",
-          "#3a3e42",
-          "#575b60",
-          "#767b7f",
-          "#979ca1",
-          "#bdc1c6",
-          "#eaeff4"
-        ]
-      },
-      "reflector": {
-        "role": "secondary",
-        "displayName": "Leitpfosten Reflector Orange",
-        "canonical": "#e0571f",
-        "oklch": "oklch(63.0% 0.183 39.8)",
-        "purpose": "Reflector dot of the top-down delineator only.",
-        "tonalRamp": [
-          "#210000",
-          "#450f00",
-          "#712100",
-          "#9f3605",
-          "#d24a08",
-          "#f96e3a",
-          "#fbaf95",
-          "#fee9e2"
-        ]
-      },
-      "brake-lit": {
-        "role": "secondary",
-        "displayName": "Brake Light",
-        "canonical": "#ff4a26",
-        "oklch": "oklch(66.6% 0.222 33.0)",
-        "purpose": "Truck tail lights when stopped at the stop line.",
-        "tonalRamp": [
-          "#210000",
-          "#480800",
-          "#761704",
-          "#a52b13",
-          "#da3c1c",
-          "#fa6b4f",
-          "#fcae9c",
-          "#fee9e4"
-        ]
-      },
-      "seam": {
-        "role": "neutral",
-        "displayName": "Seam",
-        "canonical": "#3a3a37",
-        "oklch": "oklch(34.7% 0.005 106.7)",
-        "purpose": "1px line under the sticky header.",
-        "tonalRamp": [
-          "#0b0b09",
-          "#242421",
-          "#40403d",
-          "#5e5e5b",
-          "#7d7d7a",
-          "#9f9f9b",
-          "#c4c4c1",
-          "#efefeb"
-        ]
-      },
-      "photo-night": {
-        "role": "neutral",
-        "displayName": "Night",
-        "canonical": "#07080c",
-        "oklch": "oklch(13.5% 0.009 272.5)",
-        "purpose": "Ground behind the hero fleet photo strip.",
-        "tonalRamp": [
-          "#0a0b0f",
-          "#202126",
-          "#3b3d42",
-          "#595b60",
-          "#787a80",
-          "#999ba1",
-          "#bfc1c7",
-          "#eceef5"
-        ]
-      },
-      "field-paper": {
-        "role": "neutral",
-        "displayName": "Field Paper",
-        "canonical": "#fffdf3",
-        "oklch": "oklch(99.3% 0.013 97.4)",
-        "purpose": "Input and textarea ground inside the silver contact slab.",
-        "tonalRamp": [
-          "#0d0b06",
-          "#26241d",
-          "#414038",
-          "#5f5e55",
-          "#7f7d75",
-          "#a09f95",
-          "#c6c4bb",
-          "#f1efe5"
-        ]
-      },
-      "error-ink": {
-        "role": "neutral",
-        "displayName": "Error Ink",
-        "canonical": "#7a1909",
-        "oklch": "oklch(38.0% 0.134 31.9)",
-        "purpose": "Field error message text, on silver.",
-        "tonalRamp": [
-          "#210000",
-          "#480600",
-          "#771505",
-          "#9b3929",
-          "#c05b48",
-          "#e57c68",
-          "#fdad9d",
-          "#ffe9e4"
+          "#000a20",
+          "#042349",
+          "#033e7e",
+          "#115cb0",
+          "#2c7cde",
+          "#5aa0fa",
+          "#9ec7fd",
+          "#e5f0fe"
         ]
       },
       "error-border": {
-        "role": "neutral",
+        "role": "utility",
         "displayName": "Error Border",
-        "canonical": "#8f1d0b",
-        "oklch": "oklch(42.5% 0.152 31.7)",
-        "purpose": "Invalid-field border, on silver.",
+        "canonical": "#ff6961",
+        "oklch": "oklch(70.7% 0.185 25.9)",
+        "purpose": "Invalid field border on the dark form.",
         "tonalRamp": [
-          "#220000",
-          "#490500",
-          "#781304",
-          "#a2311f",
-          "#c75440",
-          "#ed7660",
-          "#feac9c",
-          "#fde9e5"
+          "#1e0101",
+          "#490507",
+          "#7c010d",
+          "#ae141d",
+          "#d5423e",
+          "#fc675f",
+          "#feaba3",
+          "#fde9e7"
+        ]
+      },
+      "error-text": {
+        "role": "utility",
+        "displayName": "Error Text",
+        "canonical": "#ff8a80",
+        "oklch": "oklch(75.9% 0.144 26.1)",
+        "purpose": "Field error message on the dark form.",
+        "tonalRamp": [
+          "#1f0001",
+          "#4b0105",
+          "#7a0910",
+          "#9f332f",
+          "#c4554e",
+          "#ea776e",
+          "#fbada4",
+          "#fee9e6"
         ]
       }
     },
     "typographyMeta": {
       "wordmark": {
         "displayName": "Wordmark",
-        "purpose": "Company name only: hero h1. Saira italic 850, font-stretch 125%, uppercase, red, 0.06em black stroke, paint-order stroke fill."
+        "purpose": "SPN-Transporte name only: Saira italic, uppercase, width 125%, red with 0.06em black stroke (stroke dropped on black). Footer size 0.95rem."
       },
-      "wordmark-small": {
-        "displayName": "Wordmark (header)",
-        "purpose": "Header mark on every page, same style as the hero wordmark."
-      },
-      "motto": {
-        "displayName": "Painted Motto",
-        "purpose": "Philosophy quote, Barlow Condensed 800 uppercase; legal h1 uses the same voice."
+      "display": {
+        "displayName": "Display",
+        "purpose": "Scroll-scene headline only, centred, second line muted."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Section h2s beside the road, sentence case."
+        "purpose": "Section titles, two lines, second line muted, max 22ch."
+      },
+      "statement": {
+        "displayName": "Statement",
+        "purpose": "Word-reveal paragraph; the scene claim uses the same voice at 650, clamp(1.9rem, 4.4vw, 3.75rem)."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Contact phone number, tabular, never wraps; shuttle A/B letters at clamp(3.5rem, 7vw, 6rem)."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "h3s in story/team; legal h2s."
+        "purpose": "Card headings; panel headings drop to 1.35rem."
       },
-      "claim": {
-        "displayName": "Claim",
-        "purpose": "Claim under the wordmark; fact rows use the same 600 condensed voice."
-      },
-      "number": {
-        "displayName": "Number",
-        "purpose": "Phone numbers, tabular figures."
-      },
-      "nav": {
-        "displayName": "Nav",
-        "purpose": "Header links; call pill at 700."
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "First sentence of a story block, in ink."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Paragraphs, 48-62ch."
+        "purpose": "Running copy, muted, 38ch in cards, 60ch in stories."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Pill labels; 0.8125rem in the small nav pill."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Labels inside red controls and on silver; field labels; photo notes."
+        "purpose": "Nav links, form labels (0.9rem), captions, footer (0.85rem)."
       }
     },
-    "textures": [
-      {
-        "name": "grain",
-        "value": "SVG feTurbulence fractalNoise, baseFrequency .85, 2 octaves, 220px tile, warm off-white at low alpha (CSS var --grain)",
-        "purpose": "Aggregate grain on every asphalt surface (page, lanes, roads)."
-      },
-      {
-        "name": "wordmark-stroke",
-        "value": "-webkit-text-stroke: 0.06em #050505; paint-order: stroke fill",
-        "purpose": "Black outline around the red wordmark letters, as on the trucks."
-      }
-    ],
     "shadows": [
       {
-        "name": "vehicle",
-        "value": "filter: drop-shadow(0 6px 6px rgb(0 0 0 / 0.45))",
-        "purpose": "Drawn trucks only; rotated road truck uses drop-shadow(-5px 0 5px rgb(0 0 0 / 0.45)). Photos never get shadow."
+        "name": "glass-bar",
+        "value": "background: rgb(0 0 0 / 0.86); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgb(255 255 255 / 0.08)",
+        "purpose": "Fixed nav over black stages and photography."
       },
       {
-        "name": "painted-box",
-        "value": "0 6px 18px -8px rgb(0 0 0 / 0.6)",
-        "purpose": "Red hero tap-to-call box."
+        "name": "ghost-ring",
+        "value": "inset 0 0 0 1.5px rgb(255 255 255 / 0.55)",
+        "purpose": "Outline of the ghost pill."
       },
       {
-        "name": "contact-slab",
-        "value": "0 18px 40px -24px rgb(0 0 0 / 0.7)",
-        "purpose": "Silver contact panel."
+        "name": "signal-halo",
+        "value": "0 0 0 6px rgb(208 17 31 / 0.18)",
+        "purpose": "Shuttle dot only."
       },
       {
-        "name": "post",
-        "value": "0 2px 3px rgb(0 0 0 / 0.5)",
-        "purpose": "Leitpfosten head."
-      }
-    ],
-    "focus": [
-      {
-        "name": "focus-on-asphalt",
-        "value": "outline: 3px solid #eeece4; outline-offset: 3px; border-radius: 2px",
-        "purpose": "Global focus ring (Road Paint)."
+        "name": "focus-ring-field",
+        "value": "0 0 0 3px rgb(76 155 255 / 0.35)",
+        "purpose": "Input focus, with focus-blue border."
       },
       {
-        "name": "focus-on-silver",
-        "value": "outline: 3px solid #16181a",
-        "purpose": "Focus inside the contact slab; fields use offset 1px."
+        "name": "ground-shadow",
+        "value": "radial-gradient(closest-side, rgb(0 0 0 / 0.85), rgb(0 0 0 / 0))",
+        "purpose": "Contact shadow under the cut-out truck in the scroll scene."
+      },
+      {
+        "name": "photo-fade",
+        "value": "linear-gradient(180deg, #000 0%, transparent 30%, transparent 80%, #000 100%)",
+        "purpose": "Fades the scene photo into the black stage top and bottom."
+      },
+      {
+        "name": "card-photo-mask",
+        "value": "mask-image: linear-gradient(180deg, transparent 0%, #000 30%)",
+        "purpose": "Photo rising out of a black photo card."
       }
     ],
     "motion": [
       {
-        "name": "ease-out",
+        "name": "ease",
         "value": "cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "Braking/arrival ease: hero truck entry, all 150ms hover colour transitions."
+        "purpose": "All state transitions (200ms; word colour 300ms)."
       },
       {
-        "name": "hover",
-        "value": "150ms",
-        "purpose": "Colour/background/border transitions on controls."
+        "name": "press",
+        "value": "transform: scale(0.98)",
+        "purpose": "Pill :active."
       },
       {
-        "name": "hero-truck-entry",
-        "value": "1.8s, delay 0.15s, x -115% to 0 (Motion, self-hosted)",
-        "purpose": "Truck drives into the hero lane on load."
+        "name": "motion-gate",
+        "value": "html.has-motion",
+        "purpose": "Set inline before paint only when prefers-reduced-motion is not reduce; removed if the self-hosted Motion library failed to load. All scroll motion requires it."
       },
       {
-        "name": "lane-dash-loop",
-        "value": "0.9s linear infinite, background-position -9rem",
-        "purpose": "Hero centre dashes scroll to imply speed."
+        "name": "scroll-scene",
+        "value": "Motion scroll(animate(...)), ease linear, target .scene, offset [start start, end end], section 240vh",
+        "purpose": "Photo scale 1 to 1.14, brightness 0.95 to 0.3; copy fades out 6%-28%; cut-out truck from translateY(-24vh) scale(0.24) (phones -17vh, 0.3) through scale(0.72) at 40%, scale(1) at 66%, to translateY(75vh) scale(2.7) at 100%, graded from night (brightness 0.62, saturate 0.75, hue -8deg, blur 1.5px) to daylight with 3px motion blur at the end; claim fades in 36%-50%."
       },
       {
-        "name": "road-follow",
-        "value": "lerp 0.09 per frame toward viewport-centre target",
-        "purpose": "Scroll-linked vertical road truck; brake lights on at the stop line."
+        "name": "word-reveal",
+        "value": "Motion scroll(progress), offset [start 0.8, end 0.45]",
+        "purpose": "Statement words switch from word-unlit to mist in reading order."
       },
       {
-        "name": "shuttle-pendel",
-        "value": "7s cubic-bezier(0.45, 0, 0.55, 1) infinite, dwell 6% at each end, scaleX(-1) turn",
-        "purpose": "A-to-B shuttle; runs only while 40% in view."
+        "name": "fleet-settle",
+        "value": "scale(1.18) to scale(1), offset [start end, end end]",
+        "purpose": "Fleet photo settles into its 28px frame on entry."
+      },
+      {
+        "name": "shuttle",
+        "value": "5.5s cubic-bezier(0.65, 0, 0.35, 1) infinite, holds 8% at each end",
+        "purpose": "Shuttle dot A to B; paused unless 40% visible (IntersectionObserver)."
       },
       {
         "name": "reduced-motion",
-        "value": "prefers-reduced-motion: reduce",
-        "purpose": "No smooth scroll, static dashes, shuttle parked at A, no hero entry, road truck jumps to position (still brakes at stop line)."
+        "value": "@media (prefers-reduced-motion: reduce)",
+        "purpose": "Scene is a 100svh static stage with the truck parked lower right and no claim; all statement words lit; no fleet zoom; shuttle dot still; pill transitions and press scale off."
       }
     ],
     "breakpoints": [
       {
-        "name": "sm",
-        "value": "40rem",
-        "purpose": "Below: header nav hidden, call pill kept; contact slab pulls left under the road; hero photo becomes 16:9."
-      },
-      {
         "name": "md",
-        "value": "52rem",
-        "purpose": "Below: contact slab stacks."
+        "value": "48rem",
+        "purpose": "Nav links hide; fleet portraits go two-up above."
       },
       {
         "name": "lg",
         "value": "64rem",
-        "purpose": "Above: two-column stages, one-line wordmark, lead + callbox side by side, single-row fleet gallery."
+        "purpose": "Service cards two-up; Über uns and Kontakt split into two columns."
       }
     ],
-    "images": [
-      {
-        "name": "hero-photo-strip",
-        "value": "full-bleed figure, height clamp(11rem, 32vh, 22rem), max-height 56vw, object-fit cover at 50% 60%, ground #07080c; below 40rem aspect-ratio 16/9 with img scale(1.55) origin 50% 58%",
-        "purpose": "Night photo of the whole silver fleet between hero copy and lane (fuhrpark-nacht 1000w/2000w WebP)."
-      },
-      {
-        "name": "fleet-gallery",
-        "value": "grid gap 0.75rem; 1fr 1fr with wide 16:9 spanning, at 64rem 2.2fr 1fr 1fr; portraits 3:4; 2px corners; lazy WebP srcset; captions hidden",
-        "purpose": "'Unser Fuhrpark': yard shot plus two Actros fronts."
-      },
-      {
-        "name": "provenance",
-        "value": "assets/img/*.webp.json beside every raster",
-        "purpose": "Records origin (real owner-supplied photo) and edits; required for every shipping raster."
-      }
-    ]
+    "photography": {
+      "sources": "Only real photographs supplied by SPN-Transporte (owner upload, 2026-10-19). No stock, illustration or AI imagery.",
+      "provenance": "Every shipped raster in assets/img has a sidecar <file>.webp.json recording origin and edits.",
+      "privacy": "Driver name tags in windshields are blurred before publishing.",
+      "cutout": "actros-frei: a single Actros with background removed (rembg isnet-general-use), name tags blurred, bottom edge faded; used only as the scroll-scene truck.",
+      "format": "WebP with two srcset widths each; scene photo preloaded, others lazy.",
+      "framing": "Edge to edge only in the scroll scene; elsewhere clipped to the 28px card radius or masked into a black card."
+    }
   },
   "components": [
     {
-      "name": "Wordmark",
-      "kind": "custom",
-      "refersTo": "wordmark",
-      "description": "SPN-TRANSPORTE in the company's truck lettering: hero h1 and header mark.",
-      "html": "<div class=\"ds-wm-ground\"><a class=\"ds-wordmark\" href=\"#\">SPN-Transporte</a></div>",
-      "css": ".ds-wm-ground{background:#2b2b29;padding:1.5rem}.ds-wordmark{font-family:Saira,\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-style:italic;font-weight:850;font-stretch:125%;text-transform:uppercase;letter-spacing:-.005em;color:var(--red,#d0111f);-webkit-text-stroke:.06em #050505;paint-order:stroke fill;font-size:clamp(2.6rem,8vw,4.5rem);line-height:.95;text-decoration:none;display:inline-block}.ds-wordmark:focus-visible{outline:3px solid var(--paint,#eeece4);outline-offset:3px;border-radius:2px}"
-    },
-    {
-      "name": "Call Pill",
+      "name": "Primary Pill",
       "kind": "button",
-      "refersTo": "button-call",
-      "description": "Header tap-to-call marking in SPN red, always visible.",
-      "html": "<a class=\"ds-call\" href=\"tel:+4915114210193\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z\"/></svg><span>Anrufen</span></a>",
-      "css": ".ds-call{display:inline-flex;align-items:center;gap:.5rem;background:var(--red,#d0111f);color:var(--on-red,#fff);font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:700;font-size:1.2rem;text-decoration:none;padding:.45rem .9rem;border-radius:2px;transition:background-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-call svg{width:1.1rem;height:1.1rem;fill:currentColor}.ds-call:hover{background:var(--red-deep,#a50c17)}.ds-call:focus-visible{outline:3px solid var(--paint,#eeece4);outline-offset:3px}"
+      "refersTo": "button-primary",
+      "description": "Main action of a view: Tour anfragen, Anrufen, E-Mail vorbereiten.",
+      "html": "<div class=\"ds-stage\"><a class=\"ds-pill ds-pill--red\" href=\"#\">Tour anfragen</a></div>",
+      "css": ":host, :root { --black:#000; --graphite:#1d1d1f; --graphite-2:#2c2c2e; --mist:#f5f5f7; --white:#fff; --muted-dark:#6e6e73; --muted-light:#a1a1a6; --red:#d0111f; --red-hover:#e5212f; --line-light:#d2d2d7; --line-dark:#3a3a3c; --radius:1.75rem; --ease:cubic-bezier(0.16, 1, 0.3, 1); --font:\"Geist\", system-ui, -apple-system, \"Segoe UI\", sans-serif; } .ds-stage { background:var(--black); padding:2rem; } .ds-pill { display:inline-flex; align-items:center; justify-content:center; min-height:2.75rem; padding:0.7rem 1.4rem; border:0; border-radius:999px; font-family:var(--font); font-size:1.0625rem; font-weight:500; letter-spacing:-0.01em; text-decoration:none; cursor:pointer; transition:background-color 200ms var(--ease), transform 200ms var(--ease); } .ds-pill:active { transform:scale(0.98); } .ds-pill:focus-visible { outline:2px solid #4c9bff; outline-offset:3px; } .ds-pill--red { background:var(--red); color:var(--white); } .ds-pill--red:hover { background:var(--red-hover); }"
     },
     {
-      "name": "Hero Callbox",
+      "name": "Ghost Pill",
       "kind": "button",
-      "refersTo": "callbox-phone",
-      "description": "Red box with label and tabular phone number, first viewport.",
-      "html": "<a class=\"ds-callbox\" href=\"tel:+4915114210193\"><span class=\"ds-callbox-label\">Tour anfragen</span><span class=\"ds-callbox-number\">0151 14210193</span></a>",
-      "css": ".ds-callbox{display:inline-grid;background:var(--red,#d0111f);color:var(--on-red,#fff);text-decoration:none;padding:.7rem 1.25rem .75rem;border-radius:2px;box-shadow:0 6px 18px -8px rgb(0 0 0 / .6);transition:background-color 150ms cubic-bezier(0.16,1,0.3,1),transform 150ms cubic-bezier(0.16,1,0.3,1)}.ds-callbox:hover{background:var(--red-deep,#a50c17)}.ds-callbox:active{transform:translateY(1px)}.ds-callbox:focus-visible{outline:3px solid var(--paint,#eeece4);outline-offset:3px}.ds-callbox-label{font-family:Barlow,system-ui,sans-serif;font-weight:600;font-size:.875rem;color:rgb(255 255 255 / .86)}.ds-callbox-number{font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:700;font-size:2.5rem;line-height:1.05;font-variant-numeric:tabular-nums}"
+      "refersTo": "button-ghost",
+      "description": "Secondary action on black, paired with a red pill; carries the phone number.",
+      "html": "<div class=\"ds-stage\"><a class=\"ds-pill ds-pill--ghost\" href=\"#\">0151 14210193</a></div>",
+      "css": ":host, :root { --black:#000; --graphite:#1d1d1f; --graphite-2:#2c2c2e; --mist:#f5f5f7; --white:#fff; --muted-dark:#6e6e73; --muted-light:#a1a1a6; --red:#d0111f; --red-hover:#e5212f; --line-light:#d2d2d7; --line-dark:#3a3a3c; --radius:1.75rem; --ease:cubic-bezier(0.16, 1, 0.3, 1); --font:\"Geist\", system-ui, -apple-system, \"Segoe UI\", sans-serif; } .ds-stage { background:var(--black); padding:2rem; } .ds-pill { display:inline-flex; align-items:center; justify-content:center; min-height:2.75rem; padding:0.7rem 1.4rem; border:0; border-radius:999px; font-family:var(--font); font-size:1.0625rem; font-weight:500; letter-spacing:-0.01em; text-decoration:none; cursor:pointer; transition:background-color 200ms var(--ease), transform 200ms var(--ease); } .ds-pill:active { transform:scale(0.98); } .ds-pill:focus-visible { outline:2px solid #4c9bff; outline-offset:3px; } .ds-pill--ghost { color:var(--white); background:transparent; box-shadow:inset 0 0 0 1.5px rgb(255 255 255 / 0.55); font-variant-numeric:tabular-nums; } .ds-pill--ghost:hover { background:rgb(255 255 255 / 0.12); }"
     },
     {
-      "name": "Submit Button",
-      "kind": "button",
-      "refersTo": "button-submit",
-      "description": "Red button inside the silver contact slab; prepares a mailto.",
-      "html": "<div style=\"background:linear-gradient(180deg,#e3e5e6,#c9ccce 55%);padding:1.5rem\"><button type=\"button\" class=\"ds-submit\">E-Mail vorbereiten</button></div>",
-      "css": ".ds-submit{font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:700;font-size:1.3rem;color:var(--on-red,#fff);background:var(--red,#d0111f);border:0;border-radius:2px;padding:.6rem 1.4rem;cursor:pointer;transition:background-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-submit:hover{background:var(--red-deep,#a50c17)}.ds-submit:focus-visible{outline:3px solid var(--ink,#16181a);outline-offset:3px}"
-    },
-    {
-      "name": "Field",
-      "kind": "input",
-      "refersTo": "input-field",
-      "description": "Label + input on the silver contact slab, with error state.",
-      "html": "<div class=\"ds-panel\"><div class=\"ds-field\"><label for=\"ds-f\">Name oder Firma</label><input id=\"ds-f\"></div><div class=\"ds-field\"><label for=\"ds-g\">Ihre Anfrage</label><input id=\"ds-g\" aria-invalid=\"true\"><p class=\"ds-err\">Bitte beschreiben Sie kurz Ihre Tour.</p></div></div>",
-      "css": ".ds-panel{background:#c9ccce linear-gradient(180deg,#e3e5e6,#c9ccce 55%);color:var(--ink,#16181a);padding:1.5rem;display:grid;gap:1rem;font-family:Barlow,system-ui,sans-serif;border-radius:2px;box-shadow:0 18px 40px -24px rgb(0 0 0 / .7)}.ds-field{display:grid;gap:.35rem}.ds-field label{font-weight:600;font-size:.95rem}.ds-field input{font:inherit;font-size:1rem;color:var(--ink,#16181a);background:#fffdf3;border:2px solid rgb(29 28 25 / .55);border-radius:2px;padding:.6rem .75rem;transition:border-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-field input:hover{border-color:var(--ink,#16181a)}.ds-field input:focus-visible{outline:3px solid var(--ink,#16181a);outline-offset:1px;border-color:var(--ink,#16181a)}.ds-field [aria-invalid=\"true\"]{border-color:#8f1d0b}.ds-err{margin:0;font-size:.9rem;font-weight:600;color:#7a1909}"
-    },
-    {
-      "name": "Top Navigation",
+      "name": "Navigation Bar",
       "kind": "nav",
-      "refersTo": "nav-top",
-      "description": "Sticky deep-asphalt bar: red wordmark, condensed links, red call pill.",
-      "html": "<header class=\"ds-top\"><a class=\"ds-mark\" href=\"#\">SPN-Transporte</a><nav><a href=\"#\">Leistungen</a><a href=\"#\">Fuhrpark</a><a href=\"#\">Über uns</a><a href=\"#\">Kontakt</a></nav><a class=\"ds-top-call\" href=\"#\">Anrufen</a></header>",
-      "css": ".ds-top{display:flex;align-items:center;gap:1.5rem;padding:.75rem 1.5rem;background:#222220;border-bottom:1px solid #3a3a37;color:var(--paint,#eeece4)}.ds-mark{font-family:Saira,\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-style:italic;font-weight:850;font-stretch:125%;text-transform:uppercase;letter-spacing:-.005em;color:var(--red,#d0111f);-webkit-text-stroke:.06em #050505;paint-order:stroke fill;font-size:1.5rem;line-height:1;text-decoration:none}.ds-top nav{margin-left:auto;display:flex;gap:2rem}.ds-top nav a{font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:600;font-size:1.2rem;letter-spacing:.02em;text-decoration:none;color:#bdbab0;transition:color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-top nav a:hover{color:var(--paint,#eeece4)}.ds-top a:focus-visible{outline:3px solid var(--paint,#eeece4);outline-offset:3px}.ds-top-call{background:var(--red,#d0111f);color:var(--on-red,#fff);font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:700;font-size:1.2rem;text-decoration:none;padding:.45rem .9rem;border-radius:2px;transition:background-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-top-call:hover{background:var(--red-deep,#a50c17)}"
+      "refersTo": "nav",
+      "description": "Fixed glass bar: wordmark, links, small red Anrufen pill. Links hide below 48rem.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-wordmark\" href=\"#\">SPN-Transporte</a><nav><a href=\"#\">Leistungen</a><a href=\"#\">Fuhrpark</a><a href=\"#\">Über uns</a><a href=\"#\">Kontakt</a></nav><a class=\"ds-pill ds-pill--small\" href=\"#\">Anrufen</a></header>",
+      "css": ":host, :root { --black:#000; --graphite:#1d1d1f; --graphite-2:#2c2c2e; --mist:#f5f5f7; --white:#fff; --muted-dark:#6e6e73; --muted-light:#a1a1a6; --red:#d0111f; --red-hover:#e5212f; --line-light:#d2d2d7; --line-dark:#3a3a3c; --radius:1.75rem; --ease:cubic-bezier(0.16, 1, 0.3, 1); --font:\"Geist\", system-ui, -apple-system, \"Segoe UI\", sans-serif; } .ds-nav { display:flex; align-items:center; gap:2rem; height:3.25rem; padding:0 1.25rem; background:rgb(0 0 0 / 0.86); backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid rgb(255 255 255 / 0.08); font-family:var(--font); } .ds-wordmark { font-family:\"Saira\", var(--font); font-style:italic; font-weight:850; font-stretch:125%; text-transform:uppercase; color:var(--red); font-size:1.05rem; text-decoration:none; } .ds-nav nav { display:flex; gap:1.75rem; margin-left:auto; } .ds-nav nav a { font-size:0.875rem; color:rgb(245 245 247 / 0.8); text-decoration:none; transition:color 200ms var(--ease); } .ds-nav nav a:hover { color:var(--white); } .ds-pill { display:inline-flex; align-items:center; justify-content:center; min-height:2.75rem; padding:0.7rem 1.4rem; border:0; border-radius:999px; font-family:var(--font); font-size:1.0625rem; font-weight:500; letter-spacing:-0.01em; text-decoration:none; cursor:pointer; transition:background-color 200ms var(--ease), transform 200ms var(--ease); } .ds-pill:active { transform:scale(0.98); } .ds-pill:focus-visible { outline:2px solid #4c9bff; outline-offset:3px; } .ds-pill--small { min-height:2rem; padding:0.35rem 0.95rem; font-size:0.8125rem; background:var(--red); color:var(--white); } .ds-pill--small:hover { background:var(--red-hover); }"
     },
     {
-      "name": "Fleet Gallery",
+      "name": "Section Headline",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "Two-line headline: statement in ink, muted second line at the same size.",
+      "html": "<div class=\"ds-mist\"><h2 class=\"ds-title\">Nahverkehr und Shuttle.<span>Mit Fahrern, die die Strecken kennen.</span></h2></div>",
+      "css": ":host, :root { --black:#000; --graphite:#1d1d1f; --graphite-2:#2c2c2e; --mist:#f5f5f7; --white:#fff; --muted-dark:#6e6e73; --muted-light:#a1a1a6; --red:#d0111f; --red-hover:#e5212f; --line-light:#d2d2d7; --line-dark:#3a3a3c; --radius:1.75rem; --ease:cubic-bezier(0.16, 1, 0.3, 1); --font:\"Geist\", system-ui, -apple-system, \"Segoe UI\", sans-serif; } .ds-mist { background:var(--mist); padding:3rem 2rem; } .ds-title { margin:0; max-width:22ch; font-family:var(--font); font-size:clamp(2.25rem, 5.2vw, 4.5rem); font-weight:650; line-height:1.05; letter-spacing:-0.035em; color:var(--graphite); } .ds-title span { display:block; color:var(--muted-dark); }"
+    },
+    {
+      "name": "Service Card",
       "kind": "card",
-      "refersTo": "fleet-photo",
-      "description": "'Unser Fuhrpark': wide yard shot plus two portrait Actros fronts, 2px corners, no shadow.",
-      "html": "<div class=\"ds-fleet\"><figure class=\"ds-fleet-wide\"><img src=\"assets/img/hof-800.webp\" alt=\"Fünf silberne Actros vor einer Halle\"></figure><figure class=\"ds-fleet-tall\"><img src=\"assets/img/actros-e-540.webp\" alt=\"Actros L von vorn\"></figure><figure class=\"ds-fleet-tall\"><img src=\"assets/img/actros-v-540.webp\" alt=\"Actros von vorn\"></figure></div>",
-      "css": ".ds-fleet{display:grid;gap:.75rem;grid-template-columns:2.2fr 1fr 1fr;background:#2b2b29;padding:1rem}.ds-fleet figure{margin:0}.ds-fleet img{display:block;width:100%;height:100%;object-fit:cover;border-radius:2px;background:#222220}.ds-fleet-tall{aspect-ratio:3/4}"
+      "refersTo": "card",
+      "description": "White 28px card on the mist stage; title plus muted copy, no shadow, no border.",
+      "html": "<div class=\"ds-mist\"><article class=\"ds-card\"><h3>Shuttle- und Pendelverkehr</h3><p>Regelmäßige Fahrten zwischen zwei festen Punkten. Gleiche Strecke, gleiche Fahrer, planbare Zeiten.</p></article></div>",
+      "css": ":host, :root { --black:#000; --graphite:#1d1d1f; --graphite-2:#2c2c2e; --mist:#f5f5f7; --white:#fff; --muted-dark:#6e6e73; --muted-light:#a1a1a6; --red:#d0111f; --red-hover:#e5212f; --line-light:#d2d2d7; --line-dark:#3a3a3c; --radius:1.75rem; --ease:cubic-bezier(0.16, 1, 0.3, 1); --font:\"Geist\", system-ui, -apple-system, \"Segoe UI\", sans-serif; } .ds-mist { background:var(--mist); padding:2rem; } .ds-card { background:var(--white); color:var(--graphite); border-radius:var(--radius); padding:clamp(1.75rem, 4vw, 2.75rem); font-family:var(--font); } .ds-card h3 { margin:0; font-size:clamp(1.75rem, 2.6vw, 2.25rem); font-weight:650; letter-spacing:-0.03em; line-height:1.1; } .ds-card p { margin:0.75rem 0 0; color:var(--muted-dark); max-width:38ch; line-height:1.55; }"
     },
     {
-      "name": "Lane with Truck",
+      "name": "Values Check List",
       "kind": "custom",
-      "refersTo": "road-vertical",
-      "description": "Signature: top-down lane band with paint edges, moving centre dashes, lane arrow and the Zugmaschine with silver cab.",
-      "html": "<div class=\"ds-lane\"><div class=\"ds-lane-dashes\"></div><svg class=\"ds-lane-truck\" viewBox=\"0 -4 248 48\" aria-hidden=\"true\"><rect x=\"0\" y=\"1\" width=\"200\" height=\"38\" rx=\"2\" fill=\"#8e908b\"/><g stroke=\"#6f716c\" stroke-width=\"1.5\"><path d=\"M20 2v36M40 2v36M60 2v36M80 2v36M100 2v36M120 2v36M140 2v36M160 2v36M180 2v36\"/></g><rect x=\"0\" y=\"1\" width=\"200\" height=\"38\" rx=\"2\" fill=\"none\" stroke=\"#5d5f5a\" stroke-width=\"2\"/><rect x=\"-2\" y=\"3\" width=\"4\" height=\"8\" rx=\"1\" fill=\"#7a2416\"/><rect x=\"-2\" y=\"29\" width=\"4\" height=\"8\" rx=\"1\" fill=\"#7a2416\"/><rect x=\"200\" y=\"15\" width=\"6\" height=\"10\" fill=\"#1d1c19\"/><rect x=\"205\" y=\"0\" width=\"38\" height=\"40\" rx=\"5\" fill=\"#c9ccce\"/><rect x=\"211\" y=\"6\" width=\"16\" height=\"28\" rx=\"2\" fill=\"#aeb2b5\"/><rect x=\"234\" y=\"3\" width=\"7\" height=\"34\" rx=\"2\" fill=\"#26323a\"/><rect x=\"231\" y=\"-4\" width=\"5\" height=\"4\" rx=\"1\" fill=\"#1d1c19\"/><rect x=\"231\" y=\"40\" width=\"5\" height=\"4\" rx=\"1\" fill=\"#1d1c19\"/><rect x=\"243\" y=\"4\" width=\"3\" height=\"6\" rx=\"1\" fill=\"#fff6d8\"/><rect x=\"243\" y=\"30\" width=\"3\" height=\"6\" rx=\"1\" fill=\"#fff6d8\"/></svg><svg class=\"ds-lane-arrow\" viewBox=\"0 0 120 40\" aria-hidden=\"true\"><path d=\"M0 15h78V3l42 17-42 17V25H0z\"/></svg></div>",
-      "css": ".ds-lane{position:relative;height:7rem;background:#313130;border-block:5px solid #eeece4;overflow:hidden}.ds-lane-dashes{position:absolute;left:0;right:0;top:50%;height:5px;transform:translateY(-50%);background:repeating-linear-gradient(90deg,#eeece4 0 4rem,transparent 4rem 9rem);animation:ds-lane .9s linear infinite}@keyframes ds-lane{to{background-position:-9rem 0}}.ds-lane-truck{position:absolute;left:6%;top:75%;width:14rem;transform:translateY(-50%);filter:drop-shadow(0 6px 6px rgb(0 0 0 / .45))}.ds-lane-arrow{position:absolute;right:8%;top:75%;width:7rem;aspect-ratio:3/1;fill:#eeece4;opacity:.92;transform:translateY(-50%)}@media (prefers-reduced-motion: reduce){.ds-lane-dashes{animation:none}}"
+      "refersTo": "card",
+      "description": "SPN promises with red check discs, inside a white panel.",
+      "html": "<div class=\"ds-mist\"><div class=\"ds-card\"><ul class=\"ds-checks\"><li>über 15 Jahre Erfahrung in Transport und Logistik</li><li>familiengeführt und mittelständisch</li><li>deutschsprachige, regionale Fahrer</li></ul></div></div>",
+      "css": ":host, :root { --black:#000; --graphite:#1d1d1f; --graphite-2:#2c2c2e; --mist:#f5f5f7; --white:#fff; --muted-dark:#6e6e73; --muted-light:#a1a1a6; --red:#d0111f; --red-hover:#e5212f; --line-light:#d2d2d7; --line-dark:#3a3a3c; --radius:1.75rem; --ease:cubic-bezier(0.16, 1, 0.3, 1); --font:\"Geist\", system-ui, -apple-system, \"Segoe UI\", sans-serif; } .ds-mist { background:var(--mist); padding:2rem; } .ds-card { background:var(--white); color:var(--graphite); border-radius:var(--radius); padding:clamp(1.75rem, 3.5vw, 2.5rem); font-family:var(--font); } .ds-checks { display:grid; gap:0.9rem; margin:0; padding:0; list-style:none; } .ds-checks li { position:relative; padding-left:2rem; line-height:1.4; } .ds-checks li::before { content:\"\"; position:absolute; left:0; top:0.12em; width:1.25rem; height:1.25rem; border-radius:50%; background:var(--red) url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\") center / 100% no-repeat; }"
     },
     {
-      "name": "Leitpfosten and Kerb",
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Raised graphite well on the graphite form panel; blue focus ring, red caret.",
+      "html": "<div class=\"ds-form\"><label class=\"ds-label\" for=\"ds-f\">Name oder Firma</label><input class=\"ds-input\" id=\"ds-f\"></div>",
+      "css": ":host, :root { --black:#000; --graphite:#1d1d1f; --graphite-2:#2c2c2e; --mist:#f5f5f7; --white:#fff; --muted-dark:#6e6e73; --muted-light:#a1a1a6; --red:#d0111f; --red-hover:#e5212f; --line-light:#d2d2d7; --line-dark:#3a3a3c; --radius:1.75rem; --ease:cubic-bezier(0.16, 1, 0.3, 1); --font:\"Geist\", system-ui, -apple-system, \"Segoe UI\", sans-serif; } .ds-form { display:grid; gap:0.4rem; background:var(--graphite); border-radius:var(--radius); padding:2rem; font-family:var(--font); } .ds-label { font-size:0.9rem; font-weight:500; color:var(--mist); } .ds-input { font:inherit; font-size:1rem; color:var(--mist); background:var(--graphite-2); border:1px solid var(--line-dark); border-radius:0.875rem; padding:0.8rem 1rem; caret-color:var(--red-hover); transition:border-color 200ms var(--ease), box-shadow 200ms var(--ease); } .ds-input:hover { border-color:#5a5a5e; } .ds-input:focus-visible { outline:none; border-color:#4c9bff; box-shadow:0 0 0 3px rgb(76 155 255 / 0.35); }"
+    },
+    {
+      "name": "Shuttle Diagram",
       "kind": "custom",
-      "refersTo": "road-vertical",
-      "description": "Rhythm marks: top-down delineator opening each stage; vertical SPN-red/white racing kerb at the road edge, used once.",
-      "html": "<div class=\"ds-furniture\"><span class=\"ds-post\"></span><div class=\"ds-kerb\"></div></div>",
-      "css": ".ds-furniture{background:#2b2b29;padding:1.5rem;display:flex;gap:1.5rem;align-items:flex-start;height:12rem}.ds-post{display:block;width:.7rem;height:.7rem;background:radial-gradient(circle,#e0571f 0 .15rem,#eeece4 .17rem);border-radius:1px;box-shadow:0 2px 3px rgb(0 0 0 / .5)}.ds-kerb{width:.65rem;height:100%;background:repeating-linear-gradient(180deg,var(--red,#d0111f) 0 2.75rem,#eeece4 2.75rem 5.5rem)}"
+      "refersTo": "card",
+      "description": "A to B with a red dot travelling the track; runs only while visible, static under reduced motion.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-track\"><span class=\"ds-pt\">A<small>Laden</small></span><div class=\"ds-line\"><span class=\"ds-dot\"></span></div><span class=\"ds-pt\">B<small>Entladen</small></span></div></div>",
+      "css": ":host, :root { --black:#000; --graphite:#1d1d1f; --graphite-2:#2c2c2e; --mist:#f5f5f7; --white:#fff; --muted-dark:#6e6e73; --muted-light:#a1a1a6; --red:#d0111f; --red-hover:#e5212f; --line-light:#d2d2d7; --line-dark:#3a3a3c; --radius:1.75rem; --ease:cubic-bezier(0.16, 1, 0.3, 1); --font:\"Geist\", system-ui, -apple-system, \"Segoe UI\", sans-serif; } .ds-card { background:var(--white); color:var(--graphite); border-radius:var(--radius); padding:2.5rem; font-family:var(--font); } .ds-track { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:1rem; } .ds-pt { display:grid; justify-items:center; font-size:4rem; font-weight:650; line-height:1; letter-spacing:-0.04em; } .ds-pt small { margin-top:0.5rem; font-size:0.875rem; font-weight:500; letter-spacing:0; color:var(--muted-dark); } .ds-line { container-type:inline-size; position:relative; height:6px; margin-bottom:2rem; border-radius:2px; background:var(--line-light); } .ds-dot { position:absolute; top:50%; left:0; width:1.75rem; height:1.75rem; margin-top:-0.875rem; border-radius:50%; background:var(--red); box-shadow:0 0 0 6px rgb(208 17 31 / 0.18); animation:ds-shuttle 5.5s cubic-bezier(0.65, 0, 0.35, 1) infinite; } @keyframes ds-shuttle { 0%, 8% { transform:translateX(0); } 46%, 54% { transform:translateX(calc(100cqw - 1.75rem)); } 92%, 100% { transform:translateX(0); } } @media (prefers-reduced-motion: reduce) { .ds-dot { animation:none; } }"
     }
   ],
   "narrative": {
-    "northStar": "Die Fahrbahn",
-    "overview": "The whole site is a stretch of road seen from directly above. The ground is warm dark asphalt with a fine aggregate grain; line work and reading text are road paint. Section headings are tall condensed signage lettering, lanes are dashed white lines, and the visitor follows a top-down Zugmaschine with a Planenauflieger as it drives down a vertical road beside the content and brakes at a white stop line in front of the contact block. The road belongs to SPN: its name is written in the company's own lettering (red, wide, heavy italic, black outline, as on trailer and cab), and every action carries that same brand red.\n\nThe drawn road is the world; the real fleet is the proof. A night photograph of the silver Mercedes-Benz Actros fleet runs as a full-bleed strip between the hero copy and the lane, and a short \"Unser Fuhrpark\" gallery shows the trucks on the yard. The drawn truck's cab is silver to match them, and the contact block is a silver slab like cab sheet metal. Density is low and sequential: one stage at a time beside the road, each opened by a Leitpfosten seen from above. Ornament is rationed to road furniture: dashed lines, arrows, a stop line, delineator posts and, once, a red/white racing kerb for the motorsport roots.\n\nMotion has road grammar: steady speed, ease-out braking, no bounce, no spring. Reduced motion stops everything that loops and lets the truck jump to its position rather than drive.",
+    "northStar": "The Fleet Launch",
+    "overview": "The site is staged like a product launch, and the product is SPN's own fleet of silver Mercedes-Benz Actros. Every section is a full-width stage, either pure black or a cool mist grey, and the two alternate down the page so each new topic arrives as a change of light. Headlines are large, tight Geist set in two lines: a statement in full ink and a quieter second line in muted grey. Real photographs of SPN's trucks, at night and by day, carry the proof. Nothing is illustrated and nothing is stock.\n\nThe page is sparse and confident: one idea per stage, generous section padding, few elements, big type. Colour is almost absent. Brand red (#d0111f) is the single signal and only marks things the visitor can do or things SPN promises (the check marks). The company's own wordmark, red wide italic Saira with a black outline as it is lettered on the trailers, is the only logo.\n\nMotion is used once, big, and then quietly. The opening scene is a sticky scroll stage in which a cut-out SPN Actros leaves the night photo of the fleet row and drives past the camera. Everything after that is supportive: a statement whose words light up as you read, a fleet photo that settles into frame, a red dot shuttling between A and B. With reduced motion the page is a calm static document with nothing lost.",
     "keyCharacteristics": [
-      "Asphalt ground with SVG fractal-noise grain on every road surface.",
-      "White road paint for line work and reading text; SPN red for the wordmark and every action.",
-      "The SPN-TRANSPORTE wordmark in Saira italic 850, 125% width, uppercase, red with a black outline, for the header mark and the hero h1.",
-      "Condensed signage face (Barlow Condensed 600/700/800) for headings, plain Barlow (400/500/600) for reading.",
-      "Real fleet photographs (silver Actros) as proof, each shipping raster with a provenance file.",
-      "A vertical road with a scroll-linked truck that stops at a stop line before the silver contact slab.",
-      "Near-square corners (2px) everywhere: painted marking and pressed metal, never a pill.",
-      "All fonts, images and the motion library self-hosted; no third-party requests."
+      "Full-bleed black and mist stages alternating: scene, statement (black), Leistungen (mist), Fuhrpark (black), Über uns (mist), Kontakt (black), footer (mist).",
+      "Two-line Geist headlines: ink first line, muted second line, weight 650, tracking -0.035em.",
+      "28px rounded cards and fully rounded pills; no square buttons, no hairline-boxed cards.",
+      "Red is a verb: actions, the shuttle dot, check marks, list markers. Never decoration.",
+      "Only real SPN photographs, each with a provenance sidecar, driver name tags blurred.",
+      "One signature scroll scene; supporting motion stays small and stops when off screen."
     ],
     "rules": [
       {
-        "name": "The Brand Red Rule",
-        "body": "Red is SPN's own colour: it signs the name and marks where to act. It is never used for headings other than the wordmark, body text, illustration fills (beyond the kerb's red stripes) or decoration.",
+        "name": "The Red Is a Verb Rule",
+        "body": "Signal red marks only what the visitor can do (pills, the phone hover) or what SPN promises (check marks, the shuttle dot, list markers), plus the wordmark. It never fills a section, a headline, a card or a decorative shape.",
         "section": "colors"
       },
       {
-        "name": "The Paint Writes On The Road Rule",
-        "body": "Reading text and line work on asphalt are Road Paint or Worn Paint. The only other colour that writes on asphalt is the red wordmark.",
+        "name": "The Two Stages Rule",
+        "body": "Every section takes the full width on either True Black or Mist, and neighbours alternate. No third ground colour, no gradients between stages; white and graphite exist only as cards and panels sitting on a stage.",
         "section": "colors"
       },
       {
-        "name": "The Silver Is Metal Rule",
-        "body": "Silver belongs to the fleet: the contact slab, the drawn cab, and hover on the e-mail link. It does not become a general surface colour.",
+        "name": "The Muted Second Line Rule",
+        "body": "Muted greys are always the partner of an ink colour on the same ground: muted-on-mist with graphite, muted-on-black with mist. They are never swapped across grounds.",
         "section": "colors"
       },
       {
-        "name": "The One Name Rule",
-        "body": "The Saira wordmark style is for the company name only (header mark, hero h1). It is never applied to section headings, slogans or other words.",
+        "name": "The Two-Line Headline Rule",
+        "body": "Section and scene headlines are a full-stop statement followed by a muted second line in the same size and weight. The hierarchy comes from colour, not from a second size.",
         "section": "typography"
       },
       {
-        "name": "The Uppercase Is Earned Rule",
-        "body": "Uppercase is reserved for the wordmark and 800-weight painted lettering (motto, legal h1). Headlines and everything else stay in sentence case.",
+        "name": "The Wordmark Only Rule",
+        "body": "Saira appears only as the SPN-Transporte wordmark: red fill, black outline via text-stroke (0.06em, painted under the fill). On black grounds the outline is dropped because it would vanish anyway. Saira is never used for headings or labels.",
         "section": "typography"
       },
       {
-        "name": "The Numbers Line Up Rule",
-        "body": "Phone numbers always use the condensed face with `font-variant-numeric: tabular-nums`.",
-        "section": "typography"
-      },
-      {
-        "name": "The Lies On The Road Rule",
-        "body": "Only objects that would physically sit on the road (vehicles, posts, the callbox, the contact slab) get shadow. Paint, lettering and photographs never cast shadow.",
+        "name": "The Flat Cards Rule",
+        "body": "Cards and panels never cast shadows; they separate from the stage by tone alone.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do lay reading text and line work on asphalt in Road Paint or Worn Paint over the grain.",
-      "Do make every action SPN Red with white text and 2px corners, deepening to Deep SPN Red on hover.",
-      "Do set the company name, and only the company name, in the wordmark style: Saira italic 850, 125% width, uppercase, red with a 0.06em black outline under the fill.",
-      "Do keep the phone number tap-to-call and visible without scroll on every screen (header pill on mobile, callbox in the hero).",
-      "Do use real SPN fleet photographs as proof, served as self-hosted responsive WebP with descriptive alt text and a provenance `.json` beside each file.",
-      "Do build new figures from the road vocabulary: lane bands with paint edges, dashed centre lines, the straight arrow, the top-down truck with silver cab, Leitpfosten, stop line.",
-      "Do move vehicles at steady road speed and brake with `cubic-bezier(0.16, 1, 0.3, 1)`; pause looping motion when it is off screen and stop it under reduced motion.",
-      "Do self-host every font, image and script."
+      "**Do** alternate full-bleed True Black and Mist stages, each with the same section padding (clamp(5rem, 14vh, 9rem)).",
+      "**Do** write headlines as a statement plus a muted second line at the same size, Geist 650 with -0.035em tracking.",
+      "**Do** keep every button a pill (999px) and every card or framed photo at 28px (1.75rem).",
+      "**Do** use only real SPN photographs. Ship each raster with a provenance sidecar (`<file>.webp.json`) stating origin and edits, and blur any driver name tags before publishing.",
+      "**Do** self-host every font, script and image; the page makes no third-party requests.",
+      "**Do** gate every motion behind the `has-motion` class, set only when prefers-reduced-motion is not reduce and the Motion library loaded, and make the static state complete on its own.",
+      "**Do** pause looping motion when it leaves the viewport.",
+      "**Do** keep the phone number reachable in one tap: the red Anrufen pill in the nav on every page and viewport."
     ],
     "donts": [
-      "Don't use red for section headings, body text, decoration or illustration fills; it is the name and the action.",
-      "Don't apply the Saira wordmark style to any words other than \"SPN-Transporte\".",
-      "Don't round controls beyond 2px or use pill shapes.",
-      "Don't add bounce, spring or overshoot to any motion.",
-      "Don't put shadows on paint, lettering or photographs; only objects on the road cast them.",
-      "Don't use stock, AI-generated or generic highway imagery; photographs show SPN's own fleet only.",
-      "Don't add invented figures, customer logos, testimonials or badges as visual proof."
+      "**Don't** use Signal Red for surfaces, headlines, decorative shapes or large areas; it marks actions and promises only.",
+      "**Don't** add drop shadows to cards or buttons, or border cards with hairlines.",
+      "**Don't** use stock, illustrated or AI-generated imagery, invented fleet figures, customer logos or reviews.",
+      "**Don't** set headings, labels or body text in Saira; it is the wordmark only.",
+      "**Don't** introduce a third stage colour or gradients between stages.",
+      "**Don't** add a second scroll-driven set piece; the truck scene is the one signature, everything else stays supportive."
     ]
   }
 }
