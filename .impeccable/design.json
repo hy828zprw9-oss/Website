@@ -1,0 +1,550 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T11:38:53+00:00",
+  "title": "Design System: SPN-Transporte",
+  "extensions": {
+    "colorMeta": {
+      "asphalt": {
+        "role": "neutral",
+        "displayName": "Asphalt",
+        "canonical": "#2b2b29",
+        "oklch": "oklch(28.8% 0.004 106.6)",
+        "purpose": "Page ground under the grain overlay; theme-color.",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#242422",
+          "#40403e",
+          "#5e5e5b",
+          "#7d7d7b",
+          "#9e9e9c",
+          "#c4c4c2",
+          "#efefec"
+        ]
+      },
+      "asphalt-deep": {
+        "role": "neutral",
+        "displayName": "Deep Asphalt",
+        "canonical": "#222220",
+        "oklch": "oklch(25.1% 0.004 106.7)",
+        "purpose": "Sticky header and footer bands (road shoulder).",
+        "tonalRamp": [
+          "#0b0b09",
+          "#242422",
+          "#40403e",
+          "#5e5e5b",
+          "#7d7d7b",
+          "#9e9e9c",
+          "#c4c4c1",
+          "#efefec"
+        ]
+      },
+      "asphalt-lane": {
+        "role": "neutral",
+        "displayName": "Lane Asphalt",
+        "canonical": "#313130",
+        "oklch": "oklch(31.3% 0.002 106.5)",
+        "purpose": "Surface of drawn lanes: hero lane, vertical road, shuttle road.",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#242423",
+          "#40403f",
+          "#5e5e5c",
+          "#7d7d7c",
+          "#9e9e9d",
+          "#c4c4c3",
+          "#eeeeed"
+        ]
+      },
+      "paint": {
+        "role": "neutral",
+        "displayName": "Road Paint",
+        "canonical": "#eeece4",
+        "oklch": "oklch(94.2% 0.011 95.2)",
+        "purpose": "Text on asphalt, lane edges, dashes, stop line, arrows, hero lettering; hover of yellow controls.",
+        "tonalRamp": [
+          "#0d0b06",
+          "#26241e",
+          "#414039",
+          "#5f5e57",
+          "#7f7d76",
+          "#a09e97",
+          "#c6c4bc",
+          "#f1efe6"
+        ]
+      },
+      "paint-dim": {
+        "role": "neutral",
+        "displayName": "Worn Paint",
+        "canonical": "#bdbab0",
+        "oklch": "oklch(78.9% 0.014 93.0)",
+        "purpose": "Body copy, nav at rest, captions, footer.",
+        "tonalRamp": [
+          "#0d0b05",
+          "#26241c",
+          "#424037",
+          "#605e55",
+          "#807d74",
+          "#a19e95",
+          "#c7c4ba",
+          "#f2eee4"
+        ]
+      },
+      "baustellen-yellow": {
+        "role": "primary",
+        "displayName": "Baustellen-gelb",
+        "canonical": "#f3c300",
+        "oklch": "oklch(83.6% 0.171 90.7)",
+        "purpose": "Every action and the contact panel; focus ring and selection on asphalt.",
+        "tonalRamp": [
+          "#120a00",
+          "#2e2300",
+          "#4e3e03",
+          "#715b12",
+          "#967a1a",
+          "#bf9a16",
+          "#eabf33",
+          "#fdeec2"
+        ]
+      },
+      "baustellen-yellow-deep": {
+        "role": "primary",
+        "displayName": "Deep Baustellen-gelb",
+        "canonical": "#d9ad00",
+        "oklch": "oklch(76.6% 0.156 90.3)",
+        "purpose": "Defined darker step of the yellow; held in reserve, unused by current rules.",
+        "tonalRamp": [
+          "#120a00",
+          "#2e2200",
+          "#4f3d01",
+          "#725b0f",
+          "#977916",
+          "#c0990c",
+          "#ebbf2d",
+          "#feeec1"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1d1c19",
+        "oklch": "oklch(22.6% 0.006 91.6)",
+        "purpose": "Text on yellow; submit button ground.",
+        "tonalRamp": [
+          "#0c0b08",
+          "#252421",
+          "#41403c",
+          "#5f5d5a",
+          "#7e7d79",
+          "#a09e9a",
+          "#c5c4c0",
+          "#f0eeea"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "#3d3a2e",
+        "oklch": "oklch(34.8% 0.020 95.6)",
+        "purpose": "Small labels and notes on yellow.",
+        "tonalRamp": [
+          "#0e0b03",
+          "#272419",
+          "#434034",
+          "#615e51",
+          "#817d70",
+          "#a29f91",
+          "#c8c4b6",
+          "#f2efe0"
+        ]
+      },
+      "ink-hover": {
+        "role": "neutral",
+        "displayName": "Ink Hover",
+        "canonical": "#3a382f",
+        "oklch": "oklch(34.0% 0.015 96.8)",
+        "purpose": "Submit button hover.",
+        "tonalRamp": [
+          "#0d0b05",
+          "#26241c",
+          "#424037",
+          "#605e54",
+          "#807d73",
+          "#a19f94",
+          "#c7c4b9",
+          "#f1efe3"
+        ]
+      },
+      "reflector": {
+        "role": "secondary",
+        "displayName": "Leitpfosten Reflector Orange",
+        "canonical": "#e0571f",
+        "oklch": "oklch(63.0% 0.183 39.8)",
+        "purpose": "Reflector dot of the top-down delineator only.",
+        "tonalRamp": [
+          "#210000",
+          "#450f00",
+          "#712100",
+          "#9f3605",
+          "#d24a08",
+          "#f96e3a",
+          "#fbaf95",
+          "#fee9e2"
+        ]
+      },
+      "kerb-red": {
+        "role": "secondary",
+        "displayName": "Kerb Red",
+        "canonical": "#c8331f",
+        "oklch": "oklch(55.0% 0.189 31.1)",
+        "purpose": "Red/white racing-kerb stripe along the road edge beside Über uns only.",
+        "tonalRamp": [
+          "#220000",
+          "#490500",
+          "#781205",
+          "#af1300",
+          "#d6422d",
+          "#fe6750",
+          "#feac9c",
+          "#fee9e5"
+        ]
+      },
+      "brake-lit": {
+        "role": "secondary",
+        "displayName": "Brake Light",
+        "canonical": "#ff4a26",
+        "oklch": "oklch(66.6% 0.222 33.0)",
+        "purpose": "Truck tail lights when stopped at the stop line.",
+        "tonalRamp": [
+          "#210000",
+          "#480800",
+          "#761704",
+          "#a52b13",
+          "#da3c1c",
+          "#fa6b4f",
+          "#fcae9c",
+          "#fee9e4"
+        ]
+      },
+      "seam": {
+        "role": "neutral",
+        "displayName": "Seam",
+        "canonical": "#3a3a37",
+        "oklch": "oklch(34.7% 0.005 106.7)",
+        "purpose": "1px line under the sticky header.",
+        "tonalRamp": [
+          "#0b0b09",
+          "#242421",
+          "#40403d",
+          "#5e5e5b",
+          "#7d7d7a",
+          "#9f9f9b",
+          "#c4c4c1",
+          "#efefeb"
+        ]
+      },
+      "field-paper": {
+        "role": "neutral",
+        "displayName": "Field Paper",
+        "canonical": "#fffdf3",
+        "oklch": "oklch(99.3% 0.013 97.4)",
+        "purpose": "Input and textarea ground inside the yellow panel.",
+        "tonalRamp": [
+          "#0d0b06",
+          "#26241d",
+          "#414038",
+          "#5f5e55",
+          "#7f7d75",
+          "#a09f95",
+          "#c6c4bb",
+          "#f1efe5"
+        ]
+      },
+      "error-ink": {
+        "role": "neutral",
+        "displayName": "Error Ink",
+        "canonical": "#7a1909",
+        "oklch": "oklch(38.0% 0.134 31.9)",
+        "purpose": "Field error message text on yellow.",
+        "tonalRamp": [
+          "#210000",
+          "#480600",
+          "#771505",
+          "#9b3929",
+          "#c05b48",
+          "#e57c68",
+          "#fdad9d",
+          "#ffe9e4"
+        ]
+      },
+      "error-border": {
+        "role": "neutral",
+        "displayName": "Error Border",
+        "canonical": "#8f1d0b",
+        "oklch": "oklch(42.5% 0.152 31.7)",
+        "purpose": "Invalid field border on yellow.",
+        "tonalRamp": [
+          "#220000",
+          "#490500",
+          "#781304",
+          "#a2311f",
+          "#c75440",
+          "#ed7660",
+          "#feac9c",
+          "#fde9e5"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Painted Display",
+        "purpose": "Hero 'SPN-Transporte' only: 800 uppercase road lettering."
+      },
+      "motto": {
+        "displayName": "Painted Motto",
+        "purpose": "Philosophy quote; legal h1 uses the same voice."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section h2s beside the road, sentence case."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "h3s in story/team; legal h2s."
+      },
+      "claim": {
+        "displayName": "Claim",
+        "purpose": "Brand claim under the hero lettering; fact rows use the same 600 condensed voice."
+      },
+      "number": {
+        "displayName": "Number",
+        "purpose": "Phone numbers, tabular figures."
+      },
+      "nav": {
+        "displayName": "Nav",
+        "purpose": "Header links and call pill."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraphs, 48-62ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Small labels inside yellow controls; field labels."
+      }
+    },
+    "textures": [
+      {
+        "name": "grain",
+        "value": "SVG feTurbulence fractalNoise, baseFrequency .85, 2 octaves, 220px tile, warm off-white at low alpha (CSS var --grain)",
+        "purpose": "Aggregate grain on every asphalt surface (page, lanes, roads)."
+      }
+    ],
+    "shadows": [
+      {
+        "name": "vehicle",
+        "value": "filter: drop-shadow(0 6px 6px rgb(0 0 0 / 0.45))",
+        "purpose": "Trucks only; rotated road truck uses drop-shadow(-5px 0 5px rgb(0 0 0 / 0.45))."
+      },
+      {
+        "name": "painted-box",
+        "value": "0 6px 18px -8px rgb(0 0 0 / 0.6)",
+        "purpose": "Hero tap-to-call box."
+      },
+      {
+        "name": "contact-slab",
+        "value": "0 18px 40px -24px rgb(0 0 0 / 0.7)",
+        "purpose": "Yellow contact panel."
+      },
+      {
+        "name": "post",
+        "value": "0 2px 3px rgb(0 0 0 / 0.5)",
+        "purpose": "Leitpfosten head."
+      }
+    ],
+    "focus": [
+      {
+        "name": "focus-on-asphalt",
+        "value": "outline: 3px solid #f3c300; outline-offset: 3px; border-radius: 2px",
+        "purpose": "Global focus ring."
+      },
+      {
+        "name": "focus-on-yellow",
+        "value": "outline: 3px solid #1d1c19",
+        "purpose": "Focus inside the contact panel and on fields (offset 1px)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Braking/arrival ease: hero truck entry, all 150ms hover colour transitions."
+      },
+      {
+        "name": "hover",
+        "value": "150ms",
+        "purpose": "Colour/background/border transitions on controls."
+      },
+      {
+        "name": "hero-truck-entry",
+        "value": "1.8s, delay 0.15s, x -115% to 0 (Motion, self-hosted)",
+        "purpose": "Truck drives into the hero lane on load."
+      },
+      {
+        "name": "lane-dash-loop",
+        "value": "0.9s linear infinite, background-position -9rem",
+        "purpose": "Hero centre dashes scroll to imply speed."
+      },
+      {
+        "name": "road-follow",
+        "value": "lerp 0.09 per frame toward viewport-centre target",
+        "purpose": "Scroll-linked vertical road truck; brake lights on at the stop line."
+      },
+      {
+        "name": "shuttle-pendel",
+        "value": "7s cubic-bezier(0.45, 0, 0.55, 1) infinite, dwell 6% at each end, scaleX(-1) turn",
+        "purpose": "A-to-B shuttle; runs only while 40% in view."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "No smooth scroll, static dashes, shuttle parked at A, no hero entry, road truck jumps to position (still brakes at stop line)."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "40rem",
+        "purpose": "Below: header nav hidden, call pill kept; contact panel pulls left under the road."
+      },
+      {
+        "name": "md",
+        "value": "52rem",
+        "purpose": "Below: contact panel stacks."
+      },
+      {
+        "name": "lg",
+        "value": "64rem",
+        "purpose": "Above: two-column stages, single-line hero lettering, lead + callbox side by side."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Call Pill",
+      "kind": "button",
+      "refersTo": "button-call",
+      "description": "Header tap-to-call marking, always visible.",
+      "html": "<a class=\"ds-call\" href=\"tel:+4915114210193\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z\"/></svg><span>Anrufen</span></a>",
+      "css": ".ds-call{display:inline-flex;align-items:center;gap:.5rem;background:#f3c300;color:#1d1c19;font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:700;font-size:1.2rem;text-decoration:none;padding:.45rem .9rem;border-radius:2px;transition:background-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-call svg{width:1.1rem;height:1.1rem;fill:currentColor}.ds-call:hover{background:#eeece4}.ds-call:focus-visible{outline:3px solid #f3c300;outline-offset:3px}"
+    },
+    {
+      "name": "Hero Callbox",
+      "kind": "button",
+      "refersTo": "callbox-phone",
+      "description": "Yellow painted box with label and tabular phone number, first viewport.",
+      "html": "<a class=\"ds-callbox\" href=\"tel:+4915114210193\"><span class=\"ds-callbox-label\">Tour anfragen</span><span class=\"ds-callbox-number\">0151 14210193</span></a>",
+      "css": ".ds-callbox{display:inline-grid;background:#f3c300;color:#1d1c19;text-decoration:none;padding:.7rem 1.25rem .75rem;border-radius:2px;box-shadow:0 6px 18px -8px rgb(0 0 0 / .6);transition:background-color 150ms cubic-bezier(0.16,1,0.3,1),transform 150ms cubic-bezier(0.16,1,0.3,1)}.ds-callbox:hover{background:#eeece4}.ds-callbox:active{transform:translateY(1px)}.ds-callbox:focus-visible{outline:3px solid #f3c300;outline-offset:3px}.ds-callbox-label{font-family:Barlow,system-ui,sans-serif;font-weight:600;font-size:.875rem;color:#3d3a2e}.ds-callbox-number{font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:700;font-size:2.5rem;line-height:1.05;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Submit Button",
+      "kind": "button",
+      "refersTo": "button-submit",
+      "description": "Ink button inside the yellow contact panel; prepares a mailto.",
+      "html": "<div style=\"background:#f3c300;padding:1.5rem\"><button type=\"button\" class=\"ds-submit\">E-Mail vorbereiten</button></div>",
+      "css": ".ds-submit{font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:700;font-size:1.3rem;color:#eeece4;background:#1d1c19;border:0;border-radius:2px;padding:.6rem 1.4rem;cursor:pointer;transition:background-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-submit:hover{background:#3a382f}.ds-submit:focus-visible{outline:3px solid #1d1c19;outline-offset:3px}"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Label + input on the yellow panel, with error state.",
+      "html": "<div class=\"ds-panel\"><div class=\"ds-field\"><label for=\"ds-f\">Name oder Firma</label><input id=\"ds-f\"></div><div class=\"ds-field\"><label for=\"ds-g\">Ihre Anfrage</label><input id=\"ds-g\" aria-invalid=\"true\"><p class=\"ds-err\">Bitte beschreiben Sie kurz Ihre Tour.</p></div></div>",
+      "css": ".ds-panel{background:#f3c300;color:#1d1c19;padding:1.5rem;display:grid;gap:1rem;font-family:Barlow,system-ui,sans-serif}.ds-field{display:grid;gap:.35rem}.ds-field label{font-weight:600;font-size:.95rem}.ds-field input{font:inherit;font-size:1rem;color:#1d1c19;background:#fffdf3;border:2px solid rgb(29 28 25 / .55);border-radius:2px;padding:.6rem .75rem;transition:border-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-field input:hover{border-color:#1d1c19}.ds-field input:focus-visible{outline:3px solid #1d1c19;outline-offset:1px;border-color:#1d1c19}.ds-field [aria-invalid=\"true\"]{border-color:#8f1d0b}.ds-err{margin:0;font-size:.9rem;font-weight:600;color:#7a1909}"
+    },
+    {
+      "name": "Top Navigation",
+      "kind": "nav",
+      "refersTo": "nav-top",
+      "description": "Sticky deep-asphalt bar: wordmark, condensed links, yellow call pill.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-mark\" href=\"#\">SPN-Transporte</a><nav><a href=\"#\">Leistungen</a><a href=\"#\">Über uns</a><a href=\"#\">Kontakt</a></nav><a class=\"ds-top-call\" href=\"#\">Anrufen</a></header>",
+      "css": ".ds-top{display:flex;align-items:center;gap:1.5rem;padding:.75rem 1.5rem;background:#222220;border-bottom:1px solid #3a3a37;color:#eeece4}.ds-mark{font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:800;font-size:1.6rem;line-height:1;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;color:#eeece4}.ds-top nav{margin-left:auto;display:flex;gap:2rem}.ds-top nav a{font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:600;font-size:1.2rem;letter-spacing:.02em;text-decoration:none;color:#bdbab0;transition:color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-top nav a:hover{color:#eeece4}.ds-top a:focus-visible{outline:3px solid #f3c300;outline-offset:3px}.ds-top-call{background:#f3c300;color:#1d1c19;font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:700;font-size:1.2rem;text-decoration:none;padding:.45rem .9rem;border-radius:2px}.ds-top-call:hover{background:#eeece4}"
+    },
+    {
+      "name": "Lane with Truck",
+      "kind": "custom",
+      "refersTo": "road-vertical",
+      "description": "Signature: top-down lane band with paint edges, moving centre dashes, lane arrow and the Zugmaschine symbol.",
+      "html": "<div class=\"ds-lane\"><div class=\"ds-lane-dashes\"></div><svg class=\"ds-lane-truck\" viewBox=\"0 -4 248 48\" aria-hidden=\"true\"><rect x=\"0\" y=\"1\" width=\"200\" height=\"38\" rx=\"2\" fill=\"#8e908b\"/><g stroke=\"#6f716c\" stroke-width=\"1.5\"><path d=\"M20 2v36M40 2v36M60 2v36M80 2v36M100 2v36M120 2v36M140 2v36M160 2v36M180 2v36\"/></g><rect x=\"0\" y=\"1\" width=\"200\" height=\"38\" rx=\"2\" fill=\"none\" stroke=\"#5d5f5a\" stroke-width=\"2\"/><rect x=\"-2\" y=\"3\" width=\"4\" height=\"8\" rx=\"1\" fill=\"#7a2416\"/><rect x=\"-2\" y=\"29\" width=\"4\" height=\"8\" rx=\"1\" fill=\"#7a2416\"/><rect x=\"200\" y=\"15\" width=\"6\" height=\"10\" fill=\"#1d1c19\"/><rect x=\"205\" y=\"0\" width=\"38\" height=\"40\" rx=\"5\" fill=\"#eeece4\"/><rect x=\"211\" y=\"6\" width=\"16\" height=\"28\" rx=\"2\" fill=\"#d6d3c8\"/><rect x=\"234\" y=\"3\" width=\"7\" height=\"34\" rx=\"2\" fill=\"#26323a\"/><rect x=\"231\" y=\"-4\" width=\"5\" height=\"4\" rx=\"1\" fill=\"#1d1c19\"/><rect x=\"231\" y=\"40\" width=\"5\" height=\"4\" rx=\"1\" fill=\"#1d1c19\"/><rect x=\"243\" y=\"4\" width=\"3\" height=\"6\" rx=\"1\" fill=\"#f3c300\"/><rect x=\"243\" y=\"30\" width=\"3\" height=\"6\" rx=\"1\" fill=\"#f3c300\"/></svg><svg class=\"ds-lane-arrow\" viewBox=\"0 0 120 40\" aria-hidden=\"true\"><path d=\"M0 15h78V3l42 17-42 17V25H0z\"/></svg></div>",
+      "css": ".ds-lane{position:relative;height:7rem;background:#313130;border-block:5px solid #eeece4;overflow:hidden}.ds-lane-dashes{position:absolute;left:0;right:0;top:50%;height:5px;transform:translateY(-50%);background:repeating-linear-gradient(90deg,#eeece4 0 4rem,transparent 4rem 9rem);animation:ds-lane .9s linear infinite}@keyframes ds-lane{to{background-position:-9rem 0}}.ds-lane-truck{position:absolute;left:6%;top:75%;width:14rem;transform:translateY(-50%);filter:drop-shadow(0 6px 6px rgb(0 0 0 / .45))}.ds-lane-arrow{position:absolute;right:8%;top:75%;width:7rem;aspect-ratio:3/1;fill:#eeece4;opacity:.92;transform:translateY(-50%)}@media (prefers-reduced-motion: reduce){.ds-lane-dashes{animation:none}}"
+    },
+    {
+      "name": "Leitpfosten and Kerb",
+      "kind": "custom",
+      "refersTo": "road-vertical",
+      "description": "Rhythm marks: top-down delineator opening each stage; vertical red/white racing kerb at the road edge, used once.",
+      "html": "<div class=\"ds-furniture\"><span class=\"ds-post\"></span><div class=\"ds-kerb\"></div></div>",
+      "css": ".ds-furniture{background:#2b2b29;padding:1.5rem;display:flex;gap:1.5rem;align-items:flex-start;height:12rem}.ds-post{display:block;width:.7rem;height:.7rem;background:radial-gradient(circle,#e0571f 0 .15rem,#eeece4 .17rem);border-radius:1px;box-shadow:0 2px 3px rgb(0 0 0 / .5)}.ds-kerb{width:.65rem;height:100%;background:repeating-linear-gradient(180deg,#c8331f 0 2.75rem,#eeece4 2.75rem 5.5rem)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Die Fahrbahn",
+    "overview": "The whole site is a stretch of road seen from directly above. The ground is warm dark asphalt with a fine aggregate grain; everything that speaks is road paint. Headlines are tall white stencil-like lettering laid onto the tarmac, lanes are dashed white lines, and the visitor follows a top-down Zugmaschine with a Planenauflieger as it drives down a vertical road beside the content and brakes at a white stop line in front of the contact block. Actions are never \"buttons\" in a generic sense: they are Baustellen-gelb temporary marking, the yellow that overrides white paint on a German road.\n\nDensity is low and sequential: one section at a time, each a \"stage\" beside the road, each opened by a Leitpfosten seen from above. Ornament is rationed to things a road actually carries: dashed lines, arrows, a stop line, delineator posts, and (once, for the motorsport story) a red/white racing kerb along the road edge. Nothing is decorative without being road furniture.\n\nMotion has road grammar: steady speed, ease-out braking, no bounce, no spring. Reduced motion stops everything that loops and lets the truck jump to its position rather than drive.",
+    "keyCharacteristics": [
+      "Asphalt ground with SVG fractal-noise grain on every road surface.",
+      "White road paint for text and line work; yellow only for actions and the contact panel.",
+      "Condensed signage display face (Barlow Condensed 600/700/800) over a plain reading sans (Barlow 400/500/600).",
+      "A vertical road with a scroll-linked truck that stops at a stop line before Kontakt.",
+      "Near-square corners (2px) everywhere: painted marking, not soft UI.",
+      "All fonts and the motion library self-hosted; no third-party requests."
+    ],
+    "rules": [
+      {
+        "name": "The Temporary Marking Rule",
+        "body": "Yellow means \"act here\". It is used for calls to action and the contact panel, never for decoration, headings or illustration (the truck's yellow front indicators are the one exception and live inside the drawing).",
+        "section": "colors"
+      },
+      {
+        "name": "The Paint Only Rule",
+        "body": "Text and line work on asphalt are Road Paint or Worn Paint. No other hue writes on the road.",
+        "section": "colors"
+      },
+      {
+        "name": "The Red Is Rare Rule",
+        "body": "Reflector orange and kerb red appear only as road furniture (delineator dot, kerb stripe, brake light). Never as text, backgrounds or state colours.",
+        "section": "colors"
+      },
+      {
+        "name": "The Stencil Is Uppercase Rule",
+        "body": "Uppercase is reserved for 800-weight painted lettering (hero, motto, legal h1). Headlines and everything else stay in sentence case.",
+        "section": "typography"
+      },
+      {
+        "name": "The Numbers Line Up Rule",
+        "body": "Phone numbers always use the condensed face with `font-variant-numeric: tabular-nums`.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lies On The Road Rule",
+        "body": "Only objects that would physically sit on the road (vehicles, posts, the yellow boxes) get shadow. Paint never casts shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do lay every text and line on asphalt in Road Paint (`#eeece4`) or Worn Paint (`#bdbab0`) over the grain.",
+      "Do make every action Baustellen-gelb (`#f3c300`) with Ink text and 2px corners, hovering to Road Paint.",
+      "Do keep the phone number tap-to-call and visible without scroll on every screen (header pill on mobile, callbox in the hero).",
+      "Do build new figures from the road vocabulary: lane bands with paint edges, dashed centre lines, the straight arrow, the top-down truck symbol, Leitpfosten, stop line.",
+      "Do move vehicles at steady road speed and brake with `cubic-bezier(0.16, 1, 0.3, 1)`; pause looping motion when it is off screen and stop it under reduced motion.",
+      "Do self-host every font and script."
+    ],
+    "donts": [
+      "Don't use yellow for decoration, headings or illustration fills.",
+      "Don't round controls beyond 2px or use pill shapes.",
+      "Don't add bounce, spring or overshoot to any motion.",
+      "Don't put shadows on paint; only objects on the road cast them.",
+      "Don't use kerb red or reflector orange as text, background or state colour.",
+      "Don't use photography of trucks or highways; the world is drawn top-down.",
+      "Don't add invented figures, customer logos, testimonials or badges as visual proof."
+    ]
+  }
+}

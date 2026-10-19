@@ -134,7 +134,7 @@ components:
 
 The whole site is a stretch of road seen from directly above. The ground is warm dark asphalt with a fine aggregate grain; everything that speaks is road paint. Headlines are tall white stencil-like lettering laid onto the tarmac, lanes are dashed white lines, and the visitor follows a top-down Zugmaschine with a Planenauflieger as it drives down a vertical road beside the content and brakes at a white stop line in front of the contact block. Actions are never "buttons" in a generic sense: they are Baustellen-gelb temporary marking, the yellow that overrides white paint on a German road.
 
-Density is low and sequential: one section at a time, each a "stage" beside the road, each opened by a Leitpfosten seen from above. Ornament is rationed to things a road actually carries: dashed lines, arrows, a stop line, delineator posts, and (once, for the motorsport story) a red/white racing kerb. Nothing is decorative without being road furniture.
+Density is low and sequential: one section at a time, each a "stage" beside the road, each opened by a Leitpfosten seen from above. Ornament is rationed to things a road actually carries: dashed lines, arrows, a stop line, delineator posts, and (once, for the motorsport story) a red/white racing kerb along the road edge. Nothing is decorative without being road furniture.
 
 Motion has road grammar: steady speed, ease-out braking, no bounce, no spring. Reduced motion stops everything that loops and lets the truck jump to its position rather than drive.
 
@@ -156,7 +156,7 @@ A night-dark, warm-neutral road with one loud working colour (Baustellen-gelb) a
 
 ### Secondary
 - **Leitpfosten Reflector Orange** (`reflector`): only the round reflector dot in the top-down delineator that opens each stage.
-- **Kerb Red** (`kerb-red`): only the red/white racing-kerb stripe in the Über-uns close, the single nod to the motorsport roots.
+- **Kerb Red** (`kerb-red`): only the red/white racing-kerb stripe running along the road edge beside the Über-uns section, the single nod to the motorsport roots.
 - **Brake Light** (`brake-lit`): the truck's tail lights when it has stopped at the stop line (unlit state is a dark red baked into the truck symbol).
 
 ### Neutral
@@ -205,7 +205,7 @@ A night-dark, warm-neutral road with one loud working colour (Baustellen-gelb) a
 
 A single column of "stages" running beside a vertical road. The route container pads its left edge by gutter + road width + road offset, and the road sits absolutely in that margin at the gutter, full height of the route until the stop line. Stages are max 40rem by default; story, split and contact stages widen to 72rem and become two columns at 64rem (`minmax(0, 34-36rem) minmax(0, 1fr)`, column gap `clamp(3rem, 6vw, 6rem)`). Vertical rhythm per stage is `clamp(3.5rem, 10vh, 6.5rem)` top and bottom; contact gets more air on top (`clamp(4.5rem, 13vh, 8rem)`) so the stop line has room.
 
-The hero is a two-row grid at `100svh` minus the header: copy centred in the first row, a full-bleed horizontal lane in the second. At 64rem the lead and callbox sit side by side on one row under the claim.
+The hero is a two-row grid at `86svh` minus the header: copy anchored to the bottom of the first row, a full-bleed horizontal lane in the second, so the lane and truck are in view on load. At 64rem the lead and callbox sit side by side on one row under the claim.
 
 Breakpoints observed: 40rem (header nav hides, the call pill stays; contact panel pulls left to sit under the road), 52rem (contact panel stacks), 64rem (two-column stages, single-line hero lettering). Side gutter is `clamp(1rem, 4vw, 3rem)` everywhere.
 
@@ -259,7 +259,7 @@ Hard, painted geometry. Corners are 2px (`rounded.paint`) on every control, fiel
 - **Vertical road:** lane asphalt with 4px paint edges and a centre dash, ending in a white stop line placed just below the top of the Kontakt section (measured in JS). The truck is the same top-down symbol rotated 90°, follows the reading position (viewport centre) with a 0.09 lerp per frame, and lights its brake lights (`brake-lit`) when it reaches the stop line.
 - **Shuttle A↔B:** a short lane between two condensed 800 letters, the truck pendling across it (7s, `cubic-bezier(0.45, 0, 0.55, 1)`, dwell at each end, flipping direction with `scaleX(-1)`). It runs only while 40% visible.
 - **Leitpfosten:** a 0.7rem white square with an orange reflector dot, placed at the road edge at the top of each stage.
-- **Kerb:** a 0.9rem red/white stripe (2.75rem segments), used once, above the motto.
+- **Kerb:** a vertical 0.65rem red/white stripe (2.75rem segments) laid at the road edge, running the height of the Über-uns section (inset 2.5rem top and bottom). Used once.
 - **Truck symbol:** grey Planenauflieger with rib lines and dark-red tail lights, black coupling, Road Paint cab with roof panel, dark windscreen, black mirrors and yellow indicators; viewBox `0 -4 248 48`, driving direction right.
 
 ### Reduced Motion
