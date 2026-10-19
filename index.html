@@ -7,7 +7,8 @@
   <meta name="description" content="SPN-Transporte: familiengeführte Transportfirma mit Wurzeln im Motorsport und über 15 Jahren Erfahrung. Nahverkehr und Shuttle-Verkehre mit deutschsprachigen, regionalen Fahrern. Telefon 0151 14210193.">
   <meta name="theme-color" content="#2b2b29">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="assets/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/saira-latin-wdth-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -24,13 +25,13 @@
         <rect x="-2" y="3" width="4" height="8" rx="1" style="fill: var(--brake, #7a2416)"/>
         <rect x="-2" y="29" width="4" height="8" rx="1" style="fill: var(--brake, #7a2416)"/>
         <rect x="200" y="15" width="6" height="10" fill="#1d1c19"/>
-        <rect x="205" y="0" width="38" height="40" rx="5" fill="#eeece4"/>
-        <rect x="211" y="6" width="16" height="28" rx="2" fill="#d6d3c8"/>
+        <rect x="205" y="0" width="38" height="40" rx="5" fill="#c9ccce"/>
+        <rect x="211" y="6" width="16" height="28" rx="2" fill="#aeb2b5"/>
         <rect x="234" y="3" width="7" height="34" rx="2" fill="#26323a"/>
         <rect x="231" y="-4" width="5" height="4" rx="1" fill="#1d1c19"/>
         <rect x="231" y="40" width="5" height="4" rx="1" fill="#1d1c19"/>
-        <rect x="243" y="4" width="3" height="6" rx="1" fill="#f3c300"/>
-        <rect x="243" y="30" width="3" height="6" rx="1" fill="#f3c300"/>
+        <rect x="243" y="4" width="3" height="6" rx="1" fill="#fff6d8"/>
+        <rect x="243" y="30" width="3" height="6" rx="1" fill="#fff6d8"/>
       </symbol>
       <symbol id="arrow-straight" viewBox="0 0 120 40">
         <path d="M0 15h78V3l42 17-42 17V25H0z"/>
@@ -41,10 +42,11 @@
   <a class="skip" href="#inhalt">Zum Inhalt springen</a>
 
   <header class="top">
-    <a class="mark" href="#top" aria-label="SPN-Transporte, zum Seitenanfang">SPN-Transporte</a>
+    <a class="mark wordmark" href="#top" aria-label="SPN-Transporte, zum Seitenanfang">SPN-Transporte</a>
     <nav aria-label="Hauptnavigation">
       <ul>
         <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#fuhrpark">Fuhrpark</a></li>
         <li><a href="#betrieb">Über uns</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
@@ -55,7 +57,7 @@
   <main id="inhalt">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero__copy">
-        <h1 id="hero-title" class="painted"><span>SPN-</span><span>Transporte</span></h1>
+        <h1 id="hero-title" class="wordmark"><span>SPN-</span><span>Transporte</span></h1>
         <p class="claim">Ihr zuverlässiger Transportpartner in Deutschland und Europa</p>
         <div class="hero__row">
         <p class="lead">Familiengeführt, seit über 15 Jahren auf der Straße. Mit deutschsprachigen Fahrern fahren wir sicher, flexibel und termingerecht.</p>
@@ -68,6 +70,9 @@
         </div>
         </div>
       </div>
+      <figure class="hero__photo">
+        <img src="assets/img/fuhrpark-nacht-2000.webp" srcset="assets/img/fuhrpark-nacht-1000.webp 1000w, assets/img/fuhrpark-nacht-2000.webp 2000w" sizes="100vw" width="2000" height="1500" alt="Sechs silberne Mercedes-Benz Actros von SPN-Transporte nachts nebeneinander auf dem Hof, die Sterne am Kühlergrill leuchten.">
+      </figure>
       <div class="lane" aria-hidden="true">
         <div class="lane__dashes"></div>
         <svg class="lane__arrow"><use href="#arrow-straight"/></svg>
@@ -100,6 +105,22 @@
           </div>
           <figcaption><span>Laden</span><span>Entladen</span></figcaption>
         </figure>
+      </section>
+
+      <section class="stage stage--fleet" id="fuhrpark" aria-labelledby="fleet-title">
+        <h2 id="fleet-title">Unser Fuhrpark</h2>
+        <p>Silberne Mercedes-Benz Actros, gepflegt und mit unserem Namen am Kühlergrill. So stehen sie auf unserem Hof, wenn sie nicht unterwegs sind.</p>
+        <div class="fleet">
+          <figure class="fleet__wide">
+            <img src="assets/img/hof-1440.webp" srcset="assets/img/hof-800.webp 800w, assets/img/hof-1440.webp 1440w" sizes="(min-width: 64rem) 50vw, 100vw" width="1440" height="1080" loading="lazy" alt="Fünf silberne Mercedes-Benz Actros Zugmaschinen von SPN-Transporte in einer Reihe vor einer Halle.">
+          </figure>
+          <figure class="fleet__tall">
+            <img src="assets/img/actros-e-900.webp" srcset="assets/img/actros-e-540.webp 540w, assets/img/actros-e-900.webp 900w" sizes="(min-width: 64rem) 22vw, 50vw" width="900" height="1200" loading="lazy" alt="Mercedes-Benz Actros L von vorn, mit SPN-Transporte-Schriftzug am Kühlergrill.">
+          </figure>
+          <figure class="fleet__tall">
+            <img src="assets/img/actros-v-900.webp" srcset="assets/img/actros-v-540.webp 540w, assets/img/actros-v-900.webp 900w" sizes="(min-width: 64rem) 22vw, 50vw" width="900" height="1200" loading="lazy" alt="Mercedes-Benz Actros von vorn, mit SPN-Transporte-Schriftzug am Kühlergrill.">
+          </figure>
+        </div>
       </section>
 
       <section class="stage stage--story" id="betrieb" aria-labelledby="betrieb-title">

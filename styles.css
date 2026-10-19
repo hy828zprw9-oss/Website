@@ -17,6 +17,14 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "Saira";
+  src: url("assets/fonts/saira-latin-wdth-italic.woff2") format("woff2-variations"), url("assets/fonts/saira-latin-wdth-italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 100 900;
+  font-stretch: 50% 125%;
+  font-display: swap;
+}
+@font-face {
   font-family: "Barlow";
   src: url("assets/fonts/barlow-latin-400-normal.woff2") format("woff2");
   font-weight: 400;
@@ -41,13 +49,16 @@
   --asphalt-lane: #313130;
   --paint: #eeece4;
   --paint-dim: #bdbab0;
-  --yellow: #f3c300;
-  --yellow-deep: #d9ad00;
-  --ink: #1d1c19;
-  --ink-soft: #3d3a2e;
+  --red: #d0111f;
+  --red-deep: #a50c17;
+  --on-red: #ffffff;
+  --silver: #c9ccce;
+  --silver-light: #e3e5e6;
+  --ink: #16181a;
+  --ink-soft: #3b3f43;
   --reflector: #e0571f;
-  --kerb: #c8331f;
 
+  --brand: "Saira", "Barlow Condensed", sans-serif;
   --display: "Barlow Condensed", "Arial Narrow", sans-serif;
   --text: "Barlow", system-ui, sans-serif;
 
@@ -79,12 +90,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-::selection { background: var(--yellow); color: var(--ink); }
+::selection { background: var(--red); color: var(--on-red); }
 
 a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
 
 :focus-visible {
-  outline: 3px solid var(--yellow);
+  outline: 3px solid var(--paint);
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -97,8 +108,8 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
   top: -4rem;
   z-index: 20;
   padding: 0.6rem 1rem;
-  background: var(--yellow);
-  color: var(--ink);
+  background: var(--red);
+  color: var(--on-red);
   font-weight: 600;
 }
 .skip:focus { top: 0.75rem; }
@@ -118,13 +129,9 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
 }
 
 .mark {
-  font-family: var(--display);
-  font-weight: 800;
-  font-size: 1.6rem;
-  line-height: 1;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
   text-decoration: none;
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  line-height: 1;
 }
 
 .top nav { margin-left: auto; }
@@ -144,8 +151,8 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--yellow);
-  color: var(--ink);
+  background: var(--red);
+  color: var(--on-red);
   font-family: var(--display);
   font-weight: 700;
   font-size: 1.2rem;
@@ -154,7 +161,7 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
   border-radius: 2px;
   transition: background-color 150ms var(--ease-out);
 }
-.call:hover { background: var(--paint); }
+.call:hover { background: var(--red-deep); }
 .call svg { width: 1.1rem; height: 1.1rem; fill: currentColor; }
 
 @media (max-width: 40rem) {
@@ -180,23 +187,31 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
   max-width: 46rem;
 }
 
-.painted {
-  margin: 0;
-  font-family: var(--display);
-  font-weight: 800;
+/* Schriftzug wie auf Auflieger und Fahrerhaus: rot, kursiv, breit, schwarz umrandet */
+.wordmark {
+  font-family: var(--brand);
+  font-style: italic;
+  font-weight: 850;
+  font-stretch: 125%;
   text-transform: uppercase;
-  font-size: clamp(3.6rem, 17.5vw, 8.5rem);
-  line-height: 0.84;
-  letter-spacing: 0.01em;
-  color: var(--paint);
+  letter-spacing: -0.005em;
+  color: var(--red);
+  -webkit-text-stroke: 0.06em #050505;
+  paint-order: stroke fill;
 }
-.painted span { display: block; }
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 11.5vw, 6.75rem);
+  line-height: 0.95;
+}
+.hero h1 span { display: block; }
 
 .hero__row { display: grid; gap: 0; }
 
 @media (min-width: 64rem) {
   .hero__copy { max-width: none; }
-  .painted span { display: inline; }
+  .hero h1 span { display: inline; }
   .hero__row {
     grid-template-columns: minmax(0, 30rem) auto;
     align-items: end;
@@ -233,20 +248,20 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
 
 .callbox__phone {
   display: grid;
-  background: var(--yellow);
-  color: var(--ink);
+  background: var(--red);
+  color: var(--on-red);
   text-decoration: none;
   padding: 0.7rem 1.25rem 0.75rem;
   border-radius: 2px;
   box-shadow: 0 6px 18px -8px rgb(0 0 0 / 0.6);
   transition: background-color 150ms var(--ease-out), transform 150ms var(--ease-out);
 }
-.callbox__phone:hover { background: var(--paint); }
+.callbox__phone:hover { background: var(--red-deep); }
 .callbox__phone:active { transform: translateY(1px); }
 .callbox__label {
   font-weight: 600;
   font-size: 0.875rem;
-  color: var(--ink-soft);
+  color: rgb(255 255 255 / 0.86);
 }
 .callbox__number {
   font-family: var(--display);
@@ -257,7 +272,29 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
 }
 
 .callbox__mail { color: var(--paint); font-weight: 500; overflow-wrap: anywhere; }
-.callbox__mail:hover { color: var(--yellow); }
+.callbox__mail:hover { color: var(--silver); }
+
+/* Fuhrpark-Foto im Startbereich */
+.hero__photo {
+  position: relative;
+  margin: 0;
+  height: clamp(11rem, 32vh, 22rem);
+  max-height: 56vw;
+  overflow: hidden;
+  background: #07080c;
+}
+.hero__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 60%;
+}
+
+@media (max-width: 40rem) {
+  .hero__photo { height: auto; max-height: none; aspect-ratio: 16 / 9; }
+  .hero__photo img { transform: scale(1.55); transform-origin: 50% 58%; }
+}
 
 /* Fahrspur im Startbereich */
 
@@ -483,6 +520,41 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
 }
 .facts svg { flex: none; width: 3rem; height: 1rem; margin-top: 0.3em; fill: var(--paint); }
 
+/* Fuhrpark */
+
+.fleet {
+  display: grid;
+  gap: 0.75rem;
+  margin: 2rem 0 0;
+  grid-template-columns: 1fr 1fr;
+}
+.fleet figure { margin: 0; }
+.fleet img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  background: var(--asphalt-deep);
+}
+.fleet__wide { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+.fleet__tall { aspect-ratio: 3 / 4; }
+.fleet figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--paint-dim);
+}
+.fleet__wide figcaption, .fleet__tall figcaption { display: none; }
+.fleet-note { margin: 0.9rem 0 0; font-size: 0.95rem; color: var(--paint-dim); }
+
+.stage--fleet { max-width: 72rem; }
+
+@media (min-width: 64rem) {
+  .fleet { grid-template-columns: 2.2fr 1fr 1fr; align-items: stretch; }
+  .fleet__wide { grid-column: auto; aspect-ratio: auto; }
+  .fleet__tall { aspect-ratio: 3 / 4; }
+}
+
 /* Über uns */
 
 .stage--story { max-width: 72rem; }
@@ -524,7 +596,7 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
   bottom: 2.5rem;
   left: calc(-1 * clamp(1.25rem, 4vw, 4rem));
   width: 0.65rem;
-  background: repeating-linear-gradient(180deg, var(--kerb) 0 2.75rem, var(--paint) 2.75rem 5.5rem);
+  background: repeating-linear-gradient(180deg, var(--red) 0 2.75rem, var(--paint) 2.75rem 5.5rem);
 }
 
 .motto blockquote { margin: 0; }
@@ -566,7 +638,7 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
   gap: 0;
   margin-top: 2.25rem;
-  background: var(--yellow);
+  background: var(--silver) linear-gradient(180deg, var(--silver-light), var(--silver) 55%);
   color: var(--ink);
   border-radius: 2px;
   box-shadow: 0 18px 40px -24px rgb(0 0 0 / 0.7);
@@ -641,15 +713,15 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
   font-family: var(--display);
   font-weight: 700;
   font-size: 1.3rem;
-  color: var(--paint);
-  background: var(--ink);
+  color: var(--on-red);
+  background: var(--red);
   border: 0;
   border-radius: 2px;
   padding: 0.6rem 1.4rem;
   cursor: pointer;
   transition: background-color 150ms var(--ease-out);
 }
-.submit:hover { background: #3a382f; }
+.submit:hover { background: var(--red-deep); }
 
 .form__note { margin: 0; font-size: 0.875rem; color: var(--ink-soft); }
 
@@ -704,8 +776,8 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
 }
 .legal p, .legal li { color: var(--paint-dim); }
 .legal .todo {
-  background: var(--yellow);
-  color: var(--ink);
+  background: var(--red);
+  color: var(--on-red);
   padding: 0 0.3em;
   font-weight: 600;
 }
