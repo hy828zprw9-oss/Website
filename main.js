@@ -35,21 +35,28 @@
     }, [0, 0.06, 0.28, 1]);
 
     bind(scene.querySelector(".scene__truck"), {
-      opacity: [0, 1, 1, 1, 0],
+      opacity: [0, 1, 1, 1, 1],
       transform: [
         `translateY(${startY}) scale(${startScale})`,
         `translateY(${startY}) scale(${startScale})`,
         "translateY(-8vh) scale(0.72)",
         "translateY(0vh) scale(1)",
-        "translateY(30vh) scale(1.9)",
+        "translateY(75vh) scale(2.7)",
       ],
-      filter: ["blur(2px)", "blur(0px)", "blur(0px)", "blur(0px)", "blur(6px)"],
+      // Nachtlicht: das Tagfoto wird an die Szene angepasst und hellt sich beim Näherkommen auf
+      filter: [
+        "brightness(0.62) saturate(0.75) hue-rotate(-8deg) blur(1.5px)",
+        "brightness(0.66) saturate(0.78) hue-rotate(-8deg) blur(0px)",
+        "brightness(0.8) saturate(0.88) hue-rotate(-4deg) blur(0px)",
+        "brightness(0.95) saturate(0.95) hue-rotate(0deg) blur(0px)",
+        "brightness(1) saturate(1) hue-rotate(0deg) blur(3px)",
+      ],
     }, [0, 0.1, 0.4, 0.66, 1]);
 
     bind(scene.querySelector(".scene__claim"), {
-      opacity: [0, 0, 1, 1, 0],
-      transform: ["translateY(3vh)", "translateY(3vh)", "translateY(0)", "translateY(0)", "translateY(-3vh)"],
-    }, [0, 0.36, 0.5, 0.84, 0.96]);
+      opacity: [0, 0, 1, 1, 1],
+      transform: ["translateY(3vh)", "translateY(3vh)", "translateY(0)", "translateY(0)", "translateY(-2vh)"],
+    }, [0, 0.36, 0.5, 0.9, 1]);
   }
 
   // Aussage: Wörter werden beim Scrollen hell

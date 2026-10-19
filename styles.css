@@ -121,6 +121,8 @@ img { max-width: 100%; }
 }
 
 .nav__mark { font-size: 1.05rem; line-height: 1; }
+/* auf Schwarz verschwindet die schwarze Kontur ohnehin: klares Rot ohne Rand */
+.nav__mark { -webkit-text-stroke: 0; }
 
 .nav nav { margin-left: auto; }
 .nav ul { display: flex; gap: 1.75rem; margin: 0; padding: 0; list-style: none; }
@@ -176,7 +178,7 @@ img { max-width: 100%; }
   height: 100svh;
   min-height: 34rem;
 }
-.has-motion .scene { height: 280vh; }
+.has-motion .scene { height: 240vh; }
 
 .scene__stage {
   position: sticky;
@@ -283,7 +285,7 @@ html:not(.has-motion) .scene__claim { display: none; }
 @media (max-width: 48rem) {
   .scene__truck { width: 68vw; margin-left: -34vw; bottom: 3vh; }
   html:not(.has-motion) .scene__truck { width: 52vw; right: 4vw; }
-  .scene__photo { inset: 50svh 0 0; }
+  .scene__photo { inset: 36svh 0 0; }
   .scene__photo img { object-position: 50% 55%; }
 }
 
@@ -365,19 +367,22 @@ html:not(.has-motion) .scene__claim { display: none; }
   width: 100%;
   height: 72%;
   object-fit: cover;
-  object-position: 50% 60%;
+  object-position: 50% 88%;
   -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 30%);
   mask-image: linear-gradient(180deg, transparent 0%, #000 30%);
 }
 
-.card--shuttle { justify-content: space-between; }
+.card--shuttle { justify-content: flex-start; }
 
-.shuttle { margin: 0; padding: 0 clamp(1.75rem, 4vw, 2.75rem) clamp(2.5rem, 6vw, 4rem); }
+.shuttle {
+  margin: auto 0 0;
+  padding: 0 clamp(1.75rem, 4vw, 2.75rem) clamp(3rem, 8vw, 5.5rem);
+}
 .shuttle__track { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; }
 .shuttle__point {
   display: grid;
   justify-items: center;
-  font-size: clamp(2.75rem, 5vw, 4rem);
+  font-size: clamp(3.5rem, 7vw, 6rem);
   font-weight: 650;
   line-height: 1;
   letter-spacing: -0.04em;
@@ -392,8 +397,8 @@ html:not(.has-motion) .scene__claim { display: none; }
 .shuttle__line {
   container-type: inline-size;
   position: relative;
-  height: 4px;
-  margin-bottom: 1.6rem;
+  height: 6px;
+  margin-bottom: 2rem;
   border-radius: 2px;
   background: var(--line-light);
 }
@@ -401,9 +406,9 @@ html:not(.has-motion) .scene__claim { display: none; }
   position: absolute;
   top: 50%;
   left: 0;
-  width: 1.25rem;
-  height: 1.25rem;
-  margin-top: -0.625rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-top: -0.875rem;
   border-radius: 50%;
   background: var(--red);
   box-shadow: 0 0 0 6px rgb(208 17 31 / 0.18);
@@ -413,7 +418,7 @@ html:not(.has-motion) .scene__claim { display: none; }
 .shuttle.is-running .shuttle__dot { animation-play-state: running; }
 @keyframes shuttle {
   0%, 8% { transform: translateX(0); }
-  46%, 54% { transform: translateX(calc(100cqw - 1.25rem)); }
+  46%, 54% { transform: translateX(calc(100cqw - 1.75rem)); }
   92%, 100% { transform: translateX(0); }
 }
 
