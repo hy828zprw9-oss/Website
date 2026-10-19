@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-19T11:38:53+00:00",
+  "generatedAt": "2026-10-19T11:52:20+00:00",
   "title": "Design System: SPN-Transporte",
   "extensions": {
     "colorMeta": {
@@ -26,7 +26,7 @@
         "displayName": "Deep Asphalt",
         "canonical": "#222220",
         "oklch": "oklch(25.1% 0.004 106.7)",
-        "purpose": "Sticky header and footer bands (road shoulder).",
+        "purpose": "Sticky header and footer bands (road shoulder); fleet photo placeholder ground.",
         "tonalRamp": [
           "#0b0b09",
           "#242422",
@@ -60,7 +60,7 @@
         "displayName": "Road Paint",
         "canonical": "#eeece4",
         "oklch": "oklch(94.2% 0.011 95.2)",
-        "purpose": "Text on asphalt, lane edges, dashes, stop line, arrows, hero lettering; hover of yellow controls.",
+        "purpose": "Text and line work on asphalt: lane edges, dashes, stop line, arrows; global focus ring.",
         "tonalRamp": [
           "#0d0b06",
           "#26241e",
@@ -89,89 +89,140 @@
           "#f2eee4"
         ]
       },
-      "baustellen-yellow": {
+      "red": {
         "role": "primary",
-        "displayName": "Baustellen-gelb",
-        "canonical": "#f3c300",
-        "oklch": "oklch(83.6% 0.171 90.7)",
-        "purpose": "Every action and the contact panel; focus ring and selection on asphalt.",
+        "displayName": "SPN Red",
+        "canonical": "#d0111f",
+        "oklch": "oklch(54.4% 0.215 26.3)",
+        "purpose": "Company lettering colour: wordmark fill and every action (call pill, callbox, submit, skip link, selection, legal [todo]); red half of the kerb.",
         "tonalRamp": [
-          "#120a00",
-          "#2e2300",
-          "#4e3e03",
-          "#715b12",
-          "#967a1a",
-          "#bf9a16",
-          "#eabf33",
-          "#fdeec2"
+          "#240000",
+          "#4c0000",
+          "#7e0000",
+          "#b30004",
+          "#d33c39",
+          "#e7746b",
+          "#f9a9a0",
+          "#ffe5e0"
         ]
       },
-      "baustellen-yellow-deep": {
+      "red-deep": {
         "role": "primary",
-        "displayName": "Deep Baustellen-gelb",
-        "canonical": "#d9ad00",
-        "oklch": "oklch(76.6% 0.156 90.3)",
-        "purpose": "Defined darker step of the yellow; held in reserve, unused by current rules.",
+        "displayName": "Deep SPN Red",
+        "canonical": "#a50c17",
+        "oklch": "oklch(45.9% 0.181 26.3)",
+        "purpose": "Hover/pressed state of every red control.",
         "tonalRamp": [
-          "#120a00",
-          "#2e2200",
-          "#4f3d01",
-          "#725b0f",
-          "#977916",
-          "#c0990c",
-          "#ebbf2d",
-          "#feeec1"
+          "#240000",
+          "#4c0000",
+          "#7e0000",
+          "#a9141b",
+          "#d0413c",
+          "#e7746b",
+          "#f9a9a0",
+          "#ffe5e1"
+        ]
+      },
+      "on-red": {
+        "role": "primary",
+        "displayName": "On Red",
+        "canonical": "#ffffff",
+        "oklch": "oklch(100% 0 0)",
+        "purpose": "Text and icons on red; callbox label at 86% white.",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#222222",
+          "#3d3d3d",
+          "#5b5b5b",
+          "#7a7a7a",
+          "#9b9b9b",
+          "#c1c1c1",
+          "#eeeeee"
+        ]
+      },
+      "wordmark-outline": {
+        "role": "primary",
+        "displayName": "Wordmark Outline",
+        "canonical": "#050505",
+        "oklch": "oklch(11.5% 0 0)",
+        "purpose": "0.06em black text stroke under the wordmark fill; nowhere else.",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#222222",
+          "#3d3d3d",
+          "#5b5b5b",
+          "#7a7a7a",
+          "#9b9b9b",
+          "#c1c1c1",
+          "#eeeeee"
+        ]
+      },
+      "silver": {
+        "role": "secondary",
+        "displayName": "Fleet Silver",
+        "canonical": "#c9ccce",
+        "oklch": "oklch(84.3% 0.004 236.5)",
+        "purpose": "Contact slab, drawn truck cab, hover of the hero e-mail link.",
+        "tonalRamp": [
+          "#090b0d",
+          "#202223",
+          "#3b3d3f",
+          "#595b5d",
+          "#787b7c",
+          "#999c9e",
+          "#bec1c3",
+          "#eceff1"
+        ]
+      },
+      "silver-light": {
+        "role": "secondary",
+        "displayName": "Light Silver",
+        "canonical": "#e3e5e6",
+        "oklch": "oklch(92.1% 0.003 228.8)",
+        "purpose": "Top of the contact slab gradient (Light Silver to Silver at 55%).",
+        "tonalRamp": [
+          "#0a0b0c",
+          "#202223",
+          "#3c3d3e",
+          "#595b5c",
+          "#797b7b",
+          "#9a9c9c",
+          "#bfc1c2",
+          "#edeff0"
         ]
       },
       "ink": {
         "role": "neutral",
         "displayName": "Ink",
-        "canonical": "#1d1c19",
-        "oklch": "oklch(22.6% 0.006 91.6)",
-        "purpose": "Text on yellow; submit button ground.",
+        "canonical": "#16181a",
+        "oklch": "oklch(20.8% 0.005 248.1)",
+        "purpose": "Text on silver; contact focus rings, field borders, hint dashes.",
         "tonalRamp": [
-          "#0c0b08",
-          "#252421",
-          "#41403c",
-          "#5f5d5a",
-          "#7e7d79",
-          "#a09e9a",
-          "#c5c4c0",
-          "#f0eeea"
+          "#0a0b0d",
+          "#202224",
+          "#3b3d40",
+          "#595b5e",
+          "#787b7d",
+          "#999c9e",
+          "#bec1c4",
+          "#eceff2"
         ]
       },
       "ink-soft": {
         "role": "neutral",
         "displayName": "Soft Ink",
-        "canonical": "#3d3a2e",
-        "oklch": "oklch(34.8% 0.020 95.6)",
-        "purpose": "Small labels and notes on yellow.",
+        "canonical": "#3b3f43",
+        "oklch": "oklch(36.5% 0.009 248.1)",
+        "purpose": "Small labels on silver, optional markers, form note.",
         "tonalRamp": [
-          "#0e0b03",
-          "#272419",
-          "#434034",
-          "#615e51",
-          "#817d70",
-          "#a29f91",
-          "#c8c4b6",
-          "#f2efe0"
-        ]
-      },
-      "ink-hover": {
-        "role": "neutral",
-        "displayName": "Ink Hover",
-        "canonical": "#3a382f",
-        "oklch": "oklch(34.0% 0.015 96.8)",
-        "purpose": "Submit button hover.",
-        "tonalRamp": [
-          "#0d0b05",
-          "#26241c",
-          "#424037",
-          "#605e54",
-          "#807d73",
-          "#a19f94",
-          "#c7c4b9",
-          "#f1efe3"
+          "#080c0f",
+          "#1e2226",
+          "#3a3e42",
+          "#575b60",
+          "#767b7f",
+          "#979ca1",
+          "#bdc1c6",
+          "#eaeff4"
         ]
       },
       "reflector": {
@@ -189,23 +240,6 @@
           "#f96e3a",
           "#fbaf95",
           "#fee9e2"
-        ]
-      },
-      "kerb-red": {
-        "role": "secondary",
-        "displayName": "Kerb Red",
-        "canonical": "#c8331f",
-        "oklch": "oklch(55.0% 0.189 31.1)",
-        "purpose": "Red/white racing-kerb stripe along the road edge beside Über uns only.",
-        "tonalRamp": [
-          "#220000",
-          "#490500",
-          "#781205",
-          "#af1300",
-          "#d6422d",
-          "#fe6750",
-          "#feac9c",
-          "#fee9e5"
         ]
       },
       "brake-lit": {
@@ -242,12 +276,29 @@
           "#efefeb"
         ]
       },
+      "photo-night": {
+        "role": "neutral",
+        "displayName": "Night",
+        "canonical": "#07080c",
+        "oklch": "oklch(13.5% 0.009 272.5)",
+        "purpose": "Ground behind the hero fleet photo strip.",
+        "tonalRamp": [
+          "#0a0b0f",
+          "#202126",
+          "#3b3d42",
+          "#595b60",
+          "#787a80",
+          "#999ba1",
+          "#bfc1c7",
+          "#eceef5"
+        ]
+      },
       "field-paper": {
         "role": "neutral",
         "displayName": "Field Paper",
         "canonical": "#fffdf3",
         "oklch": "oklch(99.3% 0.013 97.4)",
-        "purpose": "Input and textarea ground inside the yellow panel.",
+        "purpose": "Input and textarea ground inside the silver contact slab.",
         "tonalRamp": [
           "#0d0b06",
           "#26241d",
@@ -264,7 +315,7 @@
         "displayName": "Error Ink",
         "canonical": "#7a1909",
         "oklch": "oklch(38.0% 0.134 31.9)",
-        "purpose": "Field error message text on yellow.",
+        "purpose": "Field error message text, on silver.",
         "tonalRamp": [
           "#210000",
           "#480600",
@@ -281,7 +332,7 @@
         "displayName": "Error Border",
         "canonical": "#8f1d0b",
         "oklch": "oklch(42.5% 0.152 31.7)",
-        "purpose": "Invalid field border on yellow.",
+        "purpose": "Invalid-field border, on silver.",
         "tonalRamp": [
           "#220000",
           "#490500",
@@ -295,13 +346,17 @@
       }
     },
     "typographyMeta": {
-      "display": {
-        "displayName": "Painted Display",
-        "purpose": "Hero 'SPN-Transporte' only: 800 uppercase road lettering."
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "Company name only: hero h1. Saira italic 850, font-stretch 125%, uppercase, red, 0.06em black stroke, paint-order stroke fill."
+      },
+      "wordmark-small": {
+        "displayName": "Wordmark (header)",
+        "purpose": "Header mark on every page, same style as the hero wordmark."
       },
       "motto": {
         "displayName": "Painted Motto",
-        "purpose": "Philosophy quote; legal h1 uses the same voice."
+        "purpose": "Philosophy quote, Barlow Condensed 800 uppercase; legal h1 uses the same voice."
       },
       "headline": {
         "displayName": "Headline",
@@ -313,7 +368,7 @@
       },
       "claim": {
         "displayName": "Claim",
-        "purpose": "Brand claim under the hero lettering; fact rows use the same 600 condensed voice."
+        "purpose": "Claim under the wordmark; fact rows use the same 600 condensed voice."
       },
       "number": {
         "displayName": "Number",
@@ -321,7 +376,7 @@
       },
       "nav": {
         "displayName": "Nav",
-        "purpose": "Header links and call pill."
+        "purpose": "Header links; call pill at 700."
       },
       "body": {
         "displayName": "Body",
@@ -329,7 +384,7 @@
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Small labels inside yellow controls; field labels."
+        "purpose": "Labels inside red controls and on silver; field labels; photo notes."
       }
     },
     "textures": [
@@ -337,23 +392,28 @@
         "name": "grain",
         "value": "SVG feTurbulence fractalNoise, baseFrequency .85, 2 octaves, 220px tile, warm off-white at low alpha (CSS var --grain)",
         "purpose": "Aggregate grain on every asphalt surface (page, lanes, roads)."
+      },
+      {
+        "name": "wordmark-stroke",
+        "value": "-webkit-text-stroke: 0.06em #050505; paint-order: stroke fill",
+        "purpose": "Black outline around the red wordmark letters, as on the trucks."
       }
     ],
     "shadows": [
       {
         "name": "vehicle",
         "value": "filter: drop-shadow(0 6px 6px rgb(0 0 0 / 0.45))",
-        "purpose": "Trucks only; rotated road truck uses drop-shadow(-5px 0 5px rgb(0 0 0 / 0.45))."
+        "purpose": "Drawn trucks only; rotated road truck uses drop-shadow(-5px 0 5px rgb(0 0 0 / 0.45)). Photos never get shadow."
       },
       {
         "name": "painted-box",
         "value": "0 6px 18px -8px rgb(0 0 0 / 0.6)",
-        "purpose": "Hero tap-to-call box."
+        "purpose": "Red hero tap-to-call box."
       },
       {
         "name": "contact-slab",
         "value": "0 18px 40px -24px rgb(0 0 0 / 0.7)",
-        "purpose": "Yellow contact panel."
+        "purpose": "Silver contact panel."
       },
       {
         "name": "post",
@@ -364,13 +424,13 @@
     "focus": [
       {
         "name": "focus-on-asphalt",
-        "value": "outline: 3px solid #f3c300; outline-offset: 3px; border-radius: 2px",
-        "purpose": "Global focus ring."
+        "value": "outline: 3px solid #eeece4; outline-offset: 3px; border-radius: 2px",
+        "purpose": "Global focus ring (Road Paint)."
       },
       {
-        "name": "focus-on-yellow",
-        "value": "outline: 3px solid #1d1c19",
-        "purpose": "Focus inside the contact panel and on fields (offset 1px)."
+        "name": "focus-on-silver",
+        "value": "outline: 3px solid #16181a",
+        "purpose": "Focus inside the contact slab; fields use offset 1px."
       }
     ],
     "motion": [
@@ -414,108 +474,148 @@
       {
         "name": "sm",
         "value": "40rem",
-        "purpose": "Below: header nav hidden, call pill kept; contact panel pulls left under the road."
+        "purpose": "Below: header nav hidden, call pill kept; contact slab pulls left under the road; hero photo becomes 16:9."
       },
       {
         "name": "md",
         "value": "52rem",
-        "purpose": "Below: contact panel stacks."
+        "purpose": "Below: contact slab stacks."
       },
       {
         "name": "lg",
         "value": "64rem",
-        "purpose": "Above: two-column stages, single-line hero lettering, lead + callbox side by side."
+        "purpose": "Above: two-column stages, one-line wordmark, lead + callbox side by side, single-row fleet gallery."
+      }
+    ],
+    "images": [
+      {
+        "name": "hero-photo-strip",
+        "value": "full-bleed figure, height clamp(11rem, 32vh, 22rem), max-height 56vw, object-fit cover at 50% 60%, ground #07080c; below 40rem aspect-ratio 16/9 with img scale(1.55) origin 50% 58%",
+        "purpose": "Night photo of the whole silver fleet between hero copy and lane (fuhrpark-nacht 1000w/2000w WebP)."
+      },
+      {
+        "name": "fleet-gallery",
+        "value": "grid gap 0.75rem; 1fr 1fr with wide 16:9 spanning, at 64rem 2.2fr 1fr 1fr; portraits 3:4; 2px corners; lazy WebP srcset; captions hidden",
+        "purpose": "'Unser Fuhrpark': yard shot plus two Actros fronts."
+      },
+      {
+        "name": "provenance",
+        "value": "assets/img/*.webp.json beside every raster",
+        "purpose": "Records origin (real owner-supplied photo) and edits; required for every shipping raster."
       }
     ]
   },
   "components": [
     {
+      "name": "Wordmark",
+      "kind": "custom",
+      "refersTo": "wordmark",
+      "description": "SPN-TRANSPORTE in the company's truck lettering: hero h1 and header mark.",
+      "html": "<div class=\"ds-wm-ground\"><a class=\"ds-wordmark\" href=\"#\">SPN-Transporte</a></div>",
+      "css": ".ds-wm-ground{background:#2b2b29;padding:1.5rem}.ds-wordmark{font-family:Saira,\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-style:italic;font-weight:850;font-stretch:125%;text-transform:uppercase;letter-spacing:-.005em;color:var(--red,#d0111f);-webkit-text-stroke:.06em #050505;paint-order:stroke fill;font-size:clamp(2.6rem,8vw,4.5rem);line-height:.95;text-decoration:none;display:inline-block}.ds-wordmark:focus-visible{outline:3px solid var(--paint,#eeece4);outline-offset:3px;border-radius:2px}"
+    },
+    {
       "name": "Call Pill",
       "kind": "button",
       "refersTo": "button-call",
-      "description": "Header tap-to-call marking, always visible.",
+      "description": "Header tap-to-call marking in SPN red, always visible.",
       "html": "<a class=\"ds-call\" href=\"tel:+4915114210193\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z\"/></svg><span>Anrufen</span></a>",
-      "css": ".ds-call{display:inline-flex;align-items:center;gap:.5rem;background:#f3c300;color:#1d1c19;font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:700;font-size:1.2rem;text-decoration:none;padding:.45rem .9rem;border-radius:2px;transition:background-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-call svg{width:1.1rem;height:1.1rem;fill:currentColor}.ds-call:hover{background:#eeece4}.ds-call:focus-visible{outline:3px solid #f3c300;outline-offset:3px}"
+      "css": ".ds-call{display:inline-flex;align-items:center;gap:.5rem;background:var(--red,#d0111f);color:var(--on-red,#fff);font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:700;font-size:1.2rem;text-decoration:none;padding:.45rem .9rem;border-radius:2px;transition:background-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-call svg{width:1.1rem;height:1.1rem;fill:currentColor}.ds-call:hover{background:var(--red-deep,#a50c17)}.ds-call:focus-visible{outline:3px solid var(--paint,#eeece4);outline-offset:3px}"
     },
     {
       "name": "Hero Callbox",
       "kind": "button",
       "refersTo": "callbox-phone",
-      "description": "Yellow painted box with label and tabular phone number, first viewport.",
+      "description": "Red box with label and tabular phone number, first viewport.",
       "html": "<a class=\"ds-callbox\" href=\"tel:+4915114210193\"><span class=\"ds-callbox-label\">Tour anfragen</span><span class=\"ds-callbox-number\">0151 14210193</span></a>",
-      "css": ".ds-callbox{display:inline-grid;background:#f3c300;color:#1d1c19;text-decoration:none;padding:.7rem 1.25rem .75rem;border-radius:2px;box-shadow:0 6px 18px -8px rgb(0 0 0 / .6);transition:background-color 150ms cubic-bezier(0.16,1,0.3,1),transform 150ms cubic-bezier(0.16,1,0.3,1)}.ds-callbox:hover{background:#eeece4}.ds-callbox:active{transform:translateY(1px)}.ds-callbox:focus-visible{outline:3px solid #f3c300;outline-offset:3px}.ds-callbox-label{font-family:Barlow,system-ui,sans-serif;font-weight:600;font-size:.875rem;color:#3d3a2e}.ds-callbox-number{font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:700;font-size:2.5rem;line-height:1.05;font-variant-numeric:tabular-nums}"
+      "css": ".ds-callbox{display:inline-grid;background:var(--red,#d0111f);color:var(--on-red,#fff);text-decoration:none;padding:.7rem 1.25rem .75rem;border-radius:2px;box-shadow:0 6px 18px -8px rgb(0 0 0 / .6);transition:background-color 150ms cubic-bezier(0.16,1,0.3,1),transform 150ms cubic-bezier(0.16,1,0.3,1)}.ds-callbox:hover{background:var(--red-deep,#a50c17)}.ds-callbox:active{transform:translateY(1px)}.ds-callbox:focus-visible{outline:3px solid var(--paint,#eeece4);outline-offset:3px}.ds-callbox-label{font-family:Barlow,system-ui,sans-serif;font-weight:600;font-size:.875rem;color:rgb(255 255 255 / .86)}.ds-callbox-number{font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:700;font-size:2.5rem;line-height:1.05;font-variant-numeric:tabular-nums}"
     },
     {
       "name": "Submit Button",
       "kind": "button",
       "refersTo": "button-submit",
-      "description": "Ink button inside the yellow contact panel; prepares a mailto.",
-      "html": "<div style=\"background:#f3c300;padding:1.5rem\"><button type=\"button\" class=\"ds-submit\">E-Mail vorbereiten</button></div>",
-      "css": ".ds-submit{font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:700;font-size:1.3rem;color:#eeece4;background:#1d1c19;border:0;border-radius:2px;padding:.6rem 1.4rem;cursor:pointer;transition:background-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-submit:hover{background:#3a382f}.ds-submit:focus-visible{outline:3px solid #1d1c19;outline-offset:3px}"
+      "description": "Red button inside the silver contact slab; prepares a mailto.",
+      "html": "<div style=\"background:linear-gradient(180deg,#e3e5e6,#c9ccce 55%);padding:1.5rem\"><button type=\"button\" class=\"ds-submit\">E-Mail vorbereiten</button></div>",
+      "css": ".ds-submit{font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:700;font-size:1.3rem;color:var(--on-red,#fff);background:var(--red,#d0111f);border:0;border-radius:2px;padding:.6rem 1.4rem;cursor:pointer;transition:background-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-submit:hover{background:var(--red-deep,#a50c17)}.ds-submit:focus-visible{outline:3px solid var(--ink,#16181a);outline-offset:3px}"
     },
     {
       "name": "Field",
       "kind": "input",
       "refersTo": "input-field",
-      "description": "Label + input on the yellow panel, with error state.",
+      "description": "Label + input on the silver contact slab, with error state.",
       "html": "<div class=\"ds-panel\"><div class=\"ds-field\"><label for=\"ds-f\">Name oder Firma</label><input id=\"ds-f\"></div><div class=\"ds-field\"><label for=\"ds-g\">Ihre Anfrage</label><input id=\"ds-g\" aria-invalid=\"true\"><p class=\"ds-err\">Bitte beschreiben Sie kurz Ihre Tour.</p></div></div>",
-      "css": ".ds-panel{background:#f3c300;color:#1d1c19;padding:1.5rem;display:grid;gap:1rem;font-family:Barlow,system-ui,sans-serif}.ds-field{display:grid;gap:.35rem}.ds-field label{font-weight:600;font-size:.95rem}.ds-field input{font:inherit;font-size:1rem;color:#1d1c19;background:#fffdf3;border:2px solid rgb(29 28 25 / .55);border-radius:2px;padding:.6rem .75rem;transition:border-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-field input:hover{border-color:#1d1c19}.ds-field input:focus-visible{outline:3px solid #1d1c19;outline-offset:1px;border-color:#1d1c19}.ds-field [aria-invalid=\"true\"]{border-color:#8f1d0b}.ds-err{margin:0;font-size:.9rem;font-weight:600;color:#7a1909}"
+      "css": ".ds-panel{background:#c9ccce linear-gradient(180deg,#e3e5e6,#c9ccce 55%);color:var(--ink,#16181a);padding:1.5rem;display:grid;gap:1rem;font-family:Barlow,system-ui,sans-serif;border-radius:2px;box-shadow:0 18px 40px -24px rgb(0 0 0 / .7)}.ds-field{display:grid;gap:.35rem}.ds-field label{font-weight:600;font-size:.95rem}.ds-field input{font:inherit;font-size:1rem;color:var(--ink,#16181a);background:#fffdf3;border:2px solid rgb(29 28 25 / .55);border-radius:2px;padding:.6rem .75rem;transition:border-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-field input:hover{border-color:var(--ink,#16181a)}.ds-field input:focus-visible{outline:3px solid var(--ink,#16181a);outline-offset:1px;border-color:var(--ink,#16181a)}.ds-field [aria-invalid=\"true\"]{border-color:#8f1d0b}.ds-err{margin:0;font-size:.9rem;font-weight:600;color:#7a1909}"
     },
     {
       "name": "Top Navigation",
       "kind": "nav",
       "refersTo": "nav-top",
-      "description": "Sticky deep-asphalt bar: wordmark, condensed links, yellow call pill.",
-      "html": "<header class=\"ds-top\"><a class=\"ds-mark\" href=\"#\">SPN-Transporte</a><nav><a href=\"#\">Leistungen</a><a href=\"#\">Über uns</a><a href=\"#\">Kontakt</a></nav><a class=\"ds-top-call\" href=\"#\">Anrufen</a></header>",
-      "css": ".ds-top{display:flex;align-items:center;gap:1.5rem;padding:.75rem 1.5rem;background:#222220;border-bottom:1px solid #3a3a37;color:#eeece4}.ds-mark{font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:800;font-size:1.6rem;line-height:1;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;color:#eeece4}.ds-top nav{margin-left:auto;display:flex;gap:2rem}.ds-top nav a{font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:600;font-size:1.2rem;letter-spacing:.02em;text-decoration:none;color:#bdbab0;transition:color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-top nav a:hover{color:#eeece4}.ds-top a:focus-visible{outline:3px solid #f3c300;outline-offset:3px}.ds-top-call{background:#f3c300;color:#1d1c19;font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:700;font-size:1.2rem;text-decoration:none;padding:.45rem .9rem;border-radius:2px}.ds-top-call:hover{background:#eeece4}"
+      "description": "Sticky deep-asphalt bar: red wordmark, condensed links, red call pill.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-mark\" href=\"#\">SPN-Transporte</a><nav><a href=\"#\">Leistungen</a><a href=\"#\">Fuhrpark</a><a href=\"#\">Über uns</a><a href=\"#\">Kontakt</a></nav><a class=\"ds-top-call\" href=\"#\">Anrufen</a></header>",
+      "css": ".ds-top{display:flex;align-items:center;gap:1.5rem;padding:.75rem 1.5rem;background:#222220;border-bottom:1px solid #3a3a37;color:var(--paint,#eeece4)}.ds-mark{font-family:Saira,\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-style:italic;font-weight:850;font-stretch:125%;text-transform:uppercase;letter-spacing:-.005em;color:var(--red,#d0111f);-webkit-text-stroke:.06em #050505;paint-order:stroke fill;font-size:1.5rem;line-height:1;text-decoration:none}.ds-top nav{margin-left:auto;display:flex;gap:2rem}.ds-top nav a{font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:600;font-size:1.2rem;letter-spacing:.02em;text-decoration:none;color:#bdbab0;transition:color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-top nav a:hover{color:var(--paint,#eeece4)}.ds-top a:focus-visible{outline:3px solid var(--paint,#eeece4);outline-offset:3px}.ds-top-call{background:var(--red,#d0111f);color:var(--on-red,#fff);font-family:\"Barlow Condensed\",\"Arial Narrow\",sans-serif;font-weight:700;font-size:1.2rem;text-decoration:none;padding:.45rem .9rem;border-radius:2px;transition:background-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-top-call:hover{background:var(--red-deep,#a50c17)}"
+    },
+    {
+      "name": "Fleet Gallery",
+      "kind": "card",
+      "refersTo": "fleet-photo",
+      "description": "'Unser Fuhrpark': wide yard shot plus two portrait Actros fronts, 2px corners, no shadow.",
+      "html": "<div class=\"ds-fleet\"><figure class=\"ds-fleet-wide\"><img src=\"assets/img/hof-800.webp\" alt=\"Fünf silberne Actros vor einer Halle\"></figure><figure class=\"ds-fleet-tall\"><img src=\"assets/img/actros-e-540.webp\" alt=\"Actros L von vorn\"></figure><figure class=\"ds-fleet-tall\"><img src=\"assets/img/actros-v-540.webp\" alt=\"Actros von vorn\"></figure></div>",
+      "css": ".ds-fleet{display:grid;gap:.75rem;grid-template-columns:2.2fr 1fr 1fr;background:#2b2b29;padding:1rem}.ds-fleet figure{margin:0}.ds-fleet img{display:block;width:100%;height:100%;object-fit:cover;border-radius:2px;background:#222220}.ds-fleet-tall{aspect-ratio:3/4}"
     },
     {
       "name": "Lane with Truck",
       "kind": "custom",
       "refersTo": "road-vertical",
-      "description": "Signature: top-down lane band with paint edges, moving centre dashes, lane arrow and the Zugmaschine symbol.",
-      "html": "<div class=\"ds-lane\"><div class=\"ds-lane-dashes\"></div><svg class=\"ds-lane-truck\" viewBox=\"0 -4 248 48\" aria-hidden=\"true\"><rect x=\"0\" y=\"1\" width=\"200\" height=\"38\" rx=\"2\" fill=\"#8e908b\"/><g stroke=\"#6f716c\" stroke-width=\"1.5\"><path d=\"M20 2v36M40 2v36M60 2v36M80 2v36M100 2v36M120 2v36M140 2v36M160 2v36M180 2v36\"/></g><rect x=\"0\" y=\"1\" width=\"200\" height=\"38\" rx=\"2\" fill=\"none\" stroke=\"#5d5f5a\" stroke-width=\"2\"/><rect x=\"-2\" y=\"3\" width=\"4\" height=\"8\" rx=\"1\" fill=\"#7a2416\"/><rect x=\"-2\" y=\"29\" width=\"4\" height=\"8\" rx=\"1\" fill=\"#7a2416\"/><rect x=\"200\" y=\"15\" width=\"6\" height=\"10\" fill=\"#1d1c19\"/><rect x=\"205\" y=\"0\" width=\"38\" height=\"40\" rx=\"5\" fill=\"#eeece4\"/><rect x=\"211\" y=\"6\" width=\"16\" height=\"28\" rx=\"2\" fill=\"#d6d3c8\"/><rect x=\"234\" y=\"3\" width=\"7\" height=\"34\" rx=\"2\" fill=\"#26323a\"/><rect x=\"231\" y=\"-4\" width=\"5\" height=\"4\" rx=\"1\" fill=\"#1d1c19\"/><rect x=\"231\" y=\"40\" width=\"5\" height=\"4\" rx=\"1\" fill=\"#1d1c19\"/><rect x=\"243\" y=\"4\" width=\"3\" height=\"6\" rx=\"1\" fill=\"#f3c300\"/><rect x=\"243\" y=\"30\" width=\"3\" height=\"6\" rx=\"1\" fill=\"#f3c300\"/></svg><svg class=\"ds-lane-arrow\" viewBox=\"0 0 120 40\" aria-hidden=\"true\"><path d=\"M0 15h78V3l42 17-42 17V25H0z\"/></svg></div>",
+      "description": "Signature: top-down lane band with paint edges, moving centre dashes, lane arrow and the Zugmaschine with silver cab.",
+      "html": "<div class=\"ds-lane\"><div class=\"ds-lane-dashes\"></div><svg class=\"ds-lane-truck\" viewBox=\"0 -4 248 48\" aria-hidden=\"true\"><rect x=\"0\" y=\"1\" width=\"200\" height=\"38\" rx=\"2\" fill=\"#8e908b\"/><g stroke=\"#6f716c\" stroke-width=\"1.5\"><path d=\"M20 2v36M40 2v36M60 2v36M80 2v36M100 2v36M120 2v36M140 2v36M160 2v36M180 2v36\"/></g><rect x=\"0\" y=\"1\" width=\"200\" height=\"38\" rx=\"2\" fill=\"none\" stroke=\"#5d5f5a\" stroke-width=\"2\"/><rect x=\"-2\" y=\"3\" width=\"4\" height=\"8\" rx=\"1\" fill=\"#7a2416\"/><rect x=\"-2\" y=\"29\" width=\"4\" height=\"8\" rx=\"1\" fill=\"#7a2416\"/><rect x=\"200\" y=\"15\" width=\"6\" height=\"10\" fill=\"#1d1c19\"/><rect x=\"205\" y=\"0\" width=\"38\" height=\"40\" rx=\"5\" fill=\"#c9ccce\"/><rect x=\"211\" y=\"6\" width=\"16\" height=\"28\" rx=\"2\" fill=\"#aeb2b5\"/><rect x=\"234\" y=\"3\" width=\"7\" height=\"34\" rx=\"2\" fill=\"#26323a\"/><rect x=\"231\" y=\"-4\" width=\"5\" height=\"4\" rx=\"1\" fill=\"#1d1c19\"/><rect x=\"231\" y=\"40\" width=\"5\" height=\"4\" rx=\"1\" fill=\"#1d1c19\"/><rect x=\"243\" y=\"4\" width=\"3\" height=\"6\" rx=\"1\" fill=\"#fff6d8\"/><rect x=\"243\" y=\"30\" width=\"3\" height=\"6\" rx=\"1\" fill=\"#fff6d8\"/></svg><svg class=\"ds-lane-arrow\" viewBox=\"0 0 120 40\" aria-hidden=\"true\"><path d=\"M0 15h78V3l42 17-42 17V25H0z\"/></svg></div>",
       "css": ".ds-lane{position:relative;height:7rem;background:#313130;border-block:5px solid #eeece4;overflow:hidden}.ds-lane-dashes{position:absolute;left:0;right:0;top:50%;height:5px;transform:translateY(-50%);background:repeating-linear-gradient(90deg,#eeece4 0 4rem,transparent 4rem 9rem);animation:ds-lane .9s linear infinite}@keyframes ds-lane{to{background-position:-9rem 0}}.ds-lane-truck{position:absolute;left:6%;top:75%;width:14rem;transform:translateY(-50%);filter:drop-shadow(0 6px 6px rgb(0 0 0 / .45))}.ds-lane-arrow{position:absolute;right:8%;top:75%;width:7rem;aspect-ratio:3/1;fill:#eeece4;opacity:.92;transform:translateY(-50%)}@media (prefers-reduced-motion: reduce){.ds-lane-dashes{animation:none}}"
     },
     {
       "name": "Leitpfosten and Kerb",
       "kind": "custom",
       "refersTo": "road-vertical",
-      "description": "Rhythm marks: top-down delineator opening each stage; vertical red/white racing kerb at the road edge, used once.",
+      "description": "Rhythm marks: top-down delineator opening each stage; vertical SPN-red/white racing kerb at the road edge, used once.",
       "html": "<div class=\"ds-furniture\"><span class=\"ds-post\"></span><div class=\"ds-kerb\"></div></div>",
-      "css": ".ds-furniture{background:#2b2b29;padding:1.5rem;display:flex;gap:1.5rem;align-items:flex-start;height:12rem}.ds-post{display:block;width:.7rem;height:.7rem;background:radial-gradient(circle,#e0571f 0 .15rem,#eeece4 .17rem);border-radius:1px;box-shadow:0 2px 3px rgb(0 0 0 / .5)}.ds-kerb{width:.65rem;height:100%;background:repeating-linear-gradient(180deg,#c8331f 0 2.75rem,#eeece4 2.75rem 5.5rem)}"
+      "css": ".ds-furniture{background:#2b2b29;padding:1.5rem;display:flex;gap:1.5rem;align-items:flex-start;height:12rem}.ds-post{display:block;width:.7rem;height:.7rem;background:radial-gradient(circle,#e0571f 0 .15rem,#eeece4 .17rem);border-radius:1px;box-shadow:0 2px 3px rgb(0 0 0 / .5)}.ds-kerb{width:.65rem;height:100%;background:repeating-linear-gradient(180deg,var(--red,#d0111f) 0 2.75rem,#eeece4 2.75rem 5.5rem)}"
     }
   ],
   "narrative": {
     "northStar": "Die Fahrbahn",
-    "overview": "The whole site is a stretch of road seen from directly above. The ground is warm dark asphalt with a fine aggregate grain; everything that speaks is road paint. Headlines are tall white stencil-like lettering laid onto the tarmac, lanes are dashed white lines, and the visitor follows a top-down Zugmaschine with a Planenauflieger as it drives down a vertical road beside the content and brakes at a white stop line in front of the contact block. Actions are never \"buttons\" in a generic sense: they are Baustellen-gelb temporary marking, the yellow that overrides white paint on a German road.\n\nDensity is low and sequential: one section at a time, each a \"stage\" beside the road, each opened by a Leitpfosten seen from above. Ornament is rationed to things a road actually carries: dashed lines, arrows, a stop line, delineator posts, and (once, for the motorsport story) a red/white racing kerb along the road edge. Nothing is decorative without being road furniture.\n\nMotion has road grammar: steady speed, ease-out braking, no bounce, no spring. Reduced motion stops everything that loops and lets the truck jump to its position rather than drive.",
+    "overview": "The whole site is a stretch of road seen from directly above. The ground is warm dark asphalt with a fine aggregate grain; line work and reading text are road paint. Section headings are tall condensed signage lettering, lanes are dashed white lines, and the visitor follows a top-down Zugmaschine with a Planenauflieger as it drives down a vertical road beside the content and brakes at a white stop line in front of the contact block. The road belongs to SPN: its name is written in the company's own lettering (red, wide, heavy italic, black outline, as on trailer and cab), and every action carries that same brand red.\n\nThe drawn road is the world; the real fleet is the proof. A night photograph of the silver Mercedes-Benz Actros fleet runs as a full-bleed strip between the hero copy and the lane, and a short \"Unser Fuhrpark\" gallery shows the trucks on the yard. The drawn truck's cab is silver to match them, and the contact block is a silver slab like cab sheet metal. Density is low and sequential: one stage at a time beside the road, each opened by a Leitpfosten seen from above. Ornament is rationed to road furniture: dashed lines, arrows, a stop line, delineator posts and, once, a red/white racing kerb for the motorsport roots.\n\nMotion has road grammar: steady speed, ease-out braking, no bounce, no spring. Reduced motion stops everything that loops and lets the truck jump to its position rather than drive.",
     "keyCharacteristics": [
       "Asphalt ground with SVG fractal-noise grain on every road surface.",
-      "White road paint for text and line work; yellow only for actions and the contact panel.",
-      "Condensed signage display face (Barlow Condensed 600/700/800) over a plain reading sans (Barlow 400/500/600).",
-      "A vertical road with a scroll-linked truck that stops at a stop line before Kontakt.",
-      "Near-square corners (2px) everywhere: painted marking, not soft UI.",
-      "All fonts and the motion library self-hosted; no third-party requests."
+      "White road paint for line work and reading text; SPN red for the wordmark and every action.",
+      "The SPN-TRANSPORTE wordmark in Saira italic 850, 125% width, uppercase, red with a black outline, for the header mark and the hero h1.",
+      "Condensed signage face (Barlow Condensed 600/700/800) for headings, plain Barlow (400/500/600) for reading.",
+      "Real fleet photographs (silver Actros) as proof, each shipping raster with a provenance file.",
+      "A vertical road with a scroll-linked truck that stops at a stop line before the silver contact slab.",
+      "Near-square corners (2px) everywhere: painted marking and pressed metal, never a pill.",
+      "All fonts, images and the motion library self-hosted; no third-party requests."
     ],
     "rules": [
       {
-        "name": "The Temporary Marking Rule",
-        "body": "Yellow means \"act here\". It is used for calls to action and the contact panel, never for decoration, headings or illustration (the truck's yellow front indicators are the one exception and live inside the drawing).",
+        "name": "The Brand Red Rule",
+        "body": "Red is SPN's own colour: it signs the name and marks where to act. It is never used for headings other than the wordmark, body text, illustration fills (beyond the kerb's red stripes) or decoration.",
         "section": "colors"
       },
       {
-        "name": "The Paint Only Rule",
-        "body": "Text and line work on asphalt are Road Paint or Worn Paint. No other hue writes on the road.",
+        "name": "The Paint Writes On The Road Rule",
+        "body": "Reading text and line work on asphalt are Road Paint or Worn Paint. The only other colour that writes on asphalt is the red wordmark.",
         "section": "colors"
       },
       {
-        "name": "The Red Is Rare Rule",
-        "body": "Reflector orange and kerb red appear only as road furniture (delineator dot, kerb stripe, brake light). Never as text, backgrounds or state colours.",
+        "name": "The Silver Is Metal Rule",
+        "body": "Silver belongs to the fleet: the contact slab, the drawn cab, and hover on the e-mail link. It does not become a general surface colour.",
         "section": "colors"
       },
       {
-        "name": "The Stencil Is Uppercase Rule",
-        "body": "Uppercase is reserved for 800-weight painted lettering (hero, motto, legal h1). Headlines and everything else stay in sentence case.",
+        "name": "The One Name Rule",
+        "body": "The Saira wordmark style is for the company name only (header mark, hero h1). It is never applied to section headings, slogans or other words.",
+        "section": "typography"
+      },
+      {
+        "name": "The Uppercase Is Earned Rule",
+        "body": "Uppercase is reserved for the wordmark and 800-weight painted lettering (motto, legal h1). Headlines and everything else stay in sentence case.",
         "section": "typography"
       },
       {
@@ -525,25 +625,27 @@
       },
       {
         "name": "The Lies On The Road Rule",
-        "body": "Only objects that would physically sit on the road (vehicles, posts, the yellow boxes) get shadow. Paint never casts shadow.",
+        "body": "Only objects that would physically sit on the road (vehicles, posts, the callbox, the contact slab) get shadow. Paint, lettering and photographs never cast shadow.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do lay every text and line on asphalt in Road Paint (`#eeece4`) or Worn Paint (`#bdbab0`) over the grain.",
-      "Do make every action Baustellen-gelb (`#f3c300`) with Ink text and 2px corners, hovering to Road Paint.",
+      "Do lay reading text and line work on asphalt in Road Paint or Worn Paint over the grain.",
+      "Do make every action SPN Red with white text and 2px corners, deepening to Deep SPN Red on hover.",
+      "Do set the company name, and only the company name, in the wordmark style: Saira italic 850, 125% width, uppercase, red with a 0.06em black outline under the fill.",
       "Do keep the phone number tap-to-call and visible without scroll on every screen (header pill on mobile, callbox in the hero).",
-      "Do build new figures from the road vocabulary: lane bands with paint edges, dashed centre lines, the straight arrow, the top-down truck symbol, Leitpfosten, stop line.",
+      "Do use real SPN fleet photographs as proof, served as self-hosted responsive WebP with descriptive alt text and a provenance `.json` beside each file.",
+      "Do build new figures from the road vocabulary: lane bands with paint edges, dashed centre lines, the straight arrow, the top-down truck with silver cab, Leitpfosten, stop line.",
       "Do move vehicles at steady road speed and brake with `cubic-bezier(0.16, 1, 0.3, 1)`; pause looping motion when it is off screen and stop it under reduced motion.",
-      "Do self-host every font and script."
+      "Do self-host every font, image and script."
     ],
     "donts": [
-      "Don't use yellow for decoration, headings or illustration fills.",
+      "Don't use red for section headings, body text, decoration or illustration fills; it is the name and the action.",
+      "Don't apply the Saira wordmark style to any words other than \"SPN-Transporte\".",
       "Don't round controls beyond 2px or use pill shapes.",
       "Don't add bounce, spring or overshoot to any motion.",
-      "Don't put shadows on paint; only objects on the road cast them.",
-      "Don't use kerb red or reflector orange as text, background or state colour.",
-      "Don't use photography of trucks or highways; the world is drawn top-down.",
+      "Don't put shadows on paint, lettering or photographs; only objects on the road cast them.",
+      "Don't use stock, AI-generated or generic highway imagery; photographs show SPN's own fleet only.",
       "Don't add invented figures, customer logos, testimonials or badges as visual proof."
     ]
   }

@@ -1,28 +1,23 @@
----
-version: 1
-slug: "index-html"
-primary_target: "index.html"
-related_targets: []
----
-
 # Startseite (One-Pager)
 
 Scope: index.html, the whole public site. Visitor mode: Persuade.
-Audience: Disponenten bei Speditionen/Verladern. Action: call 0151 14210193 or e-mail. Proof: family business, 15+ years, German-speaking regional drivers, Nahverkehr & Shuttle, Zugmaschine for the customer's trailer. No invented figures, customers or reviews.
-Constraints: no third-party requests (fonts and motion library self-hosted), Impressum/Datenschutz data still open (placeholders, clearly marked).
+Audience: Disponenten bei Speditionen/Verladern. Action: call 0151 14210193 or e-mail. Proof: real fleet photos (silver Mercedes-Benz Actros with SPN lettering), family business, 15+ years, motorsport roots, German-speaking regional drivers, Nahverkehr & Shuttle. No invented figures, customers or reviews.
+Constraints: no third-party requests (fonts, motion library, images self-hosted); driver name tags in photos blurred; Impressum/Datenschutz data still open (marked placeholders).
 
 ## Direction contract
 
-THESIS: The page is the road a SPN tour drives. Refuses the category default of a sunset-highway photo with "Ihr zuverlässiger Partner" over three icon cards.
+User-pinned redesign (2026-10-19): "modern like Apple, not old-fashioned; integrate the photos; the truck drives out of the photos". Replaces the earlier top-down road world.
 
-OWN-WORLD: Asphalt seen from above: warm dark grey ground with fine aggregate grain, retroreflective white road paint (stencil-tall lettering, dashed lane lines, stop line, arrows), SPN brand red (from the company's truck lettering) for every action, red/white racetrack kerb along the road at the story, top-down delineator posts as rhythm marks. The SPN-TRANSPORTE wordmark in red, wide, heavy italic with black outline (as on trailer and cab). Real fleet photos (silver Mercedes-Benz Actros) as the proof. Condensed highway-signage sans for headings, plain sans for reading.
+THESIS: A product-launch page where the product is the fleet. Refuses the category default of a stock highway photo with three icon cards.
 
-STORY: Visitor sees a moving truck on SPN's lane, reads who drives it (family, 15+ years, German-speaking drivers), sees the job (Nahverkehr, Shuttle A↔B; "Zugmaschine for your trailer" only once the user confirms it as an offer), learns the motorsport roots, and calls.
+OWN-WORLD: Black and mist-grey sections alternating, large tight grotesk headlines (Geist) with a muted second line, 28px rounded cards, pill buttons, brand red (#d0111f) only for actions and checks, the SPN-TRANSPORTE wordmark in the company's red wide italic with black outline as logo. Real night and daylight fleet photography carries the page.
 
-FIRST VIEWPORT: Full-bleed asphalt. SPN-TRANSPORTE wordmark in brand style, claim beneath, the real fleet photographed at night as a wide strip above the lane. Top-down Zugmaschine enters from the left on a lane with moving dashes. Red box with the tap-to-call number and the e-mail, visible without scroll on phone and desktop.
+STORY: The visitor sees SPN's own trucks, one Actros drives out of the row toward them, learns the motorsport roots and the family business, sees Nahverkehr and Shuttle, the fleet, and calls.
 
-FORM: Fahrbahnmarkierung & Leitpfosten, position 6 of 7 on the grounded list. seed:08122a54b005d79e
+FIRST VIEWPORT: Black stage, centred two-line headline "Präzision aus dem Motorsport. / Zuverlässigkeit auf der Straße.", meta line, red "Tour anfragen" pill and phone pill; below, the night photo of the fleet row with lit stars.
 
-Signature interaction: scroll-linked truck driving down a vertical centre line through the sections; at "Shuttle" it pendles between A and B; it stops at the stop line before the contact block. Motion grammar: steady road speed, ease-out braking, no bounce; reduced-motion shows the truck parked.
+FORM: User-pinned direction (no roll for this redesign); previous roll seed:08122a54b005d79e no longer governs.
+
+Signature interaction: sticky scroll scene: the photo slowly zooms and darkens, a cut-out SPN Actros emerges from the row and grows until it passes the camera, the claim appears. Supporting: word-by-word statement reveal, fleet photo zoom-out on entry, shuttle dot A↔B. Reduced motion: static scene, all words lit.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
