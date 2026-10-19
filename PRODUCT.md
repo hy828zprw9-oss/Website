@@ -20,7 +20,7 @@ Company website of SPN-Transporte. Success is a phone call or e-mail enquiry fro
 
 ## Positioning
 
-Familiengeführter, mittelständischer Transportbetrieb mit über 15 Jahren Erfahrung und deutschsprachigen, regionalen Fahrern. Persönliche Betreuung statt Großspedition.
+Familiengeführter, mittelständischer Transportbetrieb mit Wurzeln im Motorsport und über 15 Jahren Erfahrung, mit deutschsprachigen, regionalen Fahrern. Persönliche Betreuung statt Großspedition. Philosophie: "Präzision aus dem Motorsport – Zuverlässigkeit auf der Straße."
 
 ## Operating Context
 
@@ -42,7 +42,7 @@ Tours are mostly local: Nahverkehr and Shuttle with one or two loading/unloading
 
 ## Evidence on Hand
 
-- Real copy from the old site (claim, family business, 15+ years, German-speaking drivers).
+- Real copy from the old site (claim, family business, 15+ years, German-speaking drivers, Über-uns story with motorsport roots, values list, philosophy, team text).
 - No logo, photos, testimonials, customer names, certifications or fleet figures on hand. Do not fabricate any of them.
 
 ## Product Principles

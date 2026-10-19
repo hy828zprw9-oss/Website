@@ -46,6 +46,7 @@
   --ink: #1d1c19;
   --ink-soft: #3d3a2e;
   --reflector: #e0571f;
+  --kerb: #c8331f;
 
   --display: "Barlow Condensed", "Arial Narrow", sans-serif;
   --text: "Barlow", system-ui, sans-serif;
@@ -119,12 +120,11 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
 .mark {
   font-family: var(--display);
   font-weight: 800;
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   line-height: 1;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   text-decoration: none;
-  padding: 0.2rem 0.5rem 0.15rem;
-  border: 3px solid var(--paint);
 }
 
 .top nav { margin-left: auto; }
@@ -176,7 +176,7 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
   position: relative;
   z-index: 1;
   align-self: center;
-  padding: clamp(2rem, 6vh, 4.5rem) var(--gutter) clamp(2rem, 5vh, 3.5rem);
+  padding: clamp(1.25rem, 4vh, 3rem) var(--gutter) clamp(1.25rem, 3.5vh, 2.5rem);
   max-width: 46rem;
 }
 
@@ -263,7 +263,7 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
 
 .lane {
   position: relative;
-  height: clamp(6.5rem, 12vw, 9.5rem);
+  height: clamp(6rem, 11vw, 8.5rem);
   background: var(--asphalt-lane) var(--grain);
   border-block: 5px solid var(--paint);
   overflow: hidden;
@@ -297,7 +297,7 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
   position: absolute;
   left: 6%;
   top: 75%;
-  width: clamp(11rem, 23vw, 20rem);
+  width: clamp(12rem, 21vw, 18rem);
   translate: 0 -50%;
   filter: drop-shadow(0 6px 6px rgb(0 0 0 / 0.45));
 }
@@ -313,7 +313,7 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
 .road {
   position: absolute;
   top: 0;
-  bottom: 0;
+  height: var(--road-h, 100%);
   left: var(--gutter);
   width: var(--road-w);
   background: var(--asphalt-lane) var(--grain);
@@ -349,6 +349,7 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
   filter: drop-shadow(-5px 0 5px rgb(0 0 0 / 0.45));
 }
 .road__truck svg { display: block; width: 100%; height: 100%; }
+.road__truck.is-stopped { --brake: #ff4a26; }
 
 .stage {
   position: relative;
@@ -371,19 +372,17 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
   .stage--split .facts { margin-top: 0; }
 }
 
-/* Leitpfosten an der Straße, je Abschnitt */
+/* Leitpfosten von oben: am Fahrbahnrand, zu Beginn jedes Abschnitts */
 .stage::before {
   content: "";
   position: absolute;
-  top: calc(clamp(3.5rem, 10vh, 6.5rem) + 0.35rem);
-  left: calc(clamp(1.25rem, 4vw, 4rem) / -2 - 0.25rem);
-  width: 0.5rem;
-  height: 2.25rem;
-  background:
-    linear-gradient(var(--reflector), var(--reflector)) 50% 0.35rem / 0.25rem 0.5rem no-repeat,
-    linear-gradient(transparent 0 0.25rem, var(--ink) 0.25rem 1rem, transparent 1rem) 0 0 / 100% 100% no-repeat,
-    var(--paint);
-  border-radius: 1px 1px 0 0;
+  top: 0.5rem;
+  left: calc(-1 * clamp(1.25rem, 4vw, 4rem) + 0.45rem);
+  width: 0.7rem;
+  height: 0.7rem;
+  background: radial-gradient(circle, var(--reflector) 0 0.15rem, var(--paint) 0.17rem);
+  border-radius: 1px;
+  box-shadow: 0 2px 3px rgb(0 0 0 / 0.5);
 }
 
 .stage h2 {
@@ -475,14 +474,72 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
 }
 .facts li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.9rem;
   font-family: var(--display);
   font-weight: 600;
   font-size: clamp(1.35rem, 2.4vw, 1.65rem);
   line-height: 1.2;
 }
-.facts svg { flex: none; width: 3rem; height: 1rem; fill: var(--paint); }
+.facts svg { flex: none; width: 3rem; height: 1rem; margin-top: 0.3em; fill: var(--paint); }
+
+/* Über uns */
+
+.stage--story { max-width: 72rem; }
+
+.story {
+  display: grid;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+}
+.story__text p { margin: 0 0 1rem; max-width: 62ch; color: var(--paint-dim); }
+.story__text p:first-child { color: var(--paint); font-weight: 500; }
+
+.story__facts h3,
+.team h3 {
+  margin: 0 0 1rem;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+  line-height: 1.1;
+}
+.story__facts .facts { margin-top: 0; }
+
+@media (min-width: 64rem) {
+  .story { grid-template-columns: minmax(0, 36rem) minmax(0, 1fr); gap: clamp(3rem, 6vw, 6rem); }
+}
+
+.close { display: grid; gap: 0; margin-top: clamp(3.5rem, 9vh, 5.5rem); }
+.motto { margin: 0; }
+
+@media (min-width: 64rem) {
+  .close { grid-template-columns: minmax(0, 36rem) minmax(0, 1fr); align-items: end; gap: clamp(3rem, 6vw, 6rem); }
+  .close .kerb { grid-column: 1 / -1; margin-bottom: 0.25rem; }
+  .close .team { margin-top: 0; }
+}
+
+/* Randstein wie an der Rennstrecke */
+.kerb {
+  height: 0.9rem;
+  margin-bottom: 1.75rem;
+  background: repeating-linear-gradient(90deg, var(--kerb) 0 2.75rem, var(--paint) 2.75rem 5.5rem);
+}
+
+.motto blockquote { margin: 0; }
+.motto blockquote p {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(2.2rem, 5.6vw, 4.75rem);
+  line-height: 0.95;
+  max-width: 18ch;
+  text-wrap: balance;
+}
+.motto figcaption { margin-top: 1rem; color: var(--paint-dim); }
+
+.team { margin-top: clamp(3rem, 8vh, 4.5rem); max-width: 62ch; }
+.team p { margin: 0 0 1rem; color: var(--paint-dim); }
 
 /* Kontakt */
 
@@ -490,8 +547,17 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
 
 .contact__hint { margin-top: 0.5rem; padding-top: 1.25rem; border-top: 2px solid rgb(29 28 25 / 0.18); }
 .contact__hint p { margin: 0 0 0.4rem; font-weight: 600; }
-.contact__hint ul { margin: 0; padding-left: 1.1rem; }
-.contact__hint li::marker { color: var(--ink-soft); }
+.contact__hint ul { margin: 0; padding: 0; list-style: none; }
+.contact__hint li { position: relative; padding-left: 1.25rem; }
+.contact__hint li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  width: 0.75rem;
+  height: 3px;
+  background: var(--ink);
+}
 
 .contact {
   display: grid;
@@ -519,7 +585,6 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
   font-size: clamp(1.6rem, 3vw, 2.25rem);
   line-height: 1.1;
   text-decoration: none;
-  overflow-wrap: anywhere;
   font-variant-numeric: tabular-nums;
 }
 .contact__line span {
@@ -585,6 +650,12 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
 .submit:hover { background: #3a382f; }
 
 .form__note { margin: 0; font-size: 0.875rem; color: var(--ink-soft); }
+
+@media (max-width: 40rem) {
+  .stage--contact .contact {
+    margin-left: calc(-1 * (var(--road-w) + clamp(1.25rem, 4vw, 4rem)));
+  }
+}
 
 @media (max-width: 52rem) {
   .contact { grid-template-columns: 1fr; }

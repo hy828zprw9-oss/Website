@@ -30,6 +30,7 @@
       truckL = truck.getBoundingClientRect().height;
       const stop = contact.offsetTop + 24;
       road.style.setProperty("--stop", `${stop}px`);
+      road.style.setProperty("--road-h", `${stop + 12}px`);
       minY = 24;
       maxY = Math.max(minY, stop - truckL - 14);
     };
@@ -40,7 +41,10 @@
       return Math.min(maxY, Math.max(minY, y));
     };
 
-    const paint = (y) => truck.style.setProperty("--y", `${y.toFixed(1)}px`);
+    const paint = (y) => {
+      truck.style.setProperty("--y", `${y.toFixed(1)}px`);
+      truck.classList.toggle("is-stopped", y >= maxY - 1);
+    };
 
     const tick = () => {
       const delta = target - current;
