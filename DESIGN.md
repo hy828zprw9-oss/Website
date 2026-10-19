@@ -147,11 +147,11 @@ components:
 
 **Creative North Star: "The Fleet Launch"**
 
-The site is staged like a product launch, and the product is SPN's own fleet of silver Mercedes-Benz Actros. Every section is a full-width stage, either pure black or a cool mist grey, and the two alternate down the page so each new topic arrives as a change of light. Headlines are large, tight Geist set in two lines: a statement in full ink and a quieter second line in muted grey. Real photographs of SPN's trucks, at night and by day, carry the proof. Nothing is illustrated and nothing is stock.
+The site is staged like a product launch, and the product is SPN's own fleet of silver Mercedes-Benz Actros. Every section is a full-width stage, either pure black or a cool mist grey, and the two alternate down the page so each new topic arrives as a change of light. Headlines are large, tight Geist set in two lines: a statement in full ink and a quieter second line in muted grey. Real daylight photographs of SPN's trucks carry the proof (the owner chose daylight only). Nothing is illustrated and nothing is stock.
 
 The page is sparse and confident: one idea per stage, generous section padding, few elements, big type. Colour is almost absent. Brand red (#d0111f) is the single signal and only marks things the visitor can do or things SPN promises (the check marks). The company's own wordmark, red wide italic Saira with a black outline as it is lettered on the trailers, is the only logo.
 
-Motion is used once, big, and then quietly. The opening scene is a sticky scroll stage in which a cut-out SPN Actros leaves the night photo of the fleet row and drives past the camera. Everything after that is supportive: a statement whose words light up as you read, a fleet photo that settles into frame, a red dot shuttling between A and B. With reduced motion the page is a calm static document with nothing lost.
+Motion is used once, big, and then quietly. The opening scene is a sticky scroll stage in which a cut-out SPN Actros drives out of the daylight photo of the fleet row and past the camera. Everything after that is supportive: a statement whose words light up as you read, a fleet photo that settles into frame, a red dot shuttling between A and B. With reduced motion the page is a calm static document with nothing lost.
 
 **Key Characteristics:**
 - Full-bleed black and mist stages alternating: scene, statement (black), Leistungen (mist), Fuhrpark (black), Über uns (mist), Kontakt (black), footer (mist).
@@ -170,7 +170,7 @@ A near-monochrome Apple-style neutral system (true black, graphite, mist, white)
 - **Signal Red Bright** (signal-red-hover): hover state of red pills, hover of the large phone number, and the form caret. Lighter, not darker, because most red sits on black.
 
 ### Neutral
-- **True Black** (black): the dark stage (scene, statement, Fuhrpark, Kontakt), photo cards, and the page/theme colour. Pure #000 so the night photograph's sky dissolves into it.
+- **True Black** (black): the dark stage (scene, statement, Fuhrpark, Kontakt), photo cards, and the page/theme colour. Pure #000.
 - **Graphite** (graphite): ink on mist and white surfaces, and the contact form panel on black.
 - **Raised Graphite** (graphite-raised): input wells inside the graphite form panel.
 - **Mist** (mist): the light stage (Leistungen, Über uns, footer, legal pages) and the ink on black.
@@ -272,7 +272,7 @@ Each item is preceded by a 1.25rem Signal Red disc with a white tick drawn inlin
 Fixed glass bar on black at 86%: wordmark left (red, no outline), links right at 0.875rem in mist at 80% opacity brightening to white, small red Anrufen pill at the end. Below 48rem the links hide.
 
 ### Scroll Scene (signature)
-A sticky black stage 240vh tall (100svh when motion is off). The night photo of the fleet row sits in the lower 70% of the viewport, faded to black at top and bottom. The two-line display headline, meta line and pills are centred over the black sky. On scroll (Motion's scroll-linked animate, linear, mapped across the whole section): the photo zooms to 1.14 and darkens to 30% brightness; the copy fades and lifts away by 28%; a cut-out daylight Actros fades in small (scale 0.24, 0.3 on phones) at its place in the row, graded to the night (lower brightness and saturation, slight hue shift, softened by blur), then grows to full size and passes the camera at scale 2.7 with motion blur while its grade warms to daylight; the claim fades in from 36% to 50%. Without motion, the truck is parked at the lower right at a smaller size and the claim is not shown.
+A sticky mist stage 240vh tall (100svh when motion is off), dark text. The daylight photo of the fleet row (hof-1440) sits in the lower 70% of the viewport, its sky faded into the mist at the top. The two-line display headline, meta line and pills (ghost pill with dark outline) are centred above it. On scroll (Motion's scroll-linked animate, linear, mapped across the whole section): the photo zooms to 1.12; the copy fades and lifts away by 28%; the cut-out Actros (DT E 1005, from the same yard) fades in small in front of the row, its start point computed in main.js from the photo's cover geometry (image point 905,760; truck height 300px in photo pixels), then grows to full size and passes the camera at scale 2.7 with slight motion blur; the claim fades in from 36% to 50%. Without motion, the truck is parked at the lower right at a smaller size and the claim is not shown.
 
 ### Word Reveal
 One statement paragraph whose words are split into spans and lit from word-unlit to mist as the paragraph scrolls from 80% to 45% of the viewport. Without motion, all words render lit as plain text.

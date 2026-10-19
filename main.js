@@ -19,39 +19,58 @@
       scroll(animate(el, keyframes, options), { target: scene, offset: ["start start", "end end"] });
     };
 
-    // Startpunkt des LKW: unten in der Reihe auf dem Foto
-    const small = window.matchMedia("(max-width: 48rem)").matches;
-    const startY = small ? "-17vh" : "-24vh";
-    const startScale = small ? 0.3 : 0.24;
+    const photo = scene.querySelector(".scene__photo");
+    const truck = scene.querySelector(".scene__truck");
 
-    bind(scene.querySelector(".scene__photo"), {
-      transform: ["scale(1)", "scale(1.14)"],
-      filter: ["brightness(0.95)", "brightness(0.55)", "brightness(0.3)"],
-    });
+    // Startpunkt des LKW: vor der Reihe auf dem Hof-Foto (Punkt im Foto, 1440 × 1080)
+    const START_POINT = { x: 905, y: 760, truckHeight: 300 };
+    const startPose = () => {
+      const img = photo.querySelector("img");
+      const box = photo.getBoundingClientRect();
+      const stage = scene.querySelector(".scene__stage").getBoundingClientRect();
+      const iw = img.naturalWidth || 1440;
+      const ih = img.naturalHeight || 1080;
+      const s = Math.max(box.width / iw, box.height / ih);
+      const [px, py] = getComputedStyle(img).objectPosition.split(" ").map((v) => parseFloat(v) / 100);
+      const pointX = box.left - stage.left + (box.width - iw * s) * px + START_POINT.x * (iw / 1440) * s;
+      const pointY = box.top - stage.top + (box.height - ih * s) * py + START_POINT.y * (ih / 1080) * s;
+      const w = truck.offsetWidth;
+      const h = truck.offsetHeight;
+      const baseX = truck.offsetLeft + w / 2;
+      const baseY = truck.offsetTop + h;
+      return {
+        x: pointX - baseX,
+        y: pointY - baseY,
+        scale: Math.min(0.6, (START_POINT.truckHeight * (ih / 1080) * s) / h),
+      };
+    };
+
+    bind(photo, { transform: ["scale(1)", "scale(1.12)"] });
 
     bind(scene.querySelector(".scene__copy"), {
       opacity: [1, 1, 0, 0],
       transform: ["translateY(0)", "translateY(0)", "translateY(-6vh)", "translateY(-6vh)"],
     }, [0, 0.06, 0.28, 1]);
 
-    bind(scene.querySelector(".scene__truck"), {
-      opacity: [0, 1, 1, 1, 1],
-      transform: [
-        `translateY(${startY}) scale(${startScale})`,
-        `translateY(${startY}) scale(${startScale})`,
-        "translateY(-8vh) scale(0.72)",
-        "translateY(0vh) scale(1)",
-        "translateY(75vh) scale(2.7)",
-      ],
-      // Nachtlicht: das Tagfoto wird an die Szene angepasst und hellt sich beim Näherkommen auf
-      filter: [
-        "brightness(0.62) saturate(0.75) hue-rotate(-8deg) blur(1.5px)",
-        "brightness(0.66) saturate(0.78) hue-rotate(-8deg) blur(0px)",
-        "brightness(0.8) saturate(0.88) hue-rotate(-4deg) blur(0px)",
-        "brightness(0.95) saturate(0.95) hue-rotate(0deg) blur(0px)",
-        "brightness(1) saturate(1) hue-rotate(0deg) blur(3px)",
-      ],
-    }, [0, 0.1, 0.4, 0.66, 1]);
+    let truckScroll;
+    const bindTruck = () => {
+      if (truckScroll) truckScroll();
+      const p = startPose();
+      const at = (f) => `translate(${(p.x * (1 - f)).toFixed(1)}px, ${(p.y * (1 - f)).toFixed(1)}px) scale(${(p.scale + (1 - p.scale) * f).toFixed(3)})`;
+      const anim = animate(truck, {
+        opacity: [0, 1, 1, 1, 1],
+        transform: [at(0), at(0), at(0.55), at(1), "translate(0px, 75vh) scale(2.7)"],
+        filter: ["blur(1px)", "blur(0px)", "blur(0px)", "blur(0px)", "blur(3px)"],
+      }, { ease: "linear", duration: 1, times: [0, 0.1, 0.4, 0.66, 1] });
+      truckScroll = scroll(anim, { target: scene, offset: ["start start", "end end"] });
+    };
+    const img = photo.querySelector("img");
+    if (img.complete) bindTruck(); else img.addEventListener("load", bindTruck, { once: true });
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(bindTruck, 150);
+    });
 
     bind(scene.querySelector(".scene__claim"), {
       opacity: [0, 0, 1, 1, 1],
