@@ -168,15 +168,15 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
   position: relative;
   display: grid;
   grid-template-rows: 1fr auto;
-  min-height: calc(100svh - 4.375rem);
+  min-height: calc(86svh - 4.375rem);
   overflow: hidden;
 }
 
 .hero__copy {
   position: relative;
   z-index: 1;
-  align-self: center;
-  padding: clamp(1.25rem, 4vh, 3rem) var(--gutter) clamp(1.25rem, 3.5vh, 2.5rem);
+  align-self: end;
+  padding: clamp(1.25rem, 4vh, 3rem) var(--gutter) clamp(1.5rem, 4vh, 2.75rem);
   max-width: 46rem;
 }
 
@@ -514,15 +514,17 @@ a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px
 
 @media (min-width: 64rem) {
   .close { grid-template-columns: minmax(0, 36rem) minmax(0, 1fr); align-items: end; gap: clamp(3rem, 6vw, 6rem); }
-  .close .kerb { grid-column: 1 / -1; margin-bottom: 0.25rem; }
   .close .team { margin-top: 0; }
 }
 
-/* Randstein wie an der Rennstrecke */
+/* Randstein wie an der Rennstrecke, am Fahrbahnrand entlang des Über-uns-Abschnitts */
 .kerb {
-  height: 0.9rem;
-  margin-bottom: 1.75rem;
-  background: repeating-linear-gradient(90deg, var(--kerb) 0 2.75rem, var(--paint) 2.75rem 5.5rem);
+  position: absolute;
+  top: 2.5rem;
+  bottom: 2.5rem;
+  left: calc(-1 * clamp(1.25rem, 4vw, 4rem));
+  width: 0.65rem;
+  background: repeating-linear-gradient(180deg, var(--kerb) 0 2.75rem, var(--paint) 2.75rem 5.5rem);
 }
 
 .motto blockquote { margin: 0; }

@@ -17,7 +17,7 @@ THESIS: The page is the road a SPN tour drives. Refuses the category default of 
 
 OWN-WORLD: Asphalt seen from above: warm dark grey ground with fine aggregate grain, retroreflective white road paint (stencil-tall lettering, dashed lane lines, stop line, arrows), Baustellen-gelb temporary marking for every action, red/white Leitpfosten stripes as rare rhythm marks. Condensed highway-signage sans for display, plain sans for reading.
 
-STORY: Visitor sees a moving truck on SPN's lane, reads who drives it (family, 15+ years, German-speaking drivers), sees the job (Nahverkehr, Shuttle A↔B, Zugmaschine for your trailer), and calls.
+STORY: Visitor sees a moving truck on SPN's lane, reads who drives it (family, 15+ years, German-speaking drivers), sees the job (Nahverkehr, Shuttle A↔B; "Zugmaschine for your trailer" only once the user confirms it as an offer), learns the motorsport roots, and calls.
 
 FIRST VIEWPORT: Full-bleed asphalt. "SPN-TRANSPORTE" painted on the road in tall white road lettering, claim beneath. Top-down Zugmaschine enters from the left on a lane with moving dashes. Yellow painted box with the tap-to-call number and the e-mail, visible without scroll on phone and desktop.
 
