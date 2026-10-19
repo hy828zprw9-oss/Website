@@ -28,7 +28,8 @@ Tours are mostly local: Nahverkehr and Shuttle with one or two loading/unloading
 
 ## Capabilities and Constraints
 
-- Leistungen confirmed for the site: Nahverkehr & Shuttle.
+- Leistungen confirmed for the site: Nahverkehr & Shuttle. Owner decided (2026-10-19): no separate "Zugmaschine mit Fahrer" offer on the site.
+- Hosting: IONOS (owner, 2026-10-19).
 - Existing copy also claims "Transporte in Deutschland und ganz Europa".
 - Contact: Telefon 0151 14210193, E-Mail spn-transporte@t-online.de.
 - Open: legal form, owner name, postal address, USt-IdNr. (required for Impressum), fleet size, service area.
@@ -43,7 +44,8 @@ Tours are mostly local: Nahverkehr and Shuttle with one or two loading/unloading
 ## Evidence on Hand
 
 - Real copy from the old site (claim, family business, 15+ years, German-speaking drivers, Über-uns story with motorsport roots, values list, philosophy, team text).
-- No logo, photos, testimonials, customer names, certifications or fleet figures on hand. Do not fabricate any of them.
+- Real daylight fleet photos and the SPN-TRANSPORTE lettering style supplied by the owner (assets/img, provenance sidecars). Owner chose daylight photos only.
+- No testimonials, customer names, certifications or fleet figures on hand. Do not fabricate any of them.
 
 ## Product Principles
 
