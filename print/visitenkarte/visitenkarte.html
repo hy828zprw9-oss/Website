@@ -19,13 +19,15 @@ body { font-family: "Geist", sans-serif; -webkit-print-color-adjust: exact; prin
 .kerb { position: absolute; background: repeating-linear-gradient(90deg, var(--red) 0 5mm, var(--white) 5mm 10mm); }
 
 /* Vorderseite */
-.front .truck { position: absolute; right: -9mm; bottom: 4.2mm; height: 46mm; }
 .front .services { position: absolute; left: 0; bottom: 1.5mm; font-size: 2.2mm; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--white); }
 .front .services i { font-style: normal; color: var(--red); padding: 0 1.2mm; }
-.front .shade { position: absolute; inset: 0; background: linear-gradient(90deg, var(--black) 0%, var(--black) 34%, rgb(11 11 12 / 0) 62%); }
+.front .photo { position: absolute; left: 0; top: 0; width: 100%; height: calc(100% - 4.2mm); object-fit: cover; object-position: 50% 70%; }
+/* Abdunklung oben für den Schriftzug, unten für die Leistungszeile */
+.front .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgb(11 11 12 / 0.92) 0%, rgb(11 11 12 / 0.55) 30%, rgb(11 11 12 / 0) 52%, rgb(11 11 12 / 0) 72%, rgb(11 11 12 / 0.85) 93%); }
 .front .wordmark { font-size: 6.4mm; }
-.front .claim { margin-top: 3.2mm; font-size: 2.25mm; line-height: 1.35; font-weight: 500; color: var(--grey); max-width: 38mm; }
+.front .claim { margin-top: 2.4mm; font-size: 2.25mm; line-height: 1.35; font-weight: 500; color: #d2d2d7; max-width: 60mm; }
 .front .claim b { color: var(--white); font-weight: 600; }
+.front .wordmark { -webkit-text-stroke: 0.05em #050505; paint-order: stroke fill; }
 .front .kerb { left: 0; right: 0; bottom: 0; height: 4.2mm; }
 
 /* Rückseite */
@@ -41,7 +43,7 @@ body { font-family: "Geist", sans-serif; -webkit-print-color-adjust: exact; prin
 </head>
 <body>
   <section class="card front">
-    <img class="truck" src="../../assets/img/actros-frei-950.webp" alt="">
+    <img class="photo" src="hof-karte.jpg" alt="">
     <div class="shade"></div>
     <div class="safe">
       <div class="wordmark">SPN-Transporte</div>
