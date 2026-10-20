@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Visitenkarte SPN-Transporte</title>
+<style>
+@font-face { font-family: "Saira"; src: url("../../assets/fonts/saira-latin-wdth-italic.woff2") format("woff2"); font-style: italic; font-weight: 100 900; font-stretch: 50% 125%; }
+@font-face { font-family: "Geist"; src: url("../../assets/fonts/geist-latin-wght-normal.woff2") format("woff2"); font-weight: 100 900; }
+@page { size: 91mm 61mm; margin: 0; }
+:root { --red: #d0111f; --black: #0b0b0c; --grey: #a1a1a6; --white: #f5f5f7; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #fff; }
+body { font-family: "Geist", sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+/* 91 × 61 mm = 85 × 55 mm Endformat + 3 mm Beschnitt rundum */
+.card { position: relative; width: 91mm; height: 61mm; overflow: hidden; background: var(--black); color: var(--white); page-break-after: always; }
+.safe { position: absolute; inset: 6.5mm; } /* 3 mm Beschnitt + 3.5 mm Sicherheitsabstand */
+.wordmark { font-family: "Saira"; font-style: italic; font-weight: 850; font-stretch: 125%; text-transform: uppercase; color: var(--red); letter-spacing: 0; line-height: 1; }
+
+/* Vorderseite */
+.front .photo { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 78%; }
+.front .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgb(11 11 12 / 0.85) 0%, rgb(11 11 12 / 0.35) 28%, rgb(11 11 12 / 0) 45%); }
+.front .wordmark { font-size: 6.4mm; }
+.front .wordmark { -webkit-text-stroke: 0.05em #050505; paint-order: stroke fill; }
+
+/* Rückseite */
+.back .safe { left: 7.5mm; }
+/* schmale rote Linie unten statt Randstein */
+.line { position: absolute; left: 0; right: 0; bottom: 0; height: 4.5mm; background: var(--red); }
+.back .wordmark { font-size: 3.6mm; }
+.back .name { margin-top: 6mm; font-size: 3.9mm; font-weight: 650; letter-spacing: -0.02em; line-height: 1.1; }
+.back .role { margin-top: 0.8mm; font-size: 2.35mm; color: var(--grey); font-weight: 500; }
+.back .lines { position: absolute; left: 0; bottom: 2mm; display: grid; gap: 1.3mm; font-size: 2.55mm; font-weight: 500; letter-spacing: -0.005em; }
+.back .lines span { display: inline-block; width: 13.5mm; color: var(--red); font-weight: 650; font-size: 2.1mm; text-transform: uppercase; letter-spacing: 0.04em; }
+.back .lines b { font-weight: 600; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+  <section class="card front">
+    <img class="photo" src="hof-karte.jpg" alt="">
+    <div class="shade"></div>
+    <div class="safe">
+      <div class="wordmark">SPN-Transporte</div>
+    </div>
+    <div class="line"></div>
+  </section>
+
+  <section class="card back">
+    <div class="safe">
+      <div class="wordmark">SPN-Transporte</div>
+      <p class="name">Leonhard Schopian</p>
+      <div class="lines">
+        <div><span>Telefon</span><b>0151 14210193</b></div>
+        <div><span>E-Mail</span>spn-dispo@t-online.de</div>
+        <div><span>Web</span>www.spn-transporte.de</div>
+      </div>
+    </div>
+    <div class="line"></div>
+  </section>
+</body>
+</html>
