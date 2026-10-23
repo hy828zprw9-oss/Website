@@ -1,0 +1,13 @@
+{
+  "name": "spn-truck3d",
+  "private": true,
+  "description": "Builds assets/js/truck3d.js: the procedural SPN Actros (img2threejs) and the page's 3D road scenes.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.24.2",
+    "three": "0.170.0"
+  }
+}

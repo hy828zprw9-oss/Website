@@ -7,6 +7,7 @@ Constraints: no third-party requests (fonts, motion library, images self-hosted)
 ## Direction contract
 
 User-pinned redesign (2026-10-19): "modern like Apple, not old-fashioned; integrate the photos; the truck drives out of the photos". Replaces the earlier top-down road world.
+User-pinned motion brief (2026-10-23): "Bau einen 3D-LKW mit img2threejs auf die Seite … modern, minimalistisch und coole Animationen … LKWs, die durch das Bild fahren, auf einen zufahren, von einem wegfahren, von links fahren, von rechts fahren." Keeps the black/mist world; replaces the single cut-out scroll scene with one road of 3D stages.
 
 THESIS: A product-launch page where the product is the fleet. Refuses the category default of a stock highway photo with three icon cards.
 
@@ -14,10 +15,10 @@ OWN-WORLD: Black and mist-grey sections alternating, large tight grotesk headlin
 
 STORY: The visitor sees SPN's own trucks, one Actros drives out of the row toward them, learns the motorsport roots and the family business, sees Nahverkehr and Shuttle, the fleet, and calls.
 
-FIRST VIEWPORT: Mist stage, centred two-line headline "Präzision aus dem Motorsport. / Zuverlässigkeit auf der Straße.", meta line, red "Tour anfragen" pill and phone pill; below, the daylight photo of the fleet row in the yard, sky fading into the mist.
+FIRST VIEWPORT: Mist stage, centred two-line headline "Präzision aus dem Motorsport. / Zuverlässigkeit auf der Straße.", meta line, red "Tour anfragen" pill and phone pill; below, a mist-grey road fading into the mist on which SPN's 3D Actros arrives from the distance. Without WebGL: the daylight photo of the fleet row, sky fading into the mist.
 
 FORM: User-pinned direction (no roll for this redesign); previous roll seed:08122a54b005d79e no longer governs.
 
-Signature interaction: sticky scroll scene: the photo slowly zooms and darkens, a cut-out SPN Actros emerges from the row and grows until it passes the camera, the claim appears. Supporting: word-by-word statement reveal, fleet photo zoom-out on entry, shuttle dot A↔B. Reduced motion: static scene, all words lit.
+Signature interaction: the road. The procedural SPN Actros (img2threejs, 3d/) approaches from the distance, the camera walks round it on scroll and it pulls away right (opening scene); it shuttles A→B→A with U-turns in the Pendelverkehr card; trucks pass both ways in the Fuhrpark band; it drives off into the dark at the end of the page. Supporting: word-by-word statement reveal, fleet photo zoom-out on entry. Reduced motion: still frames, all words lit. No WebGL: the photo scene with the cut-out Actros and the shuttle dot.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

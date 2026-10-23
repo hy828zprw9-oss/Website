@@ -9,9 +9,12 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/saira-latin-wdth-italic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/img/hof-1440.webp" as="image" imagesrcset="assets/img/hof-800.webp 800w, assets/img/hof-1440.webp 1440w" imagesizes="100vw">
+  <link rel="modulepreload" href="assets/js/truck3d.js">
   <link rel="stylesheet" href="styles.css">
-  <script>if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("has-motion");</script>
+  <script>(function (c) {
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) c.add("has-motion");
+    if (window.WebGL2RenderingContext || window.WebGLRenderingContext) c.add("has-3d");
+  })(document.documentElement.classList);</script>
 </head>
 <body>
   <a class="skip" href="#inhalt">Zum Inhalt springen</a>
@@ -30,11 +33,13 @@
   </header>
 
   <main id="inhalt">
-    <!-- Startszene: der LKW fährt aus dem Foto heraus -->
-    <section class="scene" id="top" aria-labelledby="scene-title">
+    <!-- Startszene: der Actros kommt aus der Ferne, die Kamera geht um ihn herum, dann fährt er los -->
+    <section class="scene" id="top" data-scroll-stage aria-labelledby="scene-title">
       <div class="scene__stage">
+        <div class="scene__road" data-stage="hero" aria-hidden="true"></div>
+        <!-- ohne WebGL: Foto vom Hof mit freigestelltem LKW -->
         <div class="scene__photo">
-          <img src="assets/img/hof-1440.webp" srcset="assets/img/hof-800.webp 800w, assets/img/hof-1440.webp 1440w" sizes="100vw" width="1440" height="1080" alt="Der Fuhrpark von SPN-Transporte auf dem Hof: fünf silberne Mercedes-Benz Actros nebeneinander vor einer Halle.">
+          <img loading="lazy" src="assets/img/hof-1440.webp" srcset="assets/img/hof-800.webp 800w, assets/img/hof-1440.webp 1440w" sizes="100vw" width="1440" height="1080" alt="Der Fuhrpark von SPN-Transporte auf dem Hof: fünf silberne Mercedes-Benz Actros nebeneinander vor einer Halle.">
         </div>
         <div class="scene__copy">
           <h1 id="scene-title">Präzision aus dem Motorsport.<span>Zuverlässigkeit auf der Straße.</span></h1>
@@ -45,7 +50,7 @@
           </div>
         </div>
         <div class="scene__truck" aria-hidden="true">
-          <img src="assets/img/actros-frei-950.webp" srcset="assets/img/actros-frei-640.webp 640w, assets/img/actros-frei-950.webp 952w" sizes="(min-width: 64rem) 34vw, 70vw" width="952" height="1074" alt="">
+          <img loading="lazy" src="assets/img/actros-frei-950.webp" srcset="assets/img/actros-frei-640.webp 640w, assets/img/actros-frei-950.webp 952w" sizes="(min-width: 64rem) 34vw, 70vw" width="952" height="1074" alt="">
         </div>
         <p class="scene__claim">Ihr zuverlässiger Transportpartner<br>in Deutschland und Europa.</p>
       </div>
@@ -72,6 +77,10 @@
               <p>Regelmäßige Fahrten zwischen zwei festen Punkten, zum Beispiel zwischen Werk und Lager. Gleiche Strecke, gleiche Fahrer, planbare Zeiten.</p>
             </div>
             <figure class="shuttle" aria-label="Schema: Pendelverkehr zwischen Ladestelle A und Entladestelle B">
+              <div class="shuttle__road" data-stage="shuttle" aria-hidden="true">
+                <span class="shuttle__stop" data-stop>A<small>Laden</small></span>
+                <span class="shuttle__stop" data-stop>B<small>Entladen</small></span>
+              </div>
               <div class="shuttle__track">
                 <span class="shuttle__point">A<small>Laden</small></span>
                 <div class="shuttle__line"><span class="shuttle__dot"></span></div>
@@ -87,6 +96,7 @@
       <div class="wrap">
         <h2 id="fleet-title" class="section-title section-title--dark">Unser Fuhrpark.<span>Silber, gepflegt und mit unserem Namen am Kühlergrill.</span></h2>
       </div>
+      <div class="fleet__road" data-stage="traffic" aria-hidden="true"></div>
       <figure class="fleet__hero">
         <img src="assets/img/hof-reihe-1440.webp" srcset="assets/img/hof-reihe-800.webp 800w, assets/img/hof-reihe-1440.webp 1440w" sizes="100vw" width="1440" height="1080" loading="lazy" alt="Silberne Mercedes-Benz Actros Zugmaschinen von SPN-Transporte in einer Reihe vor einer Halle, unter einem Wolkenhimmel.">
       </figure>
@@ -164,6 +174,8 @@
           </form>
         </div>
       </div>
+      <!-- zum Schluss fährt der Actros davon -->
+      <div class="contact__road" data-stage="away" aria-hidden="true"></div>
     </section>
   </main>
 

@@ -1,6 +1,6 @@
 ---
 name: SPN-Transporte
-description: A product-launch page where the product is the fleet. Black and mist stages, tight Geist headlines, pills and 28px cards, real SPN photography, and one Actros that drives out of the photo.
+description: A product-launch page where the product is the fleet. Black and mist stages, tight Geist headlines, pills and 28px cards, real SPN photography, and a procedural 3D Actros that drives along one road through the page.
 colors:
   black: "#000000"
   graphite: "#1d1d1f"
@@ -151,7 +151,7 @@ The site is staged like a product launch, and the product is SPN's own fleet of 
 
 The page is sparse and confident: one idea per stage, generous section padding, few elements, big type. Colour is almost absent. Brand red (#d0111f) is the single signal and only marks things the visitor can do or things SPN promises (the check marks). The company's own wordmark, red wide italic Saira with a black outline as it is lettered on the trailers, is the only logo.
 
-Motion is used once, big, and then quietly. The opening scene is a sticky scroll stage in which a cut-out SPN Actros drives out of the daylight photo of the fleet row and past the camera. Everything after that is supportive: a statement whose words light up as you read, a fleet photo that settles into frame, a red dot shuttling between A and B. With reduced motion the page is a calm static document with nothing lost.
+Motion is one idea told four times: a road runs through the page and SPN's Actros drives it (owner brief 2026-10-23: trucks that come toward you, drive away, and pass from left and right). The truck is a procedural Three.js reconstruction of SPN's own Actros L (DT E 1005), built with img2threejs from the owner's photo. On the mist opening stage it comes out of the distance toward you, the camera walks round it, and it pulls away to the right; in the Pendelverkehr card it runs A to B, turns and comes back; in the Fuhrpark section trucks pass both ways at night; at the end of the page it drives off into the dark, tail lights last. Text motion stays quiet: a statement whose words light up as you read, a fleet photo that settles into frame. With reduced motion every road stage is a still frame; without WebGL the page falls back to the photo scene.
 
 **Key Characteristics:**
 - Full-bleed black and mist stages alternating: scene, statement (black), Leistungen (mist), Fuhrpark (black), Über uns (mist), Kontakt (black), footer (mist).
@@ -159,7 +159,7 @@ Motion is used once, big, and then quietly. The opening scene is a sticky scroll
 - 28px rounded cards and fully rounded pills; no square buttons, no hairline-boxed cards.
 - Red is a verb: actions, the shuttle dot, check marks, list markers. Never decoration.
 - Only real SPN photographs, each with a provenance sidecar, driver name tags blurred.
-- One signature scroll scene; supporting motion stays small and stops when off screen.
+- One road, four stages (approach, shuttle, traffic, drive-away); each WebGL stage renders only while on screen.
 
 ## Colors
 
@@ -232,7 +232,7 @@ The system is flat. Depth comes from the stage contrast (black against mist), fr
 - **Glass bar** (`background: rgb(0 0 0 / 0.86); backdrop-filter: saturate(180%) blur(20px)`): the fixed nav, with a 1px white hairline at 8%.
 - **Ghost ring** (`box-shadow: inset 0 0 0 1.5px rgb(255 255 255 / 0.55)`): the outline of the ghost pill, an inset ring rather than a border.
 - **Signal halo** (`box-shadow: 0 0 0 6px rgb(208 17 31 / 0.18)`): the shuttle dot only.
-- **Ground shadow** (radial gradient, black 85% to transparent): under the cut-out truck in the scroll scene.
+- **Ground shadow** (radial gradient, black 85% to transparent): under the cut-out truck in the photo fallback scene, and as a soft elliptical blob under every 3D truck.
 
 ### Named Rules
 **The Flat Cards Rule.** Cards and panels never cast shadows; they separate from the stage by tone alone.
@@ -271,14 +271,20 @@ Each item is preceded by a 1.25rem Signal Red disc with a white tick drawn inlin
 ### Navigation
 Fixed glass bar on black at 86%: wordmark left (red, no outline), links right at 0.875rem in mist at 80% opacity brightening to white, small red Anrufen pill at the end. Below 48rem the links hide.
 
-### Scroll Scene (signature)
-A sticky mist stage 240vh tall (100svh when motion is off), dark text. The daylight photo of the fleet row (hof-1440) sits in the lower 70% of the viewport, its sky faded into the mist at the top. The two-line display headline, meta line and pills (ghost pill with dark outline) are centred above it. On scroll (Motion's scroll-linked animate, linear, mapped across the whole section): the photo zooms to 1.12; the copy fades and lifts away by 28%; the cut-out Actros (DT E 1005, from the same yard) fades in small in front of the row, its start point computed in main.js from the photo's cover geometry (image point 905,760; truck height 300px in photo pixels), then grows to full size and passes the camera at scale 2.7 with slight motion blur; the claim fades in from 36% to 50%. Without motion, the truck is parked at the lower right at a smaller size and the claim is not shown.
+### The Road (signature, 3D)
+Four WebGL stages share one procedural SPN Actros (assets/js/truck3d.js, built from 3d/; three.js and the model are self-hosted, no texture downloads). Each stage is a `[data-stage]` host whose canvas fades in on its first frame and renders only while on screen; lamps are glow sprites (small lit points by day, additive blooms at night) and every truck sits on a blurred blob shadow. Wheels roll with distance travelled.
+- **Approach (scene, mist, sticky 300vh):** a two-lane road in mist-grey and white fades into the mist through fog. On first frame the Actros drives out of the distance toward the camera (4.2 s, quartic ease-out), stopping under the headline and pills in a front three-quarter view with a slow camera sway. Scroll then walks the camera round to the side (4-50%), the copy fades by 20%, and from 50% the truck pulls away to the right; the claim appears at 56-70%.
+- **Shuttle (white Pendelverkehr card):** a pale loop ribbon with graphite stop discs; the truck holds at A (Laden), drives to B (Entladen), holds, turns round the far side and comes back, 11 s per cycle. A/B captions are DOM text pinned under the projected stops.
+- **Traffic (Fuhrpark, black band under the headline):** a dark road seen from the side; trucks pass right in the near lane and left in the far lane, white headlight blooms and red tail lights. Scroll pans the camera slightly. Phones frame one truck at a time.
+- **Drive-away (end of Kontakt, black):** seen from behind, the Actros drives toward the horizon as the page scrolls to its end and dissolves into black fog; the red tail lights stay last.
+- **Reduced motion:** each stage draws one still frame (parked approach pose, truck at A, one truck per lane, truck mid-distance).
+- **No WebGL:** the photo scene takes over: the daylight fleet photo with the cut-out Actros that emerges from the row on scroll, the shuttle dot runs A↔B, the other road hosts are hidden.
 
 ### Word Reveal
 One statement paragraph whose words are split into spans and lit from word-unlit to mist as the paragraph scrolls from 80% to 45% of the viewport. Without motion, all words render lit as plain text.
 
-### Shuttle Diagram
-Inside the white shuttle card: large letters A (Laden) and B (Entladen) on either side of a 6px line-on-mist track; a red dot with halo travels A to B and back in 5.5s with a pause at each end (in-out cubic). It runs only while 40% visible and does not run at all under reduced motion.
+### Shuttle Diagram (fallback)
+Without WebGL, inside the white shuttle card: large letters A (Laden) and B (Entladen) on either side of a 6px line-on-mist track; a red dot with halo travels A to B and back in 5.5s with a pause at each end (in-out cubic). It runs only while 40% visible and does not run at all under reduced motion. With WebGL the 3D shuttle stage replaces it.
 
 ### Fleet Frame
 A 16:9 photograph, 28px radius, up to 90rem wide, that scales from 1.18 to 1 as it scrolls into view; below it two 4:5 portrait photos with short muted captions naming the model.
@@ -290,6 +296,7 @@ A 16:9 photograph, 28px radius, up to 90rem wide, that scales from 1.18 to 1 as 
 - **Do** write headlines as a statement plus a muted second line at the same size, Geist 650 with -0.035em tracking.
 - **Do** keep every button a pill (999px) and every card or framed photo at 28px (1.75rem).
 - **Do** use only real SPN photographs. Ship each raster with a provenance sidecar (`<file>.webp.json`) stating origin and edits, and blur any driver name tags before publishing.
+- **Do** keep the 3D Actros the only non-photographic image: a procedural reconstruction of SPN's own truck, documented in 3d/actros/README.md, with no lettering, logos or plate characters.
 - **Do** self-host every font, script and image; the page makes no third-party requests.
 - **Do** gate every motion behind the `has-motion` class, set only when prefers-reduced-motion is not reduce and the Motion library loaded, and make the static state complete on its own.
 - **Do** pause looping motion when it leaves the viewport.
@@ -301,4 +308,5 @@ A 16:9 photograph, 28px radius, up to 90rem wide, that scales from 1.18 to 1 as 
 - **Don't** use stock, illustrated or AI-generated imagery, invented fleet figures, customer logos or reviews.
 - **Don't** set headings, labels or body text in Saira; it is the wordmark only.
 - **Don't** introduce a third stage colour or gradients between stages.
-- **Don't** add a second scroll-driven set piece; the truck scene is the one signature, everything else stays supportive.
+- **Don't** add motion that is not the road: the four truck stages are the signature, text and photos stay quiet.
+- **Don't** let a 3D stage run off screen or under reduced motion; never ship the 3D without its photo fallback.
