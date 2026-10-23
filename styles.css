@@ -308,8 +308,8 @@ img { max-width: 100%; }
   height: 100svh;
   min-height: 34rem;
   overflow: hidden;
-  background: var(--mist);
-  color: var(--text-dark);
+  background: var(--black);
+  color: var(--text-light);
 }
 
 .scene__photo {
@@ -324,12 +324,12 @@ img { max-width: 100%; }
   object-position: 50% 58%;
   display: block;
 }
-/* Himmel geht weich in den hellen Hintergrund über */
+/* Himmel geht weich in den schwarzen Hintergrund über */
 .scene__photo::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, var(--mist) 0%, rgb(245 245 247 / 0) 32%);
+  background: linear-gradient(180deg, var(--black) 0%, rgb(0 0 0 / 0) 36%);
 }
 
 .scene__copy {
@@ -349,18 +349,15 @@ img { max-width: 100%; }
   letter-spacing: -0.035em;
   text-wrap: balance;
 }
-.scene h1 span { display: block; color: var(--muted-dark); }
+.scene h1 span { display: block; color: var(--muted-light); }
 
 .scene__meta {
   margin: 1.25rem auto 0;
   max-width: 38ch;
-  color: var(--muted-dark);
+  color: var(--muted-light);
   font-size: clamp(1.0625rem, 1.3vw, 1.3rem);
   text-wrap: balance;
 }
-
-.scene .pill--ghost { color: var(--text-dark); box-shadow: inset 0 0 0 1.5px rgb(29 29 31 / 0.5); }
-.scene .pill--ghost:hover { background: rgb(29 29 31 / 0.06); }
 
 .scene__actions {
   display: flex;
@@ -403,7 +400,7 @@ img { max-width: 100%; }
   font-stretch: var(--wide);
   line-height: 1.08;
   letter-spacing: -0.03em;
-  color: var(--text-dark);
+  color: var(--text-light);
   opacity: 0;
 }
 
@@ -598,6 +595,10 @@ html:not(.has-motion) .scene__claim { display: none; }
 }
 .shuttle.is-running .shuttle__dot { animation-play-state: running; }
 
+/* Mit 3D wird die Pendel-Karte schwarz wie die übrigen Bühnen */
+.has-3d .card--shuttle { background: var(--black); color: var(--text-light); }
+.has-3d .card--shuttle p,
+.has-3d .shuttle__stop small { color: var(--muted-light); }
 .has-3d .shuttle { padding: 0 0 clamp(1.25rem, 3vw, 2rem); }
 .has-3d .shuttle__track { display: none; }
 .shuttle__road { height: clamp(15rem, 30vw, 21rem); }

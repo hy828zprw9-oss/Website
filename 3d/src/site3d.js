@@ -1,20 +1,16 @@
 // The road through the page: four small WebGL stages that share one procedural SPN Actros.
 //
-//   hero     the Actros comes out of the distance toward you, the camera walks round it,
-//            then it pulls away to the right (scroll-linked after the intro)
+//   hero     at night the Actros comes out of the dark toward you with its headlights on the
+//            road, the camera walks round it, then it pulls away (scroll-linked after the intro)
 //   shuttle  inside the Pendelverkehr card it runs A -> B, turns, and comes back
 //   traffic  in the Fuhrpark section trucks pass left -> right and right -> left
 //   away     at the end of the page it drives off into the dark, tail lights last
 //
-// Every stage renders only while on screen. With reduced motion each stage draws one still frame.
+// All four are black stages lit like a photo studio (studio.js), so the silver paint carries the
+// picture. Every stage renders only while on screen. With reduced motion each draws one still frame.
 import * as THREE from "three";
-import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
-import { mergeGeometries, toCreasedNormals } from "three/examples/jsm/utils/BufferGeometryUtils.js";
-import { createSPNActrosLTractorUnitModel as createActros } from "../build/actros.web.ts";
-
-const WHEEL_RADIUS = 0.53;
-const TRUCK_MID = -3.0; // local z between the axles; trucks are placed and steered by this point
-const WHEEL_IDS = ["wheelFront", "wheelFrontR", "wheelRear", "wheelRearR"];
+import { buildActros, LAMPS, TRUCK_MID, WHEEL_RADIUS } from "./actros.js";
+import { studioEnvironment } from "./studio.js";
 
 const clamp01 = (v) => Math.min(1, Math.max(0, v));
 const mix = (a, b, t) => a + (b - a) * t;
@@ -25,55 +21,6 @@ const inOutCubic = (t) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);
 const deg = THREE.MathUtils.degToRad;
 
 /* ---------- the truck ---------- */
-
-let prototype = null;
-
-// One merged mesh per material for the body, plus the four wheel stations as separate pivots
-// so they can roll. Brings ~62 draw calls per truck down to about two dozen.
-function truckPrototype() {
-  if (prototype) return prototype;
-  const model = createActros({ castShadow: false, receiveShadow: false });
-  model.updateMatrixWorld(true);
-  const nodes = model.userData.sculptRuntime.nodes;
-  const wheelNodes = WHEEL_IDS.map((id) => nodes[id]);
-  const wheelOf = (o) => {
-    for (let p = o; p; p = p.parent) if (wheelNodes.includes(p)) return p;
-    return null;
-  };
-
-  const group = new THREE.Group();
-  group.name = "SPN Actros";
-  const inverse = new THREE.Matrix4();
-  const relative = new THREE.Matrix4();
-  for (const node of wheelNodes) {
-    const pivot = new THREE.Group();
-    pivot.name = "wheel";
-    node.matrixWorld.decompose(pivot.position, pivot.quaternion, pivot.scale);
-    inverse.copy(node.matrixWorld).invert();
-    node.traverse((o) => {
-      if (!o.isMesh) return;
-      const part = o.clone(false);
-      relative.multiplyMatrices(inverse, o.matrixWorld);
-      relative.decompose(part.position, part.quaternion, part.scale);
-      pivot.add(part);
-    });
-    group.add(pivot);
-  }
-
-  const byMaterial = new Map();
-  model.traverse((o) => {
-    if (!o.isMesh || o.isInstancedMesh || wheelOf(o)) return;
-    let g = o.geometry.clone().applyMatrix4(o.matrixWorld);
-    // Smooth the rounded extrusion fillets, keep box edges crisp.
-    g = toCreasedNormals(g, deg(35));
-    for (const name of Object.keys(g.attributes)) if (!["position", "normal", "uv"].includes(name)) g.deleteAttribute(name);
-    if (!byMaterial.has(o.material)) byMaterial.set(o.material, []);
-    byMaterial.get(o.material).push(g);
-  });
-  for (const [material, geometries] of byMaterial) group.add(new THREE.Mesh(mergeGeometries(geometries), material));
-  prototype = group;
-  return prototype;
-}
 
 let glowMap = null;
 function glowTexture() {
@@ -112,22 +59,24 @@ function shadowTexture() {
   return shadowMap;
 }
 
+// quality: 1 for the hero, less for trucks that stay small on screen (fewer fillet and wheel
+// segments). glow scales the lamp blooms.
 class Truck {
-  constructor({ night = false } = {}) {
-    this.object = truckPrototype().clone();
+  constructor({ quality = 1, glow = 1 } = {}) {
+    this.object = buildActros({ quality, night: true }).clone();
     this.wheels = this.object.children.filter((c) => c.name === "wheel");
     this.lamps = [];
 
     const shadow = new THREE.Mesh(
-      new THREE.PlaneGeometry(3.3, 7.4),
-      new THREE.MeshBasicMaterial({ map: shadowTexture(), transparent: true, depthWrite: false, toneMapped: false, opacity: night ? 0.9 : 0.75 }),
+      new THREE.PlaneGeometry(3.1, 7.2),
+      new THREE.MeshBasicMaterial({ map: shadowTexture(), transparent: true, depthWrite: false, toneMapped: false, opacity: 0.9 }),
     );
     shadow.rotation.x = -Math.PI / 2;
     shadow.position.set(0, 0.012, TRUCK_MID);
     shadow.renderOrder = 1;
     this.object.add(shadow);
 
-    const lamp = (x, y, z, color, size, additive) => {
+    const lamp = (at, color, size) => {
       const sprite = new THREE.Sprite(
         new THREE.SpriteMaterial({
           map: glowTexture(),
@@ -135,20 +84,19 @@ class Truck {
           transparent: true,
           depthWrite: false,
           fog: false,
-          blending: additive ? THREE.AdditiveBlending : THREE.NormalBlending,
+          blending: THREE.AdditiveBlending,
           toneMapped: false,
         }),
       );
-      sprite.position.set(x, y, z);
+      sprite.position.copy(at);
       sprite.userData.size = size;
       this.object.add(sprite);
       this.lamps.push(sprite);
       return sprite;
     };
-    // Headlights sit just proud of the lens; tail lights on the rear cross-member.
-    // By day the lamps are small lit points; at night they bloom (additive).
-    for (const x of [-0.98, 0.98]) lamp(x, 0.9, 0.16, night ? "#eaf2ff" : "#ffffff", night ? 1.4 : 0.5, night);
-    for (const x of [-0.82, 0.82]) lamp(x, 0.78, -6.16, night ? "#ff1f2d" : "#e0101c", night ? 1.25 : 0.32, night);
+    // Headlights just proud of the lens, tail lights on the rear light bar; both bloom (additive).
+    for (const at of LAMPS.head) lamp(at, "#eaf2ff", 1.4 * glow);
+    for (const at of LAMPS.tail) lamp(at, "#ff1f2d", 1.25 * glow);
     this.distance = 0;
   }
 
@@ -179,7 +127,7 @@ class Truck {
 
 /* ---------- scenery ---------- */
 
-function roadTexture(night, anisotropy) {
+function roadTexture(anisotropy, { asphalt, line }) {
   // One 12 m tile of a two-lane road, 9 m wide: edge lines and a dashed centre line.
   const c = document.createElement("canvas");
   c.width = 256;
@@ -187,9 +135,9 @@ function roadTexture(night, anisotropy) {
   const g = c.getContext("2d");
   const pxPerM = 256 / 9;
   const pyPerM = 512 / 12;
-  g.fillStyle = night ? "#0c0c0e" : "#e7e7eb";
+  g.fillStyle = asphalt;
   g.fillRect(0, 0, 256, 512);
-  g.fillStyle = night ? "#3a3a3c" : "#ffffff";
+  g.fillStyle = line;
   g.fillRect(0.35 * pxPerM, 0, 0.15 * pxPerM, 512);
   g.fillRect(256 - 0.5 * pxPerM, 0, 0.15 * pxPerM, 512);
   g.fillRect(128 - 0.075 * pxPerM, 0, 0.15 * pxPerM, 4.5 * pyPerM);
@@ -201,28 +149,30 @@ function roadTexture(night, anisotropy) {
   return t;
 }
 
-function road(stage, { night, centreX = 1.75, from = -400, to = 400 }) {
+// lit: a shaded road that takes headlight pools and the truck's cast shadow (hero only);
+// otherwise a flat dark ribbon that costs nothing to draw.
+function road(stage, { centreX = 1.75, from = -400, to = 400, lit = false }) {
   const length = to - from;
-  const map = roadTexture(night, stage.renderer.capabilities.getMaxAnisotropy());
+  const anisotropy = stage.renderer.capabilities.getMaxAnisotropy();
+  const map = lit ? roadTexture(anisotropy, { asphalt: "#111113", line: "#4a4a4e" }) : roadTexture(anisotropy, { asphalt: "#0c0c0e", line: "#3a3a3c" });
   map.repeat.set(1, length / 12);
-  const mesh = new THREE.Mesh(new THREE.PlaneGeometry(9, length), new THREE.MeshBasicMaterial({ map, toneMapped: false }));
+  const material = lit
+    ? new THREE.MeshStandardMaterial({ map, roughness: 0.9, envMapIntensity: 0 })
+    : new THREE.MeshBasicMaterial({ map, toneMapped: false });
+  const mesh = new THREE.Mesh(new THREE.PlaneGeometry(9, length), material);
   mesh.rotation.x = -Math.PI / 2;
   mesh.position.set(centreX, 0, (from + to) / 2);
+  mesh.receiveShadow = lit;
   return mesh;
 }
 
-function lightRig(scene, { night }) {
-  const key = new THREE.DirectionalLight(night ? "#ffffff" : "#fff4e6", night ? 2.4 : 2.3);
-  const rim = new THREE.DirectionalLight(night ? "#c4d6ff" : "#e2ebff", night ? 1.7 : 1.1);
-  if (night) {
-    scene.add(new THREE.HemisphereLight("#8c96a8", "#050505", 0.5));
-    key.position.set(-8, 11, -6);
-    rim.position.set(7, 5, 10);
-  } else {
-    scene.add(new THREE.HemisphereLight("#ffffff", "#c9cbd1", 1.5));
-    key.position.set(-9, 12, 9);
-    rim.position.set(6, 6, -10);
-  }
+// Key from the front left and high, a cool rim from behind, a little sky fill.
+function lightRig(scene) {
+  scene.add(new THREE.HemisphereLight("#9aa6b8", "#050505", 0.35));
+  const key = new THREE.DirectionalLight("#ffffff", 2.0);
+  key.position.set(-6, 12, 8);
+  const rim = new THREE.DirectionalLight("#cfe0ff", 1.4);
+  rim.position.set(6, 5, -12);
   scene.add(key, rim);
   return { key, rim };
 }
@@ -232,9 +182,8 @@ function lightRig(scene, { night }) {
 const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 class Stage {
-  constructor(host, { background, night = false, fov = 30, fog = null, exposure = night ? 1.0 : 1.12 }) {
+  constructor(host, { fov = 30, fog = null, exposure = 1 }) {
     this.host = host;
-    this.night = night;
     this.canvas = document.createElement("canvas");
     this.canvas.className = "stage3d";
     this.canvas.setAttribute("aria-hidden", "true");
@@ -247,13 +196,11 @@ class Stage {
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
 
     this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color(background);
-    if (fog) this.scene.fog = new THREE.Fog(background, fog[0], fog[1]);
-    const pmrem = new THREE.PMREMGenerator(this.renderer);
-    this.scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
-    this.scene.environmentIntensity = night ? 0.4 : 0.85;
-    pmrem.dispose();
-    this.lights = lightRig(this.scene, { night });
+    this.scene.background = new THREE.Color("#000");
+    if (fog) this.scene.fog = new THREE.Fog("#000", fog[0], fog[1]);
+    this.scene.environment = studioEnvironment(this.renderer);
+    this.scene.environmentIntensity = 0.9;
+    this.lights = lightRig(this.scene);
 
     this.camera = new THREE.PerspectiveCamera(fov, 1, 0.1, 600);
     this.width = 1;
@@ -308,17 +255,25 @@ const vh = () => window.innerHeight || document.documentElement.clientHeight;
 
 class HeroStage extends Stage {
   constructor(host, section) {
-    super(host, { background: "#f5f5f7", fov: 30, fog: [40, 200] });
+    super(host, { fov: 30, fog: [40, 200] });
     this.section = section;
-    this.scene.add(road(this, { night: false, centreX: 1.75, from: -420, to: 160 }));
-    this.truck = new Truck();
+    this.scene.add(road(this, { centreX: 1.75, from: -420, to: 160, lit: true }));
+    this.truck = new Truck({ glow: 0.6 });
     this.scene.add(this.truck.object);
+    // Headlights: a spot under each lamp aimed down the road ahead, so the truck brings its own
+    // pool of light out of the dark.
+    for (const at of LAMPS.head) {
+      const spot = new THREE.SpotLight("#eef4ff", 650, 60, deg(30), 0.9, 1.3);
+      spot.position.copy(at);
+      spot.target.position.set(at.x * 1.8, 0, at.z + 24);
+      this.truck.object.add(spot, spot.target);
+    }
     this.target = new THREE.Vector3();
     this.introStart = null;
     // Arriving after the visitor has already scrolled down: skip the approach.
     if (this.progress() > 0.04 || reduced.matches) this.introStart = -1e9;
 
-    // A real cast shadow from the key light on the road; the blob stays as contact occlusion.
+    // A real cast shadow from the key light on the lit road; the blob stays as contact occlusion.
     // The shadow frustum travels with the truck so it stays tight (and sharp) all the way in.
     this.renderer.shadowMap.enabled = true;
     this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -332,14 +287,6 @@ class HeroStage extends Stage {
     key.shadow.normalBias = 0.03;
     this.keyDirection = key.position.clone().normalize().multiplyScalar(24);
     this.scene.add(key.target);
-    const catcher = new THREE.Mesh(new THREE.PlaneGeometry(40, 640), new THREE.ShadowMaterial({ opacity: 0.2 }));
-    catcher.rotation.x = -Math.PI / 2;
-    catcher.position.set(1.75, 0.005, -150);
-    catcher.receiveShadow = true;
-    this.scene.add(catcher);
-    this.truck.object.traverse((o) => {
-      if (o.isMesh && !o.material.transparent) o.castShadow = true;
-    });
 
     // Desktop: the camera leans a few degrees toward the pointer, damped, so the scene has depth
     // to the hand as well as to the scroll.
@@ -434,7 +381,7 @@ function loopPoint(s) {
 
 class ShuttleStage extends Stage {
   constructor(host) {
-    super(host, { background: "#ffffff", fov: 22, exposure: 0.95 });
+    super(host, { fov: 22 });
     // Track ribbon along the loop.
     const pts = [];
     for (let i = 0; i <= 160; i++) {
@@ -444,18 +391,18 @@ class ShuttleStage extends Stage {
     const curve = new THREE.CatmullRomCurve3(pts, true);
     const ribbon = new THREE.Mesh(
       new THREE.TubeGeometry(curve, 240, 0.06, 4, true),
-      new THREE.MeshBasicMaterial({ color: "#d2d2d7", toneMapped: false }),
+      new THREE.MeshBasicMaterial({ color: "#3a3a3c", toneMapped: false }),
     );
     ribbon.scale.y = 0.2;
     this.scene.add(ribbon);
-    const stop = new THREE.MeshBasicMaterial({ color: "#1d1d1f", toneMapped: false });
+    const stop = new THREE.MeshBasicMaterial({ color: "#f5f5f7", toneMapped: false });
     for (const z of [-HALF + STOP, HALF - STOP]) {
       const disc = new THREE.Mesh(new THREE.CircleGeometry(0.3, 32), stop);
       disc.rotation.x = -Math.PI / 2;
       disc.position.set(-LANE - 1.9, 0.015, z);
       this.scene.add(disc);
     }
-    this.truck = new Truck();
+    this.truck = new Truck({ quality: 0.8, glow: 0.5 });
     this.scene.add(this.truck.object);
     this.labels = [...host.querySelectorAll("[data-stop]")];
     this.stops = [new THREE.Vector3(-LANE - 1.9, 0, -HALF + STOP), new THREE.Vector3(-LANE - 1.9, 0, HALF - STOP)];
@@ -494,10 +441,10 @@ class ShuttleStage extends Stage {
 
 class TrafficStage extends Stage {
   constructor(host) {
-    super(host, { background: "#000000", night: true, fov: 24, fog: [26, 70] });
-    this.scene.add(road(this, { night: true, centreX: 0, from: -300, to: 300 }));
+    super(host, { fov: 24, fog: [26, 70] });
+    this.scene.add(road(this, { centreX: 0, from: -300, to: 300 }));
     this.pool = Array.from({ length: 6 }, () => {
-      const truck = new Truck({ night: true });
+      const truck = new Truck({ quality: 0.6 });
       truck.object.visible = false;
       this.scene.add(truck.object);
       return { truck, active: false };
@@ -577,9 +524,9 @@ class TrafficStage extends Stage {
 
 class AwayStage extends Stage {
   constructor(host) {
-    super(host, { background: "#000000", night: true, fov: 28, fog: [24, 120] });
-    this.scene.add(road(this, { night: true, centreX: 1.75, from: -40, to: 420 }));
-    this.truck = new Truck({ night: true });
+    super(host, { fov: 28, fog: [24, 120] });
+    this.scene.add(road(this, { centreX: 1.75, from: -40, to: 420 }));
+    this.truck = new Truck({ quality: 0.6 });
     this.scene.add(this.truck.object);
   }
 

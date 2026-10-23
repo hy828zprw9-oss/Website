@@ -1794,21 +1794,21 @@
     "semantic_hash": ""
   },
   "3d/build.mjs": {
-    "mtime": 1792756567.641628,
-    "seen": 1792757519.3674238,
-    "ast_hash": "f5d5f221c936d3bb72e5e1a64df76780",
+    "mtime": 1792775492.2063243,
+    "seen": 1792776220.1007013,
+    "ast_hash": "fa697a3925ad89705f66bf39decf1ef3",
     "semantic_hash": ""
   },
   "3d/package.json": {
-    "mtime": 1792756382.9445462,
-    "seen": 1792757519.3674257,
-    "ast_hash": "ea1af924acb072e956549f0534d553f8",
+    "mtime": 1792776041.1396792,
+    "seen": 1792776220.1007054,
+    "ast_hash": "5ff51673890aae7615296f0803d2be5c",
     "semantic_hash": ""
   },
   "3d/src/site3d.js": {
-    "mtime": 1792771888.9705806,
-    "seen": 1792772102.935349,
-    "ast_hash": "792d77ace8d66f329fa5583b9f484468",
+    "mtime": 1792776008.606473,
+    "seen": 1792776220.1007104,
+    "ast_hash": "88fae8ea878cf0a63bd0a8228434bbc3",
     "semantic_hash": ""
   },
   "assets/img/actros-e-540.webp.json": {
@@ -1884,9 +1884,9 @@
     "semantic_hash": ""
   },
   "assets/js/truck3d.js": {
-    "mtime": 1792771889.2144067,
-    "seen": 1792772102.9356387,
-    "ast_hash": "c6563fa2169c9f0b9a7d1596389d4be5",
+    "mtime": 1792776025.9143121,
+    "seen": 1792776220.1010103,
+    "ast_hash": "e386c6ef3f1f36aaa5cdeef35c46f0c1",
     "semantic_hash": ""
   },
   "assets/vendor/motion.js": {
@@ -2712,15 +2712,15 @@
     "semantic_hash": ""
   },
   ".impeccable/surfaces/index-html.md": {
-    "mtime": 1792771961.61273,
-    "seen": 1792772102.9399736,
-    "ast_hash": "c3b5fac3243e5ab524bde381ff97a579",
+    "mtime": 1792776045.8504608,
+    "seen": 1792776220.1051254,
+    "ast_hash": "902fa1b27e98bb5f18a003db320d488b",
     "semantic_hash": ""
   },
   "3d/actros/README.md": {
-    "mtime": 1792757378.9086056,
-    "seen": 1792757519.3677826,
-    "ast_hash": "717f5b4a70b7281eee151783a773b417",
+    "mtime": 1792776025.7183123,
+    "seen": 1792776220.1051276,
+    "ast_hash": "3f14550b295b86b5dfe9ca34bf3dc75d",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
@@ -2730,9 +2730,9 @@
     "semantic_hash": ""
   },
   "DESIGN.md": {
-    "mtime": 1792771952.135141,
-    "seen": 1792772102.9400537,
-    "ast_hash": "6e4853c9d37a6a4355b2230fcf1afb99",
+    "mtime": 1792776025.7152112,
+    "seen": 1792776220.105151,
+    "ast_hash": "67dcc1eba616d9d5628c45f529d7872c",
     "semantic_hash": ""
   },
   "PRODUCT.md": {
@@ -3957,6 +3957,18 @@
     "mtime": 1792771068.4399903,
     "seen": 1792772102.9400792,
     "ast_hash": "bcc4b0d9ae273a407df2fdbbaa86888f",
+    "semantic_hash": ""
+  },
+  "3d/src/actros.js": {
+    "mtime": 1792776041.139136,
+    "seen": 1792776220.100708,
+    "ast_hash": "2a1c9c1881d51f61d4864ef195be4aa1",
+    "semantic_hash": ""
+  },
+  "3d/src/studio.js": {
+    "mtime": 1792775065.8470504,
+    "seen": 1792776220.1007128,
+    "ast_hash": "be4fae01fe053c23c610b70a8f38bc08",
     "semantic_hash": ""
   }
 }

@@ -9,14 +9,15 @@ Constraints: no third-party requests (fonts, motion library, images self-hosted)
 User-pinned redesign (2026-10-19): "modern like Apple, not old-fashioned; integrate the photos; the truck drives out of the photos". Replaces the earlier top-down road world.
 User-pinned motion brief (2026-10-23): "Bau einen 3D-LKW mit img2threejs auf die Seite … modern, minimalistisch und coole Animationen … LKWs, die durch das Bild fahren, auf einen zufahren, von einem wegfahren, von links fahren, von rechts fahren." Keeps the black/mist world; replaces the single cut-out scroll scene with one road of 3D stages.
 User premium brief (2026-10-23, "Master-Prompt"): Apple/Porsche/Mercedes quality, minimal, no AI-template look, purposeful 3D and scroll motion, 2.5D photo moves without distorting the subjects, mobile navigation, performance and reduced-motion fallbacks. Applied as: Archivo wide display type replacing Geist, phone menu sheet, moving cast shadow and pointer lean in the 3D hero, rise reveals, photo camera moves (dolly, widescreen open, perspective settle), card tilt and arrow pills.
+User brief (2026-10-23): "das 3d modell soll aussehen wie ein echter lkw" / "und der hintergrund schwarz". Applied as: the Actros remodelled in code (3d/src/actros.js) on the img2threejs measurements, with lofted cab, see-through glass and cockpit, louvred perforated grille, physical paint under a client-built black studio environment; every 3D stage black; the opening scene becomes a night drive with headlight pools on a shaded road; the Pendelverkehr card turns black while its 3D stage runs.
 
 THESIS: A product-launch page where the product is the fleet. Refuses the category default of a stock highway photo with three icon cards.
 
-OWN-WORLD: Black and mist-grey sections alternating, large tight grotesk headlines (Geist) with a muted second line, 28px rounded cards, pill buttons, brand red (#d0111f) only for actions and checks, the SPN-TRANSPORTE wordmark in the company's red wide italic with black outline as logo. Real daylight fleet photography carries the page (owner: daylight photos only).
+OWN-WORLD: Black and mist-grey sections alternating, large wide Archivo headlines with a muted second line, 28px rounded cards, pill buttons, brand red (#d0111f) only for actions and checks, the SPN-TRANSPORTE wordmark in the company's red wide italic with black outline as logo. Real daylight fleet photography carries the page (owner: daylight photos only).
 
 STORY: The visitor sees SPN's own trucks, one Actros drives out of the row toward them, learns the motorsport roots and the family business, sees Nahverkehr and Shuttle, the fleet, and calls.
 
-FIRST VIEWPORT: Mist stage, centred two-line headline "Präzision aus dem Motorsport. / Zuverlässigkeit auf der Straße.", meta line, red "Tour anfragen" pill and phone pill; below, a mist-grey road fading into the mist on which SPN's 3D Actros arrives from the distance. Without WebGL: the daylight photo of the fleet row, sky fading into the mist.
+FIRST VIEWPORT: Black stage, centred two-line headline "Präzision aus dem Motorsport. / Zuverlässigkeit auf der Straße.", meta line, red "Tour anfragen" pill and phone pill; below, a dark road fading into the night on which SPN's 3D Actros arrives from the distance with its headlights on. Without WebGL: the daylight photo of the fleet row, sky fading into black.
 
 FORM: User-pinned direction (no roll for this redesign); previous roll seed:08122a54b005d79e no longer governs.
 
