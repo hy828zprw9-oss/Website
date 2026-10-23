@@ -18,6 +18,11 @@
             "type": "command",
             "command": "command -v graphify >/dev/null 2>&1 || pip install -q --user graphifyy==0.9.92 >/dev/null 2>&1 || true",
             "timeout": 180
+          },
+          {
+            "type": "command",
+            "command": "command -v playwright-cli >/dev/null 2>&1 || npm install -g --silent @playwright/cli@0.1.22 >/dev/null 2>&1 || true",
+            "timeout": 180
           }
         ]
       }
