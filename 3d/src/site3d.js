@@ -486,7 +486,8 @@ class TrafficStage extends Stage {
     this.target.set(0, 1.7, mix(-3, 3, p));
     this.orbit(this.target, mix(-82, -98, p), 3.5, distance);
     this.camera.updateMatrixWorld();
-    const edge = distance * Math.tan(deg(this.camera.fov) / 2) * this.camera.aspect + 10;
+    const narrow = this.camera.aspect < 1.4;
+    const edge = distance * Math.tan(deg(this.camera.fov) / 2) * this.camera.aspect + 7.5;
 
     if (reduced.matches) {
       if (!this.parked) {
@@ -506,7 +507,8 @@ class TrafficStage extends Stage {
         lane.next -= dt;
         if (lane.next <= 0) {
           this.spawn(lane, -lane.dir * edge + this.target.z);
-          lane.next = 2.6 + Math.random() * 2.4;
+          // A phone sees a short stretch of road, so traffic comes more often there.
+          lane.next = narrow ? 1.4 + Math.random() * 1.2 : 2.4 + Math.random() * 2;
         }
       }
       for (const s of this.pool) {
