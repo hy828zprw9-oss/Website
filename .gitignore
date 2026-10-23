@@ -2,3 +2,5 @@
 .impeccable/build/
 spn-website-upload.zip
 graphify-out/cache/
+# Playwright CLI output (may contain credentials)
+.playwright-cli/
