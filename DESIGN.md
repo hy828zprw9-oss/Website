@@ -1,6 +1,6 @@
 ---
 name: SPN-Transporte
-description: A product-launch page where the product is the fleet. Black and mist stages, tight Geist headlines, pills and 28px cards, real SPN photography, and a procedural 3D Actros that drives along one road through the page.
+description: A product-launch page where the product is the fleet. Black and mist stages, wide Archivo headlines, pills and 28px cards, real SPN photography, and a procedural 3D Actros that drives along one road through the page.
 colors:
   black: "#000000"
   graphite: "#1d1d1f"
@@ -20,62 +20,88 @@ colors:
   error-text: "#ff8a80"
 typography:
   wordmark:
-    fontFamily: "Saira, Geist, sans-serif"
+    fontFamily: "Saira, Archivo, sans-serif"
     fontSize: "1.05rem"
     fontWeight: 850
     lineHeight: 1
     letterSpacing: "0"
     fontVariation: "'wdth' 125"
   display:
-    fontFamily: "Geist, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(2.4rem, 5vw, 4.5rem)"
-    fontWeight: 650
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(2.05rem, 4.4vw, 4rem)"
+    fontWeight: 600
     lineHeight: 1.04
     letterSpacing: "-0.035em"
+    fontVariation: "'wdth' 118"
   headline:
-    fontFamily: "Geist, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(2.25rem, 5.2vw, 4.5rem)"
-    fontWeight: 650
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(2rem, 4.6vw, 4rem)"
+    fontWeight: 600
     lineHeight: 1.05
     letterSpacing: "-0.035em"
-  statement:
-    fontFamily: "Geist, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(1.75rem, 3.6vw, 3.25rem)"
+    fontVariation: "'wdth' 118"
+  claim:
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(1.7rem, 3.9vw, 3.3rem)"
     fontWeight: 600
+    lineHeight: 1.08
+    letterSpacing: "-0.03em"
+    fontVariation: "'wdth' 118"
+  statement:
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(1.6rem, 3.3vw, 3rem)"
+    fontWeight: 560
     lineHeight: 1.15
     letterSpacing: "-0.028em"
+    fontVariation: "'wdth' 108"
   numeral:
-    fontFamily: "Geist, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(2.25rem, 4.4vw, 3.75rem)"
-    fontWeight: 650
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(2rem, 4vw, 3.4rem)"
+    fontWeight: 600
     lineHeight: 1
     letterSpacing: "-0.035em"
     fontFeature: "'tnum' 1"
+    fontVariation: "'wdth' 118"
+  menu:
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(2rem, 9vw, 2.75rem)"
+    fontWeight: 600
+    lineHeight: 1.15
+    letterSpacing: "-0.03em"
+    fontVariation: "'wdth' 118"
   title:
-    fontFamily: "Geist, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(1.75rem, 2.6vw, 2.25rem)"
-    fontWeight: 650
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(1.6rem, 2.4vw, 2.05rem)"
+    fontWeight: 600
     lineHeight: 1.1
     letterSpacing: "-0.03em"
-  lead:
-    fontFamily: "Geist, system-ui, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(1.4rem, 2.2vw, 1.75rem)"
+    fontVariation: "'wdth' 108"
+  panel-title:
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "1.3rem"
     fontWeight: 600
+    letterSpacing: "-0.02em"
+    fontVariation: "'wdth' 108"
+  lead:
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(1.35rem, 2.1vw, 1.7rem)"
+    fontWeight: 560
     lineHeight: 1.25
     letterSpacing: "-0.02em"
+    fontVariation: "'wdth' 108"
   body:
-    fontFamily: "Geist, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
     fontSize: "clamp(1.0625rem, 0.3vw + 1rem, 1.1875rem)"
     fontWeight: 400
     lineHeight: 1.55
-    letterSpacing: "-0.011em"
+    letterSpacing: "-0.004em"
   button:
-    fontFamily: "Geist, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
     fontSize: "1.0625rem"
     fontWeight: 500
     letterSpacing: "-0.01em"
   label:
-    fontFamily: "Geist, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
     fontSize: "0.875rem"
     fontWeight: 500
     lineHeight: 1.4
@@ -147,15 +173,15 @@ components:
 
 **Creative North Star: "The Fleet Launch"**
 
-The site is staged like a product launch, and the product is SPN's own fleet of silver Mercedes-Benz Actros. Every section is a full-width stage, either pure black or a cool mist grey, and the two alternate down the page so each new topic arrives as a change of light. Headlines are large, tight Geist set in two lines: a statement in full ink and a quieter second line in muted grey. Real daylight photographs of SPN's trucks carry the proof (the owner chose daylight only). Nothing is illustrated and nothing is stock.
+The site is staged like a product launch, and the product is SPN's own fleet of silver Mercedes-Benz Actros. Every section is a full-width stage, either pure black or a cool mist grey, and the two alternate down the page so each new topic arrives as a change of light. Headlines are large, wide Archivo set in two lines: a statement in full ink and a quieter second line in muted grey. Real daylight photographs of SPN's trucks carry the proof (the owner chose daylight only). Nothing is illustrated and nothing is stock.
 
 The page is sparse and confident: one idea per stage, generous section padding, few elements, big type. Colour is almost absent. Brand red (#d0111f) is the single signal and only marks things the visitor can do or things SPN promises (the check marks). The company's own wordmark, red wide italic Saira with a black outline as it is lettered on the trailers, is the only logo.
 
-Motion is one idea told four times: a road runs through the page and SPN's Actros drives it (owner brief 2026-10-23: trucks that come toward you, drive away, and pass from left and right). The truck is a procedural Three.js reconstruction of SPN's own Actros L (DT E 1005), built with img2threejs from the owner's photo. On the mist opening stage it comes out of the distance toward you, the camera walks round it, and it pulls away to the right; in the Pendelverkehr card it runs A to B, turns and comes back; in the Fuhrpark section trucks pass both ways at night; at the end of the page it drives off into the dark, tail lights last. Text motion stays quiet: a statement whose words light up as you read, a fleet photo that settles into frame. With reduced motion every road stage is a still frame; without WebGL the page falls back to the photo scene.
+Motion is one idea told four times: a road runs through the page and SPN's Actros drives it (owner brief 2026-10-23: trucks that come toward you, drive away, and pass from left and right). The truck is a procedural Three.js reconstruction of SPN's own Actros L (DT E 1005), built with img2threejs from the owner's photo. On the mist opening stage it comes out of the distance toward you, the camera walks round it, and it pulls away to the right; in the Pendelverkehr card it runs A to B, turns and comes back; in the Fuhrpark section trucks pass both ways at night; at the end of the page it drives off into the dark, tail lights last. Around the road, motion stays quiet and has one vocabulary: type rises out of a slight blur (the hero copy on load, section titles once on scroll), and each photo gets the camera move its subject suggests (a dolly along the yard row, a widescreen frame that opens, two portraits tipping into the plane). Cards lean up to 3° toward the pointer, the primary arrow steps forward on hover. With reduced motion every road stage is a still frame; without WebGL the page falls back to the photo scene.
 
 **Key Characteristics:**
 - Full-bleed black and mist stages alternating: scene, statement (black), Leistungen (mist), Fuhrpark (black), Über uns (mist), Kontakt (black), footer (mist).
-- Two-line Geist headlines: ink first line, muted second line, weight 650, tracking -0.035em.
+- Two-line wide headlines (Archivo, width 118%, weight 600, tracking -0.035em): ink first line, muted second line.
 - 28px rounded cards and fully rounded pills; no square buttons, no hairline-boxed cards.
 - Red is a verb: actions, the shuttle dot, check marks, list markers. Never decoration.
 - Only real SPN photographs, each with a provenance sidecar, driver name tags blurred.
@@ -194,19 +220,21 @@ A near-monochrome Apple-style neutral system (true black, graphite, mist, white)
 
 ## Typography
 
-**Display / Body Font:** Geist (variable, self-hosted, with system-ui, -apple-system, Segoe UI fallback)
+**Display / Body Font:** Archivo (Omnibus-Type, OFL, one self-hosted variable file with weight and width axes; system-ui, -apple-system, Segoe UI fallback). Replaced Geist on 2026-10-23: Geist had become the default face of generated sites, and the brief asked for a premium automotive feel.
 **Wordmark Font:** Saira Italic (variable width, self-hosted), used only for the SPN-Transporte wordmark
 
-**Character:** One grotesk does everything, Apple-like: tight negative tracking and heavy-but-not-black 650 weight at display sizes, relaxed 1.55 leading for reading. Saira, wide and slanted, is reserved for the company's own name and reads as lettering on a truck, not as a typeface choice.
+**Character:** One grotesk in two widths. Display type runs wide (118%) at weight 600 with tight tracking, which reads like the lettering on a vehicle and carries the motorsport story; titles, the statement and leads sit at 108%; reading text is normal width at 400 with 1.55 leading. Saira, wide and slanted, is reserved for the company's own name.
 
 ### Hierarchy
-- **Display** (650, clamp(2.4rem, 5vw, 4.5rem), 1.04): the scene headline only, centred, balanced, max 17em; second line muted.
-- **Headline** (650, clamp(2.25rem, 5.2vw, 4.5rem), 1.05): section titles, left aligned, max 22ch, second line muted and set as a block.
-- **Statement** (600, clamp(1.75rem, 3.6vw, 3.25rem), 1.15): the single word-reveal paragraph, max 60rem wide. The scroll-scene claim uses the same voice at 650 and clamp(1.9rem, 4.4vw, 3.75rem).
-- **Numeral** (650, clamp(2.25rem, 4.4vw, 3.75rem), 1, tabular figures): the contact phone number, never wrapped. Shuttle letters A and B use the same weight at clamp(3.5rem, 7vw, 6rem), -0.04em.
-- **Title** (650, clamp(1.75rem, 2.6vw, 2.25rem), 1.1): card headings. Smaller panel headings (values, legal h2) drop to 1.35rem, -0.02em.
-- **Lead** (600, clamp(1.4rem, 2.2vw, 1.75rem), 1.25): the opening sentence of a story block, in ink.
-- **Body** (400, clamp(1.0625rem, 0.3vw + 1rem, 1.1875rem), 1.55, -0.011em): running copy, muted, capped at 38ch in cards and 60ch in stories.
+- **Display** (600, wdth 118, clamp(2.05rem, 4.4vw, 4rem), 1.04): the scene headline only, centred, balanced, max 24em so each sentence holds one line on desktop; second line muted.
+- **Headline** (600, wdth 118, clamp(2rem, 4.6vw, 4rem), 1.05): section titles, left aligned, max 24ch, second line muted and set as a block.
+- **Claim** (600, wdth 118, clamp(1.7rem, 3.9vw, 3.3rem), 1.08): the sentence that appears when the truck pulls away.
+- **Statement** (560, wdth 108, clamp(1.6rem, 3.3vw, 3rem), 1.15): the single word-reveal paragraph, max 60rem wide.
+- **Numeral** (600, wdth 118, clamp(2rem, 4vw, 3.4rem), 1, tabular figures): the contact phone number, never wrapped (non-breaking space). Shuttle letters use the same voice.
+- **Menu** (600, wdth 118, clamp(2rem, 9vw, 2.75rem), 1.15): the links of the phone menu.
+- **Title** (600, wdth 108, clamp(1.6rem, 2.4vw, 2.05rem), 1.1): card headings. Panel headings (values, legal h2) 1.3rem.
+- **Lead** (560, wdth 108, clamp(1.35rem, 2.1vw, 1.7rem), 1.25): the opening sentence of a story block, in ink.
+- **Body** (400, wdth 100, clamp(1.0625rem, 0.3vw + 1rem, 1.1875rem), 1.55, -0.004em): running copy, muted, capped at 38ch in cards and 60ch in stories.
 - **Button** (500, 1.0625rem, -0.01em): pill labels; 0.8125rem in the small nav pill.
 - **Label** (500, 0.875rem): nav links, form labels (0.9rem), shuttle point captions, footer (0.85rem).
 - **Wordmark** (Saira italic 850, width 125%, uppercase): nav at 1.05rem, footer at 0.95rem.
@@ -250,11 +278,13 @@ Pills, quiet and decisive.
 - **Ghost:** transparent with a 1.5px inset white ring at 55%, white label, tabular figures; pairs with a red pill on black (the phone number in the scene).
 - **Small:** 2rem tall, 0.35rem 0.95rem padding, 0.8125rem label; the nav's Anrufen.
 - **Hover / Focus / Active:** red brightens to signal-red-hover, ghost gains a 12% white wash, 200ms on the shared ease; press scales to 0.98; focus is the global 2px focus-blue outline.
+- **Go pill:** primary actions that lead somewhere (Tour anfragen, E-Mail vorbereiten) carry a 1rem stroked SVG arrow; on hover or keyboard focus it steps 3px forward (320ms).
 
 ### Cards / Containers
 - **Corner Style:** 28px (1.75rem).
 - **Background:** white on mist (service card, values panel); black on mist for the photo card; graphite on black for the contact form.
 - **Shadow Strategy:** none (Flat Cards Rule).
+- **Tilt:** with a fine pointer and motion allowed, the service cards lean toward the pointer, at most 3° on each axis (perspective 1400px), and settle back over 700ms on leave.
 - **Border:** none.
 - **Internal Padding:** clamp(1.75rem, 4vw, 2.75rem).
 - **Photo card:** black card, text at the top, photo filling the lower 72% with a top mask fading from transparent to solid over 30%, so the image rises out of the black.
@@ -269,7 +299,7 @@ Each item is preceded by a 1.25rem Signal Red disc with a white tick drawn inlin
 - **Error:** error-border on the field, error-text message below at 0.875rem; validation only after submit, cleared live on input.
 
 ### Navigation
-Fixed glass bar on black at 86%: wordmark left (red, no outline), links right at 0.875rem in mist at 80% opacity brightening to white, small red Anrufen pill at the end. Below 48rem the links hide.
+Fixed glass bar on black at 86%: wordmark left (red, no outline), links right at 0.875rem in mist at 80% opacity brightening to white with a 1px underline growing from the left, small red Anrufen pill at the end. Below 48rem the links move into a menu: a two-line toggle (turns into a cross) opens a full-height black sheet under the bar with the four sections in the menu voice, staggered in by 45ms, and the phone number and mail at the foot. Escape or a link closes it; while open the rest of the page is inert and does not scroll; focus moves to the first link and back to the toggle. Without JavaScript the phone pill remains.
 
 ### The Road (signature, 3D)
 Four WebGL stages share one procedural SPN Actros (assets/js/truck3d.js, built from 3d/; three.js and the model are self-hosted, no texture downloads). Each stage is a `[data-stage]` host whose canvas fades in on its first frame and renders only while on screen; lamps are glow sprites (small lit points by day, additive blooms at night) and every truck sits on a blurred blob shadow. Wheels roll with distance travelled.
@@ -280,6 +310,9 @@ Four WebGL stages share one procedural SPN Actros (assets/js/truck3d.js, built f
 - **Reduced motion:** each stage draws one still frame (parked approach pose, truck at A, one truck per lane, truck mid-distance).
 - **No WebGL:** the photo scene takes over: the daylight fleet photo with the cut-out Actros that emerges from the row on scroll, the shuttle dot runs A↔B, the other road hosts are hidden.
 
+### Rise
+Section titles (each muted second line 120ms later), the Über-uns lead, the six values (70ms apart, as a list), and the contact phone and mail rise once from 0.55em below with a 6px blur over 0.9-1.1s, triggered when their top passes 92% of the viewport (checked per scroll frame, so a fling or anchor jump still shows them). Only with motion allowed; otherwise everything is plain and visible.
+
 ### Word Reveal
 One statement paragraph whose words are split into spans and lit from word-unlit to mist as the paragraph scrolls from 80% to 45% of the viewport. Without motion, all words render lit as plain text.
 
@@ -287,13 +320,13 @@ One statement paragraph whose words are split into spans and lit from word-unlit
 Without WebGL, inside the white shuttle card: large letters A (Laden) and B (Entladen) on either side of a 6px line-on-mist track; a red dot with halo travels A to B and back in 5.5s with a pause at each end (in-out cubic). It runs only while 40% visible and does not run at all under reduced motion. With WebGL the 3D shuttle stage replaces it.
 
 ### Fleet Frame
-A 16:9 photograph, 28px radius, up to 90rem wide, that scales from 1.18 to 1 as it scrolls into view; below it two 4:5 portrait photos with short muted captions naming the model.
+A 16:9 photograph, 28px radius, up to 90rem wide, that opens from a widescreen crop (inset 7% 10%) to its full frame while the image settles from 1.22 to 1, as it scrolls from entering to centre; below it two 4:5 portrait photos with short muted captions naming the model, which tip out of a 14° perspective into the plane (the second one a beat later). The Nahverkehr card photo drifts sideways as the card passes (scale 1.16 to 1.04, translateX 3% to -3%), a dolly along the yard row. Photos are never enlarged past 1.22 because the sources are 1440px wide.
 
 ## Do's and Don'ts
 
 ### Do:
 - **Do** alternate full-bleed True Black and Mist stages, each with the same section padding (clamp(5rem, 14vh, 9rem)).
-- **Do** write headlines as a statement plus a muted second line at the same size, Geist 650 with -0.035em tracking.
+- **Do** write headlines as a statement plus a muted second line at the same size, Archivo at width 118%, weight 600, -0.035em tracking.
 - **Do** keep every button a pill (999px) and every card or framed photo at 28px (1.75rem).
 - **Do** use only real SPN photographs. Ship each raster with a provenance sidecar (`<file>.webp.json`) stating origin and edits, and blur any driver name tags before publishing.
 - **Do** keep the 3D Actros the only non-photographic image: a procedural reconstruction of SPN's own truck, documented in 3d/actros/README.md, with no lettering, logos or plate characters.

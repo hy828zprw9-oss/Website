@@ -8,6 +8,33 @@
   const motionOn = root.classList.contains("has-motion") && M && !reduceMotion.matches;
   if (!motionOn) root.classList.remove("has-motion");
 
+  // Handy-Menü: Vollbild unter der Leiste, Escape oder Link schließt, der Rest der Seite ist solange inert.
+  const header = document.querySelector(".nav");
+  const toggle = header && header.querySelector(".nav__toggle");
+  if (toggle) {
+    const menu = header.querySelector("nav");
+    const outside = [document.querySelector("main"), document.querySelector(".foot")];
+    const isOpen = () => header.classList.contains("is-open");
+    const setOpen = (open, moveFocus = true) => {
+      header.classList.toggle("is-open", open);
+      root.classList.toggle("menu-open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "Menü schließen" : "Menü öffnen");
+      for (const el of outside) if (el) el.inert = open;
+      if (moveFocus) (open ? menu.querySelector("a") : toggle).focus();
+    };
+    toggle.addEventListener("click", () => setOpen(!isOpen()));
+    menu.addEventListener("click", (event) => {
+      if (isOpen() && event.target.closest("a")) setOpen(false, false);
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && isOpen()) setOpen(false);
+    });
+    window.matchMedia("(min-width: 48.0625rem)").addEventListener("change", (event) => {
+      if (event.matches && isOpen()) setOpen(false, false);
+    });
+  }
+
   // Startszene. Mit 3D (assets/js/truck3d.js) kommt der Actros aus der Ferne auf den Betrachter
   // zu, die Kamera geht um ihn herum, dann fährt er davon. Ohne WebGL löst sich der freigestellte
   // LKW aus der Reihe auf dem Hof-Foto.
@@ -122,13 +149,96 @@
     }, { target: statement, offset: ["start 0.8", "end 0.45"] });
   }
 
-  // Fuhrpark-Foto zoomt beim Hereinscrollen leicht heraus
-  const fleetImg = document.querySelector(".fleet__hero img");
-  if (motionOn && fleetImg) {
-    M.scroll(
-      M.animate(fleetImg, { transform: ["scale(1.18)", "scale(1)"] }, { ease: "linear", duration: 1 }),
-      { target: fleetImg.parentElement, offset: ["start end", "end end"] }
-    );
+  // Scroll-Kino. Überschriften steigen beim ersten Erscheinen aus einer leichten Unschärfe,
+  // die Fotos bekommen je eine Kamerabewegung, die zu ihrem Motiv passt.
+  if (motionOn) {
+    const linked = (el, keyframes, target, offset) => {
+      if (!el) return;
+      M.scroll(M.animate(el, keyframes, { ease: "linear", duration: 1 }), { target: target || el, offset });
+    };
+
+    const rising = [];
+    const rise = (el, delay = 0) => {
+      if (!el) return;
+      el.classList.add("rise");
+      if (delay) el.style.setProperty("--rise-delay", `${delay}ms`);
+      rising.push(el);
+    };
+    document.querySelectorAll(".section-title").forEach((title) => {
+      rise(title);
+      rise(title.querySelector("span"), 120);
+    });
+    rise(document.querySelector(".about__lead"));
+    document.querySelectorAll(".checks li").forEach((item, i) => rise(item, 70 * i));
+    rise(document.querySelector(".contact__phone"));
+    rise(document.querySelector(".contact__mail"), 90);
+    // A nested span rises with its title, so only top-level risers are tracked. Checked per
+    // scroll frame rather than with an IntersectionObserver: a fast fling or an anchor jump can
+    // carry an element past the viewport between two frames, and it must still end up shown.
+    let pending = rising.filter((el) => !el.parentElement.closest(".rise"));
+    root.classList.add("rise-ready");
+    let queued = false;
+    const reveal = () => {
+      queued = false;
+      const line = window.innerHeight * 0.92;
+      pending = pending.filter((el) => {
+        if (el.getBoundingClientRect().top > line) return true;
+        el.classList.add("is-in");
+        return false;
+      });
+      if (!pending.length) window.removeEventListener("scroll", onScroll);
+    };
+    const onScroll = () => {
+      if (!queued) {
+        queued = true;
+        requestAnimationFrame(reveal);
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    reveal();
+
+    // Nahverkehr: die Kamera fährt an der Reihe entlang, während die Karte durchs Bild läuft.
+    const cardPhoto = document.querySelector(".card__img");
+    linked(cardPhoto, { transform: ["scale(1.16) translateX(3%)", "scale(1.04) translateX(-3%)"] },
+      cardPhoto && cardPhoto.closest(".card"), ["start end", "end start"]);
+
+    // Fuhrpark: das Bild öffnet sich aus einem Breitbild-Ausschnitt auf volle Größe.
+    const fleetFrame = document.querySelector(".fleet__hero");
+    linked(fleetFrame, { clipPath: ["inset(7% 10% 7% 10% round 1.75rem)", "inset(0% 0% 0% 0% round 1.75rem)"] },
+      fleetFrame, ["start end", "center center"]);
+    linked(fleetFrame && fleetFrame.querySelector("img"), { transform: ["scale(1.22)", "scale(1)"] },
+      fleetFrame, ["start end", "center center"]);
+
+    // Die beiden Porträts kippen aus der Perspektive in die Ebene, das zweite einen Takt später.
+    document.querySelectorAll(".fleet__pair figure").forEach((figure, i) => {
+      linked(figure, {
+        transform: [
+          "perspective(1200px) rotateX(14deg) translateY(9%) scale(0.95)",
+          "perspective(1200px) rotateX(0deg) translateY(0%) scale(1)",
+        ],
+      }, figure, ["start end", i ? "start 42%" : "start 55%"]);
+    });
+  }
+
+  // Leistungskarten folgen dem Zeiger mit einer kleinen Neigung (nur Maus/Trackpad).
+  const tiltGroup = document.querySelector("[data-tilt]");
+  if (motionOn && tiltGroup && window.matchMedia("(pointer: fine)").matches) {
+    for (const card of tiltGroup.querySelectorAll(".card")) {
+      card.addEventListener("pointermove", (event) => {
+        const box = card.getBoundingClientRect();
+        const x = (event.clientX - box.left) / box.width - 0.5;
+        const y = (event.clientY - box.top) / box.height - 0.5;
+        card.classList.add("is-tilting");
+        card.style.setProperty("--ry", `${(x * 6).toFixed(2)}deg`);
+        card.style.setProperty("--rx", `${(-y * 6).toFixed(2)}deg`);
+      });
+      card.addEventListener("pointerleave", () => {
+        card.classList.remove("is-tilting");
+        card.style.setProperty("--rx", "0deg");
+        card.style.setProperty("--ry", "0deg");
+      });
+    }
   }
 
   // Pendelverkehr läuft nur, solange er zu sehen ist

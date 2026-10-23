@@ -8,6 +8,7 @@ Constraints: no third-party requests (fonts, motion library, images self-hosted)
 
 User-pinned redesign (2026-10-19): "modern like Apple, not old-fashioned; integrate the photos; the truck drives out of the photos". Replaces the earlier top-down road world.
 User-pinned motion brief (2026-10-23): "Bau einen 3D-LKW mit img2threejs auf die Seite … modern, minimalistisch und coole Animationen … LKWs, die durch das Bild fahren, auf einen zufahren, von einem wegfahren, von links fahren, von rechts fahren." Keeps the black/mist world; replaces the single cut-out scroll scene with one road of 3D stages.
+User premium brief (2026-10-23, "Master-Prompt"): Apple/Porsche/Mercedes quality, minimal, no AI-template look, purposeful 3D and scroll motion, 2.5D photo moves without distorting the subjects, mobile navigation, performance and reduced-motion fallbacks. Applied as: Archivo wide display type replacing Geist, phone menu sheet, moving cast shadow and pointer lean in the 3D hero, rise reveals, photo camera moves (dolly, widescreen open, perspective settle), card tilt and arrow pills.
 
 THESIS: A product-launch page where the product is the fleet. Refuses the category default of a stock highway photo with three icon cards.
 

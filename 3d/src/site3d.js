@@ -212,23 +212,19 @@ function road(stage, { night, centreX = 1.75, from = -400, to = 400 }) {
 }
 
 function lightRig(scene, { night }) {
+  const key = new THREE.DirectionalLight(night ? "#ffffff" : "#fff4e6", night ? 2.4 : 2.3);
+  const rim = new THREE.DirectionalLight(night ? "#c4d6ff" : "#e2ebff", night ? 1.7 : 1.1);
   if (night) {
     scene.add(new THREE.HemisphereLight("#8c96a8", "#050505", 0.5));
-    const key = new THREE.DirectionalLight("#ffffff", 2.4);
     key.position.set(-8, 11, -6);
-    scene.add(key);
-    const rim = new THREE.DirectionalLight("#c4d6ff", 1.7);
     rim.position.set(7, 5, 10);
-    scene.add(rim);
   } else {
     scene.add(new THREE.HemisphereLight("#ffffff", "#c9cbd1", 1.5));
-    const key = new THREE.DirectionalLight("#fff4e6", 2.3);
     key.position.set(-9, 12, 9);
-    scene.add(key);
-    const rim = new THREE.DirectionalLight("#e2ebff", 1.1);
     rim.position.set(6, 6, -10);
-    scene.add(rim);
   }
+  scene.add(key, rim);
+  return { key, rim };
 }
 
 /* ---------- stage plumbing ---------- */
@@ -257,7 +253,7 @@ class Stage {
     this.scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
     this.scene.environmentIntensity = night ? 0.4 : 0.85;
     pmrem.dispose();
-    lightRig(this.scene, { night });
+    this.lights = lightRig(this.scene, { night });
 
     this.camera = new THREE.PerspectiveCamera(fov, 1, 0.1, 600);
     this.width = 1;
@@ -321,6 +317,43 @@ class HeroStage extends Stage {
     this.introStart = null;
     // Arriving after the visitor has already scrolled down: skip the approach.
     if (this.progress() > 0.04 || reduced.matches) this.introStart = -1e9;
+
+    // A real cast shadow from the key light on the road; the blob stays as contact occlusion.
+    // The shadow frustum travels with the truck so it stays tight (and sharp) all the way in.
+    this.renderer.shadowMap.enabled = true;
+    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    const { key } = this.lights;
+    key.castShadow = true;
+    const mapSize = window.matchMedia("(max-width: 48rem)").matches ? 1024 : 2048;
+    key.shadow.mapSize.set(mapSize, mapSize);
+    Object.assign(key.shadow.camera, { left: -6, right: 6, top: 7, bottom: -7, near: 1, far: 60 });
+    key.shadow.camera.updateProjectionMatrix();
+    key.shadow.bias = -0.0005;
+    key.shadow.normalBias = 0.03;
+    this.keyDirection = key.position.clone().normalize().multiplyScalar(24);
+    this.scene.add(key.target);
+    const catcher = new THREE.Mesh(new THREE.PlaneGeometry(40, 640), new THREE.ShadowMaterial({ opacity: 0.2 }));
+    catcher.rotation.x = -Math.PI / 2;
+    catcher.position.set(1.75, 0.005, -150);
+    catcher.receiveShadow = true;
+    this.scene.add(catcher);
+    this.truck.object.traverse((o) => {
+      if (o.isMesh && !o.material.transparent) o.castShadow = true;
+    });
+
+    // Desktop: the camera leans a few degrees toward the pointer, damped, so the scene has depth
+    // to the hand as well as to the scroll.
+    this.pointer = { x: 0, y: 0, tx: 0, ty: 0 };
+    if (window.matchMedia("(pointer: fine)").matches) {
+      window.addEventListener(
+        "pointermove",
+        (event) => {
+          this.pointer.tx = (event.clientX / window.innerWidth) * 2 - 1;
+          this.pointer.ty = (event.clientY / window.innerHeight) * 2 - 1;
+        },
+        { passive: true },
+      );
+    }
   }
 
   progress() {
@@ -329,6 +362,7 @@ class HeroStage extends Stage {
   }
 
   update(time) {
+    const dt = this.lastTime === undefined ? 0 : Math.max(0, time - this.lastTime);
     // The approach runs on capped frame steps from the first drawn frame, so a slow first
     // frame (shader compile) does not swallow the start of it.
     if (this.introStart === null) {
@@ -349,20 +383,29 @@ class HeroStage extends Stage {
 
     const turn = inOutCubic(seg(p, 0.04, 0.5));
     const sway = reduced.matches ? 0 : Math.sin(time * 0.35) * 2.2 * (1 - turn) * arrive;
-    const azimuth = mix(mix(-3, -30, inOutCubic(k)), -90, turn) + sway;
-    const elevation = mix(4.5, 2.5, turn);
+    const follow = reduced.matches ? 0 : 1 - Math.exp(-dt * 3);
+    this.pointer.x += (this.pointer.tx - this.pointer.x) * follow;
+    this.pointer.y += (this.pointer.ty - this.pointer.y) * follow;
+    const lean = arrive * (1 - 0.7 * turn);
+    const azimuth = mix(mix(-3, -30, inOutCubic(k)), -90, turn) + sway + this.pointer.x * 6 * lean;
+    const elevation = Math.max(1, mix(4.5, 2.5, turn) - this.pointer.y * 2 * lean);
 
     const a = Math.abs(Math.sin(deg(azimuth)));
     const projectedWidth = 2.5 * Math.sqrt(1 - a * a) + 6.4 * a;
     const narrow = this.camera.aspect < 0.8;
     const distance = this.fit(projectedWidth, 4.0, narrow ? 0.88 : 0.6, narrow ? 0.34 : 0.4);
-    this.target.set(0, 1.85, mix(-1.9, TRUCK_MID, turn));
+    // Phones frame the whole tractor (rear chassis included), wide screens favour the cab.
+    this.target.set(0, 1.85, mix(narrow ? -2.7 : -1.9, TRUCK_MID, turn));
     this.orbit(this.target, azimuth, elevation, distance);
 
     // Sit the truck under the headline, then centre it once the copy has gone.
     const drop = mix(narrow ? 0.27 : 0.25, 0.06, turn);
     this.camera.setViewOffset(this.width, this.height, 0, -drop * this.height, this.width, this.height);
     this.truck.sizeLamps(this.camera, 3, this.height);
+
+    const { key } = this.lights;
+    key.target.position.set(0, 0, z + TRUCK_MID);
+    key.position.copy(key.target.position).add(this.keyDirection);
   }
 }
 

@@ -1806,9 +1806,9 @@
     "semantic_hash": ""
   },
   "3d/src/site3d.js": {
-    "mtime": 1792757304.4741008,
-    "seen": 1792757519.3674278,
-    "ast_hash": "7b522823bc1ef563a92fb3e49a59780d",
+    "mtime": 1792771888.9705806,
+    "seen": 1792772102.935349,
+    "ast_hash": "792d77ace8d66f329fa5583b9f484468",
     "semantic_hash": ""
   },
   "assets/img/actros-e-540.webp.json": {
@@ -1884,9 +1884,9 @@
     "semantic_hash": ""
   },
   "assets/js/truck3d.js": {
-    "mtime": 1792757304.668601,
-    "seen": 1792757519.3674624,
-    "ast_hash": "87278b26921162684064a5bdf44babb1",
+    "mtime": 1792771889.2144067,
+    "seen": 1792772102.9356387,
+    "ast_hash": "c6563fa2169c9f0b9a7d1596389d4be5",
     "semantic_hash": ""
   },
   "assets/vendor/motion.js": {
@@ -1896,9 +1896,9 @@
     "semantic_hash": ""
   },
   "main.js": {
-    "mtime": 1792757188.9631026,
-    "seen": 1792757519.3674662,
-    "ast_hash": "d83b373f1bfeccac7a3c8c187c27d6f5",
+    "mtime": 1792771573.5152838,
+    "seen": 1792772102.9356668,
+    "ast_hash": "c56d6ae6016fb82c6ccecc928477a9dc",
     "semantic_hash": ""
   },
   ".claude/CLAUDE.md": {
@@ -2712,9 +2712,9 @@
     "semantic_hash": ""
   },
   ".impeccable/surfaces/index-html.md": {
-    "mtime": 1792757365.63542,
-    "seen": 1792757519.3677807,
-    "ast_hash": "6c17360329939710457f145642b5c382",
+    "mtime": 1792771961.61273,
+    "seen": 1792772102.9399736,
+    "ast_hash": "c3b5fac3243e5ab524bde381ff97a579",
     "semantic_hash": ""
   },
   "3d/actros/README.md": {
@@ -2730,21 +2730,15 @@
     "semantic_hash": ""
   },
   "DESIGN.md": {
-    "mtime": 1792757354.0031238,
-    "seen": 1792757519.3677864,
-    "ast_hash": "9506b3ed3b1b669d314c50b46b46669c",
+    "mtime": 1792771952.135141,
+    "seen": 1792772102.9400537,
+    "ast_hash": "6e4853c9d37a6a4355b2230fcf1afb99",
     "semantic_hash": ""
   },
   "PRODUCT.md": {
     "mtime": 1792413277.0103493,
     "seen": 1792757519.3677886,
     "ast_hash": "29c653dd5c434ce3efbaadd4dd68965e",
-    "semantic_hash": ""
-  },
-  "assets/fonts/OFL-Geist.txt": {
-    "mtime": 1792410885.4288502,
-    "seen": 1792757519.3677907,
-    "ast_hash": "6bc8ee5e488d62bd62df7d879b70477f",
     "semantic_hash": ""
   },
   "assets/fonts/OFL-Saira.txt": {
@@ -3774,15 +3768,15 @@
     "semantic_hash": ""
   },
   "impressum.html": {
-    "mtime": 1792411095.269153,
-    "seen": 1792757519.3681417,
-    "ast_hash": "4af23634b27b93e3bfda3bb49f3a83ff",
+    "mtime": 1792771612.0945168,
+    "seen": 1792772102.9501095,
+    "ast_hash": "314642ab9f55d5c148435ad9b6530d03",
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1792756604.4140644,
-    "seen": 1792757519.3681436,
-    "ast_hash": "58b9cd7f427055987818ee664518e251",
+    "mtime": 1792771612.0939076,
+    "seen": 1792772102.9501126,
+    "ast_hash": "18225b6150b4d2db93e1e5a5ab714b2c",
     "semantic_hash": ""
   },
   "print/visitenkarte/visitenkarte-schlicht.html": {
@@ -3957,6 +3951,12 @@
     "mtime": 1792505896.1786308,
     "seen": 1792757519.3681998,
     "ast_hash": "22075962c9b73ef1a83938377dec1945",
+    "semantic_hash": ""
+  },
+  "assets/fonts/OFL-Archivo.txt": {
+    "mtime": 1792771068.4399903,
+    "seen": 1792772102.9400792,
+    "ast_hash": "bcc4b0d9ae273a407df2fdbbaa86888f",
     "semantic_hash": ""
   }
 }

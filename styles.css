@@ -1,7 +1,10 @@
+/* Archivo (Omnibus-Type, OFL): one variable file, weight and width axes. Wide cuts for display
+   type read like vehicle lettering; normal width for reading. */
 @font-face {
-  font-family: "Geist";
-  src: url("assets/fonts/geist-latin-wght-normal.woff2") format("woff2-variations"), url("assets/fonts/geist-latin-wght-normal.woff2") format("woff2");
+  font-family: "Archivo";
+  src: url("assets/fonts/archivo-latin-wdth-normal.woff2") format("woff2-variations"), url("assets/fonts/archivo-latin-wdth-normal.woff2") format("woff2");
   font-weight: 100 900;
+  font-stretch: 62% 125%;
   font-display: swap;
 }
 @font-face {
@@ -28,8 +31,10 @@
   --line-light: #d2d2d7;
   --line-dark: #3a3a3c;
 
-  --font: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --brand: "Saira", "Geist", sans-serif;
+  --font: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --brand: "Saira", "Archivo", sans-serif;
+  --wide: 118%;   /* display width: headlines, claim, numerals */
+  --semi: 108%;   /* titles and the statement */
 
   --wrap: 72rem;
   --gutter: clamp(1rem, 4vw, 2.5rem);
@@ -54,7 +59,7 @@ body {
   font-family: var(--font);
   font-size: clamp(1.0625rem, 0.3vw + 1rem, 1.1875rem);
   line-height: 1.55;
-  letter-spacing: -0.011em;
+  letter-spacing: -0.004em;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -134,9 +139,119 @@ img { max-width: 100%; }
 }
 .nav nav a:hover { color: var(--white); }
 
+/* Desktop: Unterstrich wächst beim Zeigen von links */
+@media (min-width: 48.0625rem) {
+  .nav ul a { position: relative; }
+  .nav ul a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.35rem;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 320ms var(--ease);
+  }
+  .nav ul a:hover::after,
+  .nav ul a:focus-visible::after { transform: scaleX(1); }
+}
+
+.nav__reach,
+.nav__toggle { display: none; }
+
+/* Handy: Menü-Knopf öffnet ein schwarzes Vollbild-Menü unter der Leiste (ohne JS: nur Anrufen) */
 @media (max-width: 48rem) {
   .nav nav { display: none; }
   .nav .pill--small { margin-left: auto; }
+  .nav { gap: 0.75rem; }
+  .nav.is-open { background: var(--black); }
+
+  .js .nav__toggle {
+    display: inline-grid;
+    place-content: center;
+    gap: 6px;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-right: -0.65rem;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: none;
+    color: var(--text-light);
+    cursor: pointer;
+  }
+  .nav__toggle span {
+    display: block;
+    width: 1.25rem;
+    height: 1.5px;
+    border-radius: 1px;
+    background: currentColor;
+    transition: transform 320ms var(--ease);
+  }
+  .nav.is-open .nav__toggle span:first-child { transform: translateY(3.75px) rotate(45deg); }
+  .nav.is-open .nav__toggle span:last-child { transform: translateY(-3.75px) rotate(-45deg); }
+
+  /* .nav hat backdrop-filter und ist damit der Bezugsrahmen: top/left beziehen sich auf die Leiste */
+  .js .nav nav {
+    position: fixed;
+    top: 3.25rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100dvh - 3.25rem);
+    margin: 0;
+    padding: clamp(1.5rem, 6vh, 3rem) var(--gutter) calc(2rem + env(safe-area-inset-bottom));
+    overflow-y: auto;
+    background: var(--black);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 280ms var(--ease), visibility 0s linear 280ms;
+  }
+  .js .nav.is-open nav { visibility: visible; opacity: 1; transition: opacity 280ms var(--ease); }
+  .js .nav ul { flex-direction: column; gap: 0.2rem; }
+  .js .nav nav li,
+  .js .nav__reach {
+    opacity: 0;
+    transform: translateY(0.9rem);
+    transition: opacity 420ms var(--ease), transform 620ms var(--ease);
+    transition-delay: 60ms;
+  }
+  .js .nav nav li:nth-child(2) { transition-delay: 105ms; }
+  .js .nav nav li:nth-child(3) { transition-delay: 150ms; }
+  .js .nav nav li:nth-child(4) { transition-delay: 195ms; }
+  .js .nav__reach { transition-delay: 240ms; }
+  .js .nav.is-open nav li,
+  .js .nav.is-open .nav__reach { opacity: 1; transform: none; }
+  .js .nav nav ul a {
+    display: block;
+    padding: 0.3rem 0;
+    font-size: clamp(2rem, 9vw, 2.75rem);
+    font-weight: 600;
+    font-stretch: var(--wide);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    color: var(--text-light);
+  }
+  .js .nav__reach {
+    display: grid;
+    gap: 0.4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line-dark);
+  }
+  .js .nav nav .nav__phone {
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-stretch: var(--wide);
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+    color: var(--white);
+  }
+  .js .nav nav .nav__mail { font-size: 1rem; color: var(--muted-light); }
+  html.menu-open { overflow: hidden; }
 }
 
 /* Knöpfe */
@@ -170,6 +285,12 @@ img { max-width: 100%; }
 .pill--ghost:hover { background: rgb(255 255 255 / 0.12); }
 
 .pill--small { min-height: 2rem; padding: 0.35rem 0.95rem; font-size: 0.8125rem; }
+
+/* Primäre Aktion mit Pfeil: der Pfeil rückt beim Zeigen ein Stück vor */
+.pill--go { gap: 0.55rem; padding-right: 1.15rem; }
+.pill__arrow { width: 1rem; height: 1rem; flex: none; transition: transform 320ms var(--ease); }
+.pill--go:hover .pill__arrow,
+.pill--go:focus-visible .pill__arrow { transform: translateX(3px); }
 
 /* Startszene */
 
@@ -220,9 +341,10 @@ img { max-width: 100%; }
 
 .scene h1 {
   margin: 0 auto;
-  max-width: 17em;
-  font-size: clamp(2.4rem, 5vw, 4.5rem);
-  font-weight: 650;
+  max-width: 24em;
+  font-size: clamp(2.05rem, 4.4vw, 4rem);
+  font-weight: 600;
+  font-stretch: var(--wide);
   line-height: 1.04;
   letter-spacing: -0.035em;
   text-wrap: balance;
@@ -276,12 +398,22 @@ img { max-width: 100%; }
   inset: calc(3.25rem + clamp(2.5rem, 9vh, 6rem)) var(--gutter) auto;
   margin: 0;
   text-align: center;
-  font-size: clamp(1.9rem, 4.4vw, 3.75rem);
-  font-weight: 650;
+  font-size: clamp(1.7rem, 3.9vw, 3.3rem);
+  font-weight: 600;
+  font-stretch: var(--wide);
   line-height: 1.08;
   letter-spacing: -0.03em;
   color: var(--text-dark);
   opacity: 0;
+}
+
+/* Auftakt: Überschrift, Zeile, Knöpfe kommen aus einer leichten Unschärfe nach oben */
+.has-motion .scene__copy > * { animation: copy-in 1100ms var(--ease) both; }
+.has-motion .scene__copy > :nth-child(2) { animation-delay: 140ms; }
+.has-motion .scene__copy > :nth-child(3) { animation-delay: 240ms; }
+.has-motion .scene h1 span { animation: copy-in 1100ms 70ms var(--ease) both; }
+@keyframes copy-in {
+  from { opacity: 0; transform: translateY(0.45em); filter: blur(8px); }
 }
 
 /* 3D-Straße: eine WebGL-Bühne je Abschnitt, blendet ein, sobald das erste Bild steht */
@@ -322,8 +454,9 @@ html:not(.has-motion) .scene__claim { display: none; }
 .statement__text {
   width: min(100% - 2 * var(--gutter), 60rem);
   margin: 0 auto;
-  font-size: clamp(1.75rem, 3.6vw, 3.25rem);
-  font-weight: 600;
+  font-size: clamp(1.6rem, 3.3vw, 3rem);
+  font-weight: 560;
+  font-stretch: var(--semi);
   line-height: 1.15;
   letter-spacing: -0.028em;
 }
@@ -331,13 +464,25 @@ html:not(.has-motion) .scene__claim { display: none; }
 .has-motion .statement__text .w { color: #424245; }
 .has-motion .statement__text .w.is-on { color: var(--text-light); }
 
+/* Erscheinen beim Scrollen (main.js setzt .rise-ready nur mit Bewegung und IntersectionObserver) */
+.rise-ready .rise {
+  opacity: 0;
+  transform: translateY(0.55em);
+  filter: blur(6px);
+  transition: opacity 900ms var(--ease), transform 1100ms var(--ease), filter 900ms var(--ease);
+  transition-delay: var(--rise-delay, 0ms);
+}
+.rise-ready .rise.is-in,
+.rise-ready .is-in .rise { opacity: 1; transform: none; filter: none; }
+
 /* Abschnittsüberschriften */
 
 .section-title {
   margin: 0;
-  max-width: 22ch;
-  font-size: clamp(2.25rem, 5.2vw, 4.5rem);
-  font-weight: 650;
+  max-width: 24ch;
+  font-size: clamp(2rem, 4.6vw, 4rem);
+  font-weight: 600;
+  font-stretch: var(--wide);
   line-height: 1.05;
   letter-spacing: -0.035em;
   text-wrap: balance;
@@ -376,14 +521,25 @@ html:not(.has-motion) .scene__claim { display: none; }
 .card__text { padding: clamp(1.75rem, 4vw, 2.75rem); }
 .card h3 {
   margin: 0;
-  font-size: clamp(1.75rem, 2.6vw, 2.25rem);
-  font-weight: 650;
+  font-size: clamp(1.6rem, 2.4vw, 2.05rem);
+  font-weight: 600;
+  font-stretch: var(--semi);
   letter-spacing: -0.03em;
   line-height: 1.1;
 }
 .card p { margin: 0.75rem 0 0; color: var(--muted-dark); max-width: 38ch; }
 
 .card--photo { background: var(--black); color: var(--text-light); }
+
+/* Leistungskarten neigen sich mit dem Zeiger, höchstens 3 Grad (main.js setzt --rx/--ry) */
+@media (pointer: fine) {
+  .has-motion [data-tilt] .card {
+    transform: perspective(1400px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    transition: transform 700ms var(--ease);
+    will-change: transform;
+  }
+  .has-motion [data-tilt] .card.is-tilting { transition-duration: 160ms; }
+}
 .card--photo p { color: var(--muted-light); }
 .card__img {
   position: absolute;
@@ -406,8 +562,9 @@ html:not(.has-motion) .scene__claim { display: none; }
 .shuttle__point {
   display: grid;
   justify-items: center;
-  font-size: clamp(3.5rem, 7vw, 6rem);
-  font-weight: 650;
+  font-size: clamp(3.25rem, 6.5vw, 5.5rem);
+  font-weight: 600;
+  font-stretch: var(--wide);
   line-height: 1;
   letter-spacing: -0.04em;
 }
@@ -452,8 +609,9 @@ html:not(.has-motion) .scene__claim { display: none; }
   display: grid;
   justify-items: center;
   translate: -50% 0.55rem;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  font-weight: 650;
+  font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+  font-weight: 600;
+  font-stretch: var(--wide);
   line-height: 1;
   letter-spacing: -0.04em;
   pointer-events: none;
@@ -527,8 +685,9 @@ html:not(.has-motion) .scene__claim { display: none; }
 }
 .about__story p { margin: 0 0 1.1rem; max-width: 60ch; color: var(--muted-dark); }
 .about__story .about__lead {
-  font-size: clamp(1.4rem, 2.2vw, 1.75rem);
-  font-weight: 600;
+  font-size: clamp(1.35rem, 2.1vw, 1.7rem);
+  font-weight: 560;
+  font-stretch: var(--semi);
   line-height: 1.25;
   letter-spacing: -0.02em;
   color: var(--text-dark);
@@ -539,7 +698,7 @@ html:not(.has-motion) .scene__claim { display: none; }
   border-radius: var(--radius);
   background: var(--white);
 }
-.about__values h3 { margin: 0 0 1.25rem; font-size: 1.35rem; font-weight: 650; letter-spacing: -0.02em; }
+.about__values h3 { margin: 0 0 1.25rem; font-size: 1.3rem; font-weight: 600; font-stretch: var(--semi); letter-spacing: -0.02em; }
 
 .checks { display: grid; gap: 0.9rem; margin: 0; padding: 0; list-style: none; }
 .checks li { position: relative; padding-left: 2rem; line-height: 1.4; }
@@ -572,8 +731,9 @@ html:not(.has-motion) .scene__claim { display: none; }
 .contact__phone {
   display: block;
   white-space: nowrap;
-  font-size: clamp(2.25rem, 4.4vw, 3.75rem);
-  font-weight: 650;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 600;
+  font-stretch: var(--wide);
   letter-spacing: -0.035em;
   line-height: 1;
   text-decoration: none;
@@ -661,14 +821,15 @@ html:not(.has-motion) .scene__claim { display: none; }
   margin: 0 auto;
   padding: calc(3.25rem + clamp(3rem, 8vh, 5rem)) 0 5rem;
 }
-.legal h1 { margin: 0 0 1.5rem; font-size: clamp(2.5rem, 6vw, 3.75rem); font-weight: 650; letter-spacing: -0.035em; line-height: 1.05; }
-.legal h2 { margin: 2.25rem 0 0.5rem; font-size: 1.35rem; font-weight: 650; letter-spacing: -0.02em; }
+.legal h1 { margin: 0 0 1.5rem; font-size: clamp(2.2rem, 5.4vw, 3.4rem); font-weight: 600; font-stretch: var(--wide); letter-spacing: -0.035em; line-height: 1.05; }
+.legal h2 { margin: 2.25rem 0 0.5rem; font-size: 1.3rem; font-weight: 600; font-stretch: var(--semi); letter-spacing: -0.02em; }
 .legal p, .legal li { color: var(--muted-dark); }
 .legal a { color: var(--text-dark); }
 .legal .todo { background: var(--red); color: var(--white); padding: 0 0.3em; border-radius: 4px; font-weight: 500; }
 
 @media (prefers-reduced-motion: reduce) {
   .shuttle__dot { animation: none; }
+  .nav nav li, .nav__reach, .nav__toggle span { transition: none !important; transform: none !important; }
   .stage3d { transition: none; }
   .pill, .pill:active { transition: none; transform: none; }
 }

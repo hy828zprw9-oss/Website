@@ -1,24 +1,24 @@
 # Graph Report - Website  (2026-10-23)
 
 ## Corpus Check
-- 625 files · ~1,583,604 words
+- 625 files · ~1,585,073 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 24 file(s) not represented in the graph (top: (none) 11, .css 4, .jsonl 2)
 
 ## Summary
-- 13120 nodes · 25101 edges · 621 communities (445 shown, 176 thin omitted)
-- Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 2166 edges (avg confidence: 0.86)
+- 13121 nodes · 25106 edges · 615 communities (445 shown, 170 thin omitted)
+- Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 2177 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `22d7b6f5`
+- Built from commit: `9a7c27a7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - truck3d.js
 - json
-- rx
+- ox
 - live-browser.js
 - struct
 - fit_params.py
@@ -28,7 +28,7 @@
 - extract_pbr_evidence.py
 - multiplyScalar
 - connectSSE
-- copy
+- e
 - validate_sculpt_spec.py
 - generate
 - motion.js
@@ -37,11 +37,11 @@
 - clip_features.py
 - constructor
 - modern-screenshot.umd.js
-- update
+- copy
 - generate_threejs_factory.py
 - delight_albedo.py
 - walk_targets
-- argparse
+- json
 - PipelineTest
 - validate_spec
 - setLiveState
@@ -70,11 +70,11 @@
 - reference_target_oracle.ts
 - draw.mjs
 - initGlobalBar
-- Components
+- cohere/DESIGN.md
 - Design System Inspired by Mastercard
-- new_sculpt_spec.py
+- make_character_component_tree
 - emit_target.py
-- analyze_mesh
+- _DirectionGrid
 - binance/DESIGN.md
 - mongodb/DESIGN.md
 - nvidia/DESIGN.md
@@ -94,7 +94,7 @@
 - Design System Inspired by Tesla
 - Design System Inspired by The Verge
 - assets.mjs
-- mesh_parity.py
+- verify
 - inspect.mjs
 - coinbase/DESIGN.md
 - elevenlabs/DESIGN.md
@@ -157,7 +157,7 @@
 - supabase/DESIGN.md
 - superhuman/DESIGN.md
 - vodafone/DESIGN.md
-- co
+- oi
 - fn
 - render_bridge.py
 - live.md
@@ -181,7 +181,7 @@
 - x.ai/DESIGN.md
 - zapier/DESIGN.md
 - new_state
-- re
+- h
 - emit_typescript
 - _action_ready_state_path
 - domain_profile
@@ -192,7 +192,7 @@
 - img2threejs
 - 6. Recipes
 - Components
-- img2threejs/README.md
+- GLB_CHARACTER_ANIMATION_PROMPT.md
 - check_pair
 - medial_lateral_bias
 - targets.py
@@ -221,11 +221,11 @@
 - derive_anatomy
 - base_material
 - hashlib
-- pairwise_penetration.py
+- _DirectionIndex
 - text
 - getOne
 - en
-- workflow_state.py
+- spec
 - head_image
 - test_skin_conditioning.py
 - capture-character.mjs
@@ -233,12 +233,12 @@
 - handleManualEditActivity
 - Design System Inspired by Kraken
 - mesh_reference_compare.py
-- verify
+- objectness.py
 - icosphere
 - onboard.md
 - 3. Heal
 - load_or_build_index
-- diagnose_render.py
+- load_image
 - run
 - Scripts Cheatsheet
 - reference_vision.py
@@ -248,29 +248,29 @@
 - _normalize_initial_camera
 - check_admission
 - derive_geometry.py
-- freeze
+- extract_gradient_stops.py
 - SkinBinding
 - The Toolkit
 - onAnnotDown
-- rl
+- ur
 - analyse_view
-- compare
+- RigHierarchyEmission
 - synthesise_gait_tracks
 - mountSvelteComponentVariant
 - createLiveBrowserDomHelpers
 - createLiveBrowserSessionState
 - Browser Session Management
 - verify_roundtrip.mjs
-- bo
+- Oo
 - img2threejs.mjs
-- image_hash.py
+- synth_clip
 - decimate
-- vertex_region_gate.py
+- analyze_mesh
 - Any
 - Collection
 - Divine Eye Microscope — four-tier fidelity review
 - ho
-- hue_zone_parity
+- animate.md
 - SourceIngestionError
 - analyze_turntable
 - blend_weights
@@ -285,8 +285,8 @@
 - Part 1 — The principles this work produced
 - fit_camera_to_correspondences
 - morph_targets.py
-- next_required_evidence
-- VoxelGrid
+- Components
+- partition_for_binding
 - test_glb_rig_reference.py
 - SweptArcGate
 - G12RigReferenceTest
@@ -305,14 +305,14 @@
 - with_decimation
 - write_rgb_png
 - _freeze_manifest
-- Stylized 3D Hair for Three.js
+- 6. Acceptance and diagnosis
 - The study
 - img2threejs.mjs-test.mjs
 - color_metrics.py
 - probe_glb.py
-- partition_for_binding
-- validate_rig_payload.py
-- test_geodesic_skinning.py
+- self_intersection.py
+- yi
+- fixture_spec
 - HumanoidSilhouetteProfile
 - SculptEchoFailureMatrixBase
 - build-character.sh
@@ -322,27 +322,26 @@
 - Components
 - 3D Graphics Terminology For Object Sculpt Specs
 - Hair
-- check_intake_correctness.py
+- tokenize
 - test_camera_fitting_safety.py
 - build_glb
-- test_sculpt_echo_roundtrip.py
+- SculptEchoRoundTrip
 - .source
 - md_links.py
 - lint.mjs
-- getPoint
+- compare_region_passes.py
 - Codex MCP configuration
 - img2threejs 1.5.2 — Character Rigging & Animation Pipeline
-- validate_tier
+- subdivision.py
 - run_corpus
 - largest_component
-- evaluate_features
+- 5. Track B - Character / figurine reconstruction (v1.2.0)
 - validate_file
 - MaterialReferenceContract
 - PrimitiveWatertightnessTest
 - Pipeline
 - Image Analysis Protocol
-- md_tables.py
-- Generate Report
+- TheMaterialReference
 - optimize.md
 - Running Custom Playwright Code
 - Layout
@@ -355,21 +354,21 @@
 - UniformGrid
 - AxisExemptionSelfCheck
 - CommandLine
-- check_text
+- Exception
 - reference/critique.md
 - Simplify the Design
 - Scan mode (approach C: auto-extract, then confirm descriptive language)
 - Hardening Dimensions
-- Init flow
+- New visual work
 - Commands
 - Colour
-- 2. Hairstyle taxonomy and route selection
+- Stylized 3D Hair for Three.js
 - GLB_ANIMATED_CHARACTER_PROMPT.md
 - sdf_primitives.py
 - otsu_threshold
 - compare_views
 - Acceptance
-- Character geometry pipeline
+- Components
 - GlbRig
 - .test_g8_catches_a_skating_gait
 - ._mesh
@@ -387,35 +386,35 @@
 - Contributing to img2threejs
 - Install img2threejs
 - SdfResolutionCapTest
-- silhouette_iou
+- Three.js material rendering reference
 - ._accepted_walk
-- test_mesh_parity.py
+- feature_gate_failures
 - TheDispatcherActuallyReachesThem
 - RigDomainProfile
 - ShowcaseTscSmokeTest
 - load_fixture
 - Browser Screenshot Feedback
 - node/package.json
-- PluginTableTests
+- Quick start
 - clarify.md
 - Generate Combined Critique Report
 - document.md
 - 7. Tables and lists
 - 4. Three.js design recipe
 - Mandatory image material analysis
-- segments_for_spec
+- doctor.md
 - derive_character_rig
 - stand_proud_ring_stack
 - box
 - EmittedSourceTypechecks
 - Ws6DocsTest
 - Object Image Validation Rubric
-- Standard character pipeline contract — 1.5 beta + 1.5 alpha
-- ShowcaseTableTest
-- Impeccable Asset Producer
+- md
+- Material And Lighting Realism
+- Colors
 - Common Cognitive Load Violations
 - iOS platform
-- Operate mode depth (and Read notes)
+- impeccable/SKILL.md
 - Shape
 - enableInlineEdit
 - Cookies
@@ -440,11 +439,11 @@
 - img2threejs material reference library
 - VFX — the effects layer for a character that already moves
 - root_tip_gradient
-- color_is_gated
+- Colors
 - validate_binding
 - AlbedoColorSpace
 - NestedPairSideNaming
-- TheDefectThisFixes
+- 6. The localized correction loop
 - write_png
 - conforming_build_passes
 - RigMilestone0
@@ -452,14 +451,14 @@
 - Character Reconstruction
 - Pre-Spec Assessment And Quality Contract
 - Animation contract — 1.5.2
-- Off-axis and placement gates
+- Token Cost Analysis
 - Cognitive Load Assessment
 - Impeccable Finish Reviewer
 - live-browser-ignores.js
 - tasteskill v2 (`design-taste-frontend`)
 - GLB animated-character prompt
 - 1. What TRELLIS.2 actually does
-- sagittal_symmetry_error
+- Typography
 - field_from_component
 - decimate_ratio
 - _PointGrid
@@ -473,23 +472,23 @@
 - Surface Topology Classification
 - Attachment And Joint Correctness
 - GLB character pipeline (opt-in)
-- bolder.md
+- 9. Prioritised roadmap
 - app.json
 - 9. Type and colour
 - Shared project instructions
 - Stage R4 — Action design
 - Force-measured — lock the build to what the GLB actually measures
-- normalise_rings
-- validate_visual_hull_descriptor
+- ComponentLevelRejection
+- Layout
 - Stage R — 1.5.2 implementation contract
-- ParityReport
+- Responsive Behavior
 - _FallbackFeatures
-- Cli
+- [1.5.2] — 2026-08-25
 - OptionalVisionToolingTests
-- ReferenceTargetEnvelopeParity
+- reference_target
 - SpecValidation
 - Procedural rigging contract — 1.5-alpha
-- Adaptation Strategies
+- _pairs
 - Impeccable Documenter
 - Advanced Mocking with run-code
 - kinds
@@ -505,12 +504,9 @@
 - UnsupportedInterpolation
 - Milestone 0 findings that don't belong in the gate report
 - .test_the_consensus_hairline_reaches_faceLandmarks
-- ArgvDriftGuard
-- RunnerWorksWithImg2HomeUnsetInTheParentEnv
+- SrgbToLabTest
 - ReferenceResolution
 - Heuristics Scoring Guide
-- Operate
-- Persuade and Experience
 - builder
 - commerce
 - community
@@ -525,10 +521,7 @@
 - workspace
 - 8. Forms and settings
 - playwright
-- [1.4.0] — 2026-07-25
-- [1.4.1] — 2026-07-26
 - [1.5.1] — 2026-08-22
-- _load_mask
 - JpegPortabilityTest
 - TheBaseCharacterTemplateIsLegal
 - UnknownPassIdentifierIsRefused
@@ -632,7 +625,7 @@
 - img2threejs-vision
 
 ## God Nodes (most connected - your core abstractions)
-1. `constructor()` - 115 edges
+1. `constructor()` - 114 edges
 2. `generate()` - 96 edges
 3. `validate_spec()` - 90 edges
 4. `run_gates()` - 64 edges
@@ -644,8 +637,6 @@
 10. `full_payload()` - 51 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `6.4 Four rules that were learned the expensive way` --references--> `scale()`  [INFERRED]
-  .claude/skills/img2threejs/docs/RESEARCH_TRELLIS2_TO_IMG2THREEJS.md → assets/js/truck3d.js
 - `Structural Completeness Checklist` --references--> `scale()`  [INFERRED]
   .claude/skills/img2threejs/grimoire/character/structure_decomposition.md → assets/js/truck3d.js
 - `The Rule` --references--> `scale()`  [INFERRED]
@@ -654,75 +645,77 @@
   .claude/skills/impeccable/reference/typeset.md → assets/js/truck3d.js
 - `srcset with Width Descriptors` --references--> `w()`  [INFERRED]
   .claude/skills/impeccable/reference/adapt.md → assets/js/truck3d.js
+- `Where each rule comes from` --references--> `updateMatrixWorld()`  [INFERRED]
+  .claude/skills/img2threejs/docs/GLB_ANIMATED_CHARACTER_PROMPT.md → assets/js/truck3d.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (621 total, 176 thin omitted)
+## Communities (615 total, 170 thin omitted)
 
 ### Community 0 - "truck3d.js"
 Cohesion: 0.01
-Nodes (167): a_(), absarc(), absellipse(), af(), applyAxisAngle(), applyEuler(), applyQuaternion(), arc() (+159 more)
+Nodes (149): absarc(), absellipse(), ad(), applyAxisAngle(), applyEuler(), applyQuaternion(), arc(), area() (+141 more)
 
 ### Community 1 - "json"
-Cohesion: 0.03
-Nodes (23): main(), main(), main(), main(), print_status(), assert_replay_matches_oracle(), showcase_root(), load_fixture() (+15 more)
+Cohesion: 0.02
+Nodes (27): build_command(), main(), resolve_python(), assert_replay_matches_oracle(), showcase_root(), block(), write_rgb_png(), compile_generated_module() (+19 more)
 
-### Community 2 - "rx"
-Cohesion: 0.03
-Nodes (119): addEventListener(), ax(), Be(), C(), E(), ee(), fe(), he() (+111 more)
+### Community 2 - "ox"
+Cohesion: 0.04
+Nodes (91): clearLayerUpdates(), Ae(), ce(), m(), o(), Be(), ee(), Ie() (+83 more)
 
 ### Community 3 - "live-browser.js"
 Cohesion: 0.03
 Nodes (140): applyGlobalBarLabelState(), applyLiveBarPreference(), applyParamValue(), applyPlaceholderSizingStyles(), averageRgb01(), bindEditBadgeProxy(), bufferToBase64(), buildCollapsible() (+132 more)
 
 ### Community 4 - "struct"
-Cohesion: 0.03
-Nodes (65): bmp_size(), build_camera(), detect_size(), estimate_fov(), gif_size(), jpeg_size(), png_size(), webp_size() (+57 more)
+Cohesion: 0.04
+Nodes (36): bmp_size(), build_camera(), detect_size(), estimate_fov(), gif_size(), jpeg_size(), png_size(), webp_size() (+28 more)
 
 ### Community 5 - "fit_params.py"
 Cohesion: 0.05
 Nodes (32): _approval_state(), is_approved_divine_eye_result(), normalize_history(), _cli_config(), _default_divine_eye_evaluator(), divine_eye_correction_history(), divine_eye_fidelity(), _divine_eye_objective_score() (+24 more)
 
 ### Community 6 - "applyMatrix4"
-Cohesion: 0.04
-Nodes (92): addScalar(), applyMatrix3(), applyMatrix4(), applyNormalMatrix(), attach(), center(), compose(), computeFrenetFrames() (+84 more)
+Cohesion: 0.10
+Nodes (29): applyMatrix4(), attach(), center(), getMaxScaleOnAxis(), getNormalMatrix(), getWorldDirection(), invert(), localToWorld() (+21 more)
 
 ### Community 7 - "reference.py"
-Cohesion: 0.04
-Nodes (39): check_compatibility(), main(), build_assignment(), _candidate(), load_reference(), _material_index(), MaterialReferenceError, _prior_values() (+31 more)
+Cohesion: 0.07
+Nodes (26): build_assignment(), _candidate(), load_reference(), _material_index(), MaterialReferenceError, _prior_values(), resolve_material(), _token() (+18 more)
 
 ### Community 8 - "math"
 Cohesion: 0.04
-Nodes (38): _finite(), main(), _plane(), decide(), _is_finite_number(), main(), _routing_state(), _validate_config() (+30 more)
+Nodes (48): _finite(), decide(), _is_finite_number(), main(), _routing_state(), _validate_config(), _validate_history(), _validate_tags() (+40 more)
 
 ### Community 9 - "extract_pbr_evidence.py"
 Cohesion: 0.05
 Nodes (55): bradford_adapt(), build_recipe(), classify_material(), detect_color_gradient(), estimate_roughness_from_hotspot(), _is_monotonic(), lab_distance(), _lab_f() (+47 more)
 
 ### Community 10 - "multiplyScalar"
-Cohesion: 0.05
-Nodes (87): addScaledVector(), addVectors(), angleTo(), clamp(), clampLength(), clampPoint(), closestPointToPoint(), computeBoundingBox() (+79 more)
+Cohesion: 0.03
+Nodes (139): Ac(), add(), addScaledVector(), addVectors(), af(), angleTo(), applyMatrix3(), applyNormalMatrix() (+131 more)
 
 ### Community 11 - "connectSSE"
 Cohesion: 0.06
 Nodes (86): applyParamDefaults(), applySavedSessionMeta(), buildPickedAnchorSnapshot(), captureAndEmit(), checkpointPayload(), clampVariantIndex(), clearHandled(), clearSession() (+78 more)
 
-### Community 12 - "copy"
-Cohesion: 0.04
-Nodes (69): addGroup(), bg(), a(), o(), r(), clone(), r(), copy() (+61 more)
+### Community 12 - "e"
+Cohesion: 0.07
+Nodes (28): clone(), extractBasis(), fromArray(), fromJSON(), getColorAt(), Gx(), h_(), hi() (+20 more)
 
 ### Community 13 - "validate_sculpt_spec.py"
-Cohesion: 0.07
-Nodes (67): as_number_list(), attachment_emits_cylinder(), attachment_is_complete(), _bbox_diagonal(), completed_passes_from_history(), component_recessed_feature_matches(), component_requires_attachment(), component_role_tokens() (+59 more)
+Cohesion: 0.08
+Nodes (63): as_number_list(), attachment_emits_cylinder(), attachment_is_complete(), _bbox_diagonal(), completed_passes_from_history(), component_recessed_feature_matches(), component_requires_attachment(), component_role_tokens() (+55 more)
 
 ### Community 14 - "generate"
-Cohesion: 0.06
-Nodes (14): capsule_source_face_count(), generate(), EmittedSourceTypechecks, fixture_spec(), GradientEmission, ForwardReference, HelperEmission, SaturationIsReported (+6 more)
+Cohesion: 0.13
+Nodes (9): generate(), import_forge_modules(), import_forge_modules(), import_forge_modules(), import_forge_modules(), compile_generated_module(), load_fixture(), SubdivisionContractTest (+1 more)
 
 ### Community 15 - "motion.js"
 Cohesion: 0.04
-Nodes (47): be(), br(), c(), de(), Dr(), ea(), ec(), Et() (+39 more)
+Nodes (54): adopt(), be(), c(), collectTargets(), constructor(), cs(), de(), Dr() (+46 more)
 
 ### Community 16 - "Issue"
 Cohesion: 0.07
@@ -737,52 +730,52 @@ Cohesion: 0.06
 Nodes (24): _Auto, _axis_ranges(), Classification, classify(), ClipFeatures, ClipName, decide_loop(), _finite() (+16 more)
 
 ### Community 19 - "constructor"
-Cohesion: 0.05
-Nodes (61): add(), Ae(), g(), bind(), Co(), connect(), constructor(), ao() (+53 more)
+Cohesion: 0.04
+Nodes (72): bind(), clear(), constructor(), co(), Dn(), $e(), F(), fn() (+64 more)
 
 ### Community 20 - "modern-screenshot.umd.js"
 Cohesion: 0.07
-Nodes (57): At(), pe(), ae(), be(), bt(), Ce(), s(), Ct() (+49 more)
+Nodes (58): At(), pe(), ae(), be(), bt(), Ce(), s(), Ct() (+50 more)
 
-### Community 21 - "update"
-Cohesion: 0.05
-Nodes (52): clearUpdateRanges(), F(), Dg(), Eg(), a(), c(), o(), r() (+44 more)
+### Community 21 - "copy"
+Cohesion: 0.03
+Nodes (116): addGroup(), addScalar(), bg(), a(), c(), o(), r(), clearUpdateRanges() (+108 more)
 
 ### Community 22 - "generate_threejs_factory.py"
-Cohesion: 0.06
-Nodes (34): assert_pass_unlocked(), blocked_report(), completed_passes(), component_refs_for_pass(), component_uses_dense_height_maps(), const_name(), emit_blocked(), emit_rig_hierarchy() (+26 more)
+Cohesion: 0.11
+Nodes (30): assert_pass_unlocked(), blocked_report(), completed_passes(), component_refs_for_pass(), component_uses_dense_height_maps(), const_name(), emit_blocked(), emit_rig_hierarchy() (+22 more)
 
 ### Community 23 - "delight_albedo.py"
-Cohesion: 0.06
-Nodes (34): _axis_map(), _bilinear(), _BitReader, _build_huffman(), _clamp(), _decode_huffman(), decode_jpeg(), _extend() (+26 more)
+Cohesion: 0.05
+Nodes (47): _axis_map(), _bilinear(), _BitReader, _build_huffman(), _clamp(), _decode_huffman(), decode_jpeg(), _extend() (+39 more)
 
 ### Community 24 - "walk_targets"
 Cohesion: 0.06
 Nodes (16): classifier_verdict(), _gait_band(), gait_parameters(), run_targets(), TargetBand, walk_targets(), authored(), Cli (+8 more)
 
-### Community 25 - "argparse"
-Cohesion: 0.05
-Nodes (33): main(), emit_status(), load_optional_spec(), _pipeline(), main(), main(), build_command(), main() (+25 more)
+### Community 25 - "json"
+Cohesion: 0.03
+Nodes (72): check_compatibility(), main(), emit_local_state(), main(), main(), f(), emit_status(), load_optional_spec() (+64 more)
 
 ### Community 27 - "validate_spec"
 Cohesion: 0.07
-Nodes (14): component_is_recessed_feature(), validate_spec(), import_forge_modules(), import_forge_modules(), base_spec(), import_forge_modules(), OpenShellTopologyTest, RecessedFeatureGateTest (+6 more)
+Nodes (9): component_is_recessed_feature(), validate_spec(), base_spec(), import_forge_modules(), OpenShellTopologyTest, RecessedFeatureGateTest, RegressionSafetyTest, load_fixture() (+1 more)
 
 ### Community 28 - "setLiveState"
 Cohesion: 0.10
 Nodes (60): abandonForeignSession(), abandonSupersededGo(), abortSvelteComponentInjection(), beginNewLiveConfiguration(), cancelEditing(), cancelEditingToPicking(), cancelInsertConfigure(), cleanup() (+52 more)
 
 ### Community 29 - "action_design.py"
-Cohesion: 0.06
-Nodes (27): accepts(), _add(), as_classifier_input(), band_features(), build_payload(), _call_measure(), _coerce_nodes(), default_classifier() (+19 more)
+Cohesion: 0.07
+Nodes (24): accepts(), _add(), as_classifier_input(), band_features(), build_payload(), _call_measure(), default_classifier(), default_measure() (+16 more)
 
 ### Community 30 - "slice_node.py"
-Cohesion: 0.06
-Nodes (24): Grid, main(), read_node(), bboxes(), cloud_bboxes(), emit(), main(), region_rings() (+16 more)
+Cohesion: 0.08
+Nodes (18): bboxes(), cloud_bboxes(), emit(), main(), region_rings(), verify_frozen(), biggest_cluster(), empty_bin_fraction() (+10 more)
 
 ### Community 31 - "charts.js"
-Cohesion: 0.07
-Nodes (52): image(), texture(), Act on the receipt, 1. Decide what is already true, 2. Ask what will change the work, 3. Choose the right amount of invention, 4. Commit the world, 5. Record the decision (+44 more)
+Cohesion: 0.12
+Nodes (35): Act on the receipt, Plan and asset review, Plan, capture, serve, Core Rule, Decision Comps, Impeccable Asset Producer, Input Contract, Output Contract (+27 more)
 
 ### Community 32 - "check"
 Cohesion: 0.08
@@ -790,11 +783,11 @@ Nodes (17): hair_profile_report(), _is_number(), _unit(), _validate_flow_field()
 
 ### Community 33 - "ke"
 Cohesion: 0.06
-Nodes (12): Ae(), Cn, Gt(), Ht(), ke, le(), me(), sn() (+4 more)
+Nodes (15): Ae(), Cn, fe(), Gt(), Ht(), ke, le(), me() (+7 more)
 
 ### Community 34 - "search_specs.py"
-Cohesion: 0.08
-Nodes (33): CacheReadError, CacheValidationError, CacheWriteError, IndexBuildError, IndexLoadResult, load_profile(), ProfileCachePathError, ProfileValidationError (+25 more)
+Cohesion: 0.06
+Nodes (43): CacheReadError, CacheValidationError, CacheWriteError, IndexBuildError, IndexLoadResult, ProfileCachePathError, ProfileValidationError, SearchOutputRequest (+35 more)
 
 ### Community 35 - "run_gates"
 Cohesion: 0.06
@@ -809,8 +802,8 @@ Cohesion: 0.07
 Nodes (54): actionLabel(), applyConfigureBarChrome(), bindConfigureCountPillTooltip(), bindConfigureInlineControlHover(), bindConfigureModifierPillHover(), buildConfigureActionControl(), buildConfigureCountControl(), buildConfigureRow() (+46 more)
 
 ### Community 38 - "measure"
-Cohesion: 0.08
-Nodes (11): classify(), measure(), payload_of(), PayloadValidation, synth_clip(), table_clip(), TheScaleTripwire, TheSpecValidationTable (+3 more)
+Cohesion: 0.15
+Nodes (6): classify(), measure(), table_clip(), TheSpecValidationTable, TheVocabulary, Thresholding
 
 ### Community 39 - "check_material_physics"
 Cohesion: 0.06
@@ -829,8 +822,8 @@ Cohesion: 0.08
 Nodes (50): armPageChatForTyping(), attachSteerFocusDebug(), attachSteerFocusGuard(), clearSteerAwaitTimer(), clearSteerFocusRecoverTimer(), collapsePageChat(), expandPageChat(), finishVoiceSession() (+42 more)
 
 ### Community 43 - "impeccable/SKILL.md"
-Cohesion: 0.06
-Nodes (34): Assess Adaptation Challenge, Implement & Verify, Recommended Actions, Craft (deprecated alias), Craft floor, Refuse, Verify, Monorepo notes (+26 more)
+Cohesion: 0.05
+Nodes (37): 1. Accessibility (VoiceOver / TalkBack), 2. Performance, 3. Appearance & Theming, 4. Platform Conformance (CRITICAL), 5. Adaptivity, Audit Health Score, Detailed Findings by Severity, Diagnostic Scan (+29 more)
 
 ### Community 44 - "createObjectModel.ts"
 Cohesion: 0.08
@@ -842,19 +835,19 @@ Nodes (24): AwayStage, clamp01(), glowTexture(), HeroStage, inCubic(), inOutCubi
 
 ### Community 46 - "spec_search.py"
 Cohesion: 0.10
-Nodes (42): _accent_companion(), AliasSettings, Bm25Index, Bm25Settings, _cache_payload(), _cached_evidence_reference(), _cached_record(), _cached_source_reference() (+34 more)
+Nodes (44): AliasSettings, Bm25Index, Bm25Settings, _cache_payload(), _cached_evidence_reference(), _cached_record(), _cached_source_reference(), CachedEvidenceReference (+36 more)
 
 ### Community 47 - "ScalpField"
-Cohesion: 0.07
-Nodes (7): ScalpField, Caps, EstimateErrsSafely, Normals, SignIsExact, SurfaceSamples, Validation
+Cohesion: 0.06
+Nodes (8): normalise_rings(), ScalpField, Caps, EstimateErrsSafely, Normals, SignIsExact, SurfaceSamples, Validation
 
 ### Community 48 - "analyze_texture.py"
 Cohesion: 0.08
-Nodes (18): analyze(), apply_to_material(), _lum(), main(), _sample(), extract_gradient_stops(), hue_name(), main() (+10 more)
+Nodes (14): analyze(), apply_to_material(), _lum(), _sample(), decide(), expose_assumptions(), AnalyzeTextureTest, fn() (+6 more)
 
 ### Community 49 - "normalize_vertex_paint"
-Cohesion: 0.09
-Nodes (17): _as_number(), _as_vec3(), classify_points(), dominant_region(), normalize_region(), normalize_vertex_paint(), paint_point(), parse_hex_color() (+9 more)
+Cohesion: 0.10
+Nodes (15): _as_number(), _as_vec3(), classify_points(), dominant_region(), normalize_region(), normalize_vertex_paint(), paint_point(), parse_hex_color() (+7 more)
 
 ### Community 50 - "4. Component Stylings"
 Cohesion: 0.04
@@ -872,25 +865,25 @@ Nodes (41): adjustments(), argv, assetQueries(), ASSETS_PATH, briefStop(), brief
 Cohesion: 0.08
 Nodes (43): agentHasWorkInFlight(), agentStatusText(), barPaletteForTheme(), brandMarkSvg(), buildDesignHeader(), buildParamsPanel(), buildSteerProcessingDots(), buildSteerQueueHint() (+35 more)
 
-### Community 54 - "Components"
-Cohesion: 0.05
-Nodes (43): **`agent-console-card`**, **`announcement-bar`**, **`blog-filter-chip`**, Brand & Accent, Breakpoints, **`button-pill-outline`**, **`button-primary`**, **`button-secondary`** (+35 more)
+### Community 54 - "cohere/DESIGN.md"
+Cohesion: 0.12
+Nodes (15): Breakpoints, Collapsing Strategy, Do, Do's and Don'ts, Don't, Elevation & Depth, Font Family, Hierarchy (+7 more)
 
 ### Community 55 - "Design System Inspired by Mastercard"
 Cohesion: 0.05
 Nodes (43): 1. Visual Theme & Atmosphere, 2. Color Palette & Roles, 3. Typography Rules, 4. Component Stylings, 5. Layout Principles, 6. Depth & Elevation, 7. Do's and Don'ts, 8. Responsive Behavior (+35 more)
 
-### Community 56 - "new_sculpt_spec.py"
-Cohesion: 0.08
-Nodes (19): make_payload(), apply_character_pose(), apply_character_template(), _cnode(), _eye_socket_sdf(), _hu_ratio(), inject_geometry_rules(), _limb_attachment() (+11 more)
+### Community 56 - "make_character_component_tree"
+Cohesion: 0.11
+Nodes (6): _cnode(), _eye_socket_sdf(), _hu_ratio(), _limb_attachment(), make_character_component_tree(), CharacterPoseApplication
 
 ### Community 57 - "emit_target.py"
-Cohesion: 0.11
-Nodes (24): assert_action_ready(), _bounded_env(), build_provenance(), _classify_reference_failure(), _determinism_cache_key(), _determinism_cache_path(), EmitTargetError, _harness_version_for_provenance() (+16 more)
+Cohesion: 0.12
+Nodes (25): Target, assert_action_ready(), _bounded_env(), build_provenance(), _classify_reference_failure(), _determinism_cache_key(), _determinism_cache_path(), EmitTargetError (+17 more)
 
-### Community 58 - "analyze_mesh"
-Cohesion: 0.08
-Nodes (14): analyze_mesh(), analyze_meshes(), _as_point(), _count_crossings(), _DirectionGrid, _error_result(), _format_summary(), _load_meshes() (+6 more)
+### Community 58 - "_DirectionGrid"
+Cohesion: 0.18
+Nodes (4): _count_crossings(), _DirectionGrid, _normalize(), ParityIsReal
 
 ### Community 59 - "binance/DESIGN.md"
 Cohesion: 0.05
@@ -905,8 +898,8 @@ Cohesion: 0.05
 Nodes (41): Border Radius Scale, Brand & Accent, Breakpoints, Buttons, Cards, Collapsing Strategy, Colors, Components (+33 more)
 
 ### Community 62 - "resolve_chains"
-Cohesion: 0.08
-Nodes (15): Chain, ChainResolutionError, Chains, check_medial_lateral(), _children_map(), _deepest_leaf_path(), walk(), _descend_to_branch() (+7 more)
+Cohesion: 0.07
+Nodes (18): Chain, ChainResolutionError, Chains, check_medial_lateral(), _children_map(), _coerce_nodes(), _deepest_leaf_path(), walk() (+10 more)
 
 ### Community 63 - "bmw/DESIGN.md"
 Cohesion: 0.05
@@ -965,12 +958,12 @@ Cohesion: 0.05
 Nodes (40): 1. Visual Theme & Atmosphere, 2. Color Palette & Roles, 3. Typography Rules, 4. Component Stylings, 5. Layout Principles, 6. Depth & Elevation, 7. Do's and Don'ts, 8. Responsive Behavior (+32 more)
 
 ### Community 77 - "assets.mjs"
-Cohesion: 0.08
-Nodes (39): How to read a result, AIC_FIELDS, AIC_HEADERS, applyThumb(), ARCHIVE_LICENCE, args, argv, commonsApi() (+31 more)
+Cohesion: 0.07
+Nodes (57): How to read a result, AIC_FIELDS, AIC_HEADERS, applyThumb(), ARCHIVE_LICENCE, args, argv, base() (+49 more)
 
-### Community 78 - "mesh_parity.py"
-Cohesion: 0.09
-Nodes (17): _as_floats(), _as_ints(), _compare_mesh(), _duplicates(), ElementDifference, _first_differences(), _hash_buffer(), load_payload() (+9 more)
+### Community 78 - "verify"
+Cohesion: 0.05
+Nodes (29): _as_floats(), _as_ints(), _compare_mesh(), _duplicates(), ElementDifference, _first_differences(), freeze(), _hash_buffer() (+21 more)
 
 ### Community 79 - "inspect.mjs"
 Cohesion: 0.07
@@ -1001,20 +994,20 @@ Cohesion: 0.05
 Nodes (39): Border Radius Scale, Brand & Accent, Breakpoints, Buttons, Cards & Containers, Collapsing Strategy, Colors, Components (+31 more)
 
 ### Community 86 - "animate.md"
-Cohesion: 0.06
-Nodes (36): height(), width(), transform(), Visual-hull descriptor, Accessibility and control, Choose material by meaning, Find the job, Implement to the runtime (+28 more)
+Cohesion: 0.13
+Nodes (20): height(), width(), transform(), Implement to the runtime, Assemble and review, The frontmatter: token schema, Rendering Performance, 10. Markup and credits (+12 more)
 
 ### Community 87 - "save_state"
-Cohesion: 0.11
-Nodes (13): save_state(), _action_ready_state(), BlockingStopNamesGateAndPlugin, DomainPluginGatesRunPostDomainSteps, HangTripsTheBoundAndNamesTheGate, ParticipationLookupFailureFailsLoudNotOpen, RigDomainsAreNotDueUntilTheRigTrackBegins, RunGatesTestBase (+5 more)
+Cohesion: 0.08
+Nodes (15): save_state(), _action_ready_state(), ArgvDriftGuard, BlockingStopNamesGateAndPlugin, DomainPluginGatesRunPostDomainSteps, HangTripsTheBoundAndNamesTheGate, ParticipationLookupFailureFailsLoudNotOpen, RigDomainsAreNotDueUntilTheRigTrackBegins (+7 more)
 
 ### Community 88 - "attachment_anchor.py"
 Cohesion: 0.11
 Nodes (16): analyze_attachments(), _anchor_extent(), _anchor_id(), _distance(), _find_cycle(), _format_summary(), _is_attachment_component(), _is_number() (+8 more)
 
 ### Community 89 - "test_search_specs.py"
-Cohesion: 0.10
-Nodes (16): CliOutputTest, DistilledRecordTest, load_contract_fixture(), make_record(), RecordContractTest, run_cli_fixture(), SnippetTest, SpecRecordValidationError (+8 more)
+Cohesion: 0.13
+Nodes (12): CliOutputTest, DistilledRecordTest, load_contract_fixture(), run_cli_fixture(), SnippetTest, SpecRecordValidationError, validate_evidence_refs(), validate_measurements() (+4 more)
 
 ### Community 90 - "airtable/DESIGN.md"
 Cohesion: 0.05
@@ -1085,8 +1078,8 @@ Cohesion: 0.05
 Nodes (37): Border Radius Scale, Brand & Accent, Breakpoints, Buttons, Cards & Containers, Collapsing Strategy, Colors, Components (+29 more)
 
 ### Community 107 - "ferrari/DESIGN.md"
-Cohesion: 0.05
-Nodes (37): Border Radius Scale, Brand & Accent, Breakpoints, Buttons, Cards, Collapsing Strategy, Colors, Components (+29 more)
+Cohesion: 0.14
+Nodes (13): Border Radius Scale, Decorative Depth, Do, Do's and Don'ts, Don't, Elevation & Depth, Grid & Container, Iteration Guide (+5 more)
 
 ### Community 108 - "ibm/DESIGN.md"
 Cohesion: 0.05
@@ -1105,8 +1098,8 @@ Cohesion: 0.05
 Nodes (37): Border Radius Scale, Brand & Accent, Breakpoints, Buttons, Cards & Containers, Collapsing Strategy, Colors, Components (+29 more)
 
 ### Community 112 - ".get"
-Cohesion: 0.08
-Nodes (30): Al(), As(), cl(), dl(), dn(), Es(), fl(), gl() (+22 more)
+Cohesion: 0.09
+Nodes (30): getWorldQuaternion(), getWorldScale(), i_(), Al(), As(), cl(), dl(), dn() (+22 more)
 
 ### Community 113 - "merge_spec_augmentation"
 Cohesion: 0.12
@@ -1173,8 +1166,8 @@ Cohesion: 0.10
 Nodes (16): SPN Actros L (DT E 1005), procedural 3D model, alive(), Browser, findChrome(), Page, sleep(), sweepProfiles(), args (+8 more)
 
 ### Community 129 - "orchestrate_passes.py"
-Cohesion: 0.17
-Nodes (31): attachment_complete(), attachment_gaps(), check_pass(), completed_passes(), component_requires_attachment(), current_pass(), has_non_empty(), has_number() (+23 more)
+Cohesion: 0.10
+Nodes (36): attachment_complete(), attachment_gaps(), check_pass(), completed_passes(), component_requires_attachment(), current_pass(), has_non_empty(), has_number() (+28 more)
 
 ### Community 130 - "applyEditing"
 Cohesion: 0.08
@@ -1220,13 +1213,13 @@ Nodes (35): Border Radius Scale, Brand & Accent, Breakpoints, Buttons, Cards & C
 Cohesion: 0.06
 Nodes (35): Border Radius Scale, Brand & Accent, Breakpoints, Buttons, Cards & Containers, Collapsing Strategy, Colors, Components (+27 more)
 
-### Community 141 - "co"
-Cohesion: 0.09
-Nodes (15): ai(), animateVisualElement(), Ao(), ba(), co(), ei(), fi(), gi() (+7 more)
+### Community 141 - "oi"
+Cohesion: 0.12
+Nodes (12): animateVisualElement(), Ao(), ar(), bi(), Eo(), In(), lr(), Nn() (+4 more)
 
 ### Community 142 - "fn"
 Cohesion: 0.09
-Nodes (10): fe(), fn(), Fs(), Is(), La(), os(), p, ti() (+2 more)
+Nodes (6): fn(), Fs(), Is(), os(), p, ti()
 
 ### Community 143 - "render_bridge.py"
 Cohesion: 0.20
@@ -1250,7 +1243,7 @@ Nodes (34): Border Radius Scale, Brand & Accent, Breakpoints, Buttons, Cards & C
 
 ### Community 148 - "e"
 Cohesion: 0.08
-Nodes (19): ca(), cr, e(), Eo(), er(), Gr(), ha(), Ie() (+11 more)
+Nodes (21): rotateOnWorldAxis(), br(), ca(), cr, e(), er(), Es(), ha() (+13 more)
 
 ### Community 149 - "detect_reference_effects.py"
 Cohesion: 0.10
@@ -1277,20 +1270,20 @@ Cohesion: 0.06
 Nodes (33): Border Radius Scale, Brand & Accent, Breakpoints, Buttons, Cards & Containers, Collapsing Strategy, Colors, Components (+25 more)
 
 ### Community 155 - "Path"
-Cohesion: 0.23
-Nodes (28): _cache_bool(), _cache_float(), _cache_integer(), _cache_mapping(), _cache_optional_string(), _cache_string(), _cache_string_list(), _cache_validation_error() (+20 more)
+Cohesion: 0.21
+Nodes (30): _cache_bool(), _cache_float(), _cache_integer(), _cache_mapping(), _cache_optional_string(), _cache_string(), _cache_string_list(), _cache_validation_error() (+22 more)
 
 ### Community 156 - "wise/DESIGN.md"
 Cohesion: 0.06
 Nodes (32): Border Radius Scale, Brand & Accent, Brand Accent — Tertiary, Breakpoints, Buttons, Cards & Containers, Colors, Components (+24 more)
 
 ### Community 157 - "dispose"
-Cohesion: 0.09
-Nodes (31): Ag(), _allocateTargets(), _applyPMREM(), _blur(), Cg(), n(), o(), r() (+23 more)
+Cohesion: 0.13
+Nodes (23): Ag(), _allocateTargets(), _applyPMREM(), _blur(), Cg(), _cleanup(), compileCubemapShader(), compileEquirectangularShader() (+15 more)
 
 ### Community 158 - "SourceDocument"
-Cohesion: 0.11
-Nodes (25): _alias_mapping(), assert_never(), Bm25Config, build_index(), _document_key(), EvidenceReference, _ingest_configured_sources(), ingest_json() (+17 more)
+Cohesion: 0.15
+Nodes (16): _alias_mapping(), assert_never(), Bm25Config, build_index(), _ingest_configured_sources(), ingest_json(), visit(), ingest_markdown() (+8 more)
 
 ### Community 159 - "JointAdmissionGate"
 Cohesion: 0.10
@@ -1313,16 +1306,16 @@ Cohesion: 0.06
 Nodes (31): Border Radius Scale, Brand & Accent, Breakpoints, Buttons, Cards & Containers, Colors, Components, Do (+23 more)
 
 ### Community 164 - "new_state"
-Cohesion: 0.11
-Nodes (3): mark_steps(), new_state(), WorkflowStateTest
+Cohesion: 0.10
+Nodes (19): _anchor_index(), _entries(), _format_command(), load_state(), mark_steps(), new_state(), next_entry(), _pending() (+11 more)
 
-### Community 165 - "re"
-Cohesion: 0.12
-Nodes (17): bind(), main(), pascal_case(), collect_local_feature_keys(), find_inventory(), load(), main(), norm() (+9 more)
+### Community 165 - "h"
+Cohesion: 0.06
+Nodes (41): addEventListener(), l(), g(), deleteAttribute(), a(), c(), I(), N() (+33 more)
 
 ### Community 166 - "emit_typescript"
-Cohesion: 0.12
-Nodes (11): emit_typescript(), _fmt_num(), BoneSpec, derive_envelope_radius(), Ellipsoid, IkSpec, RigSpec, validate_rig_spec() (+3 more)
+Cohesion: 0.15
+Nodes (10): emit_typescript(), _fmt_num(), BoneSpec, derive_envelope_radius(), Ellipsoid, IkSpec, RigSpec, validate_rig_spec() (+2 more)
 
 ### Community 167 - "_action_ready_state_path"
 Cohesion: 0.12
@@ -1333,24 +1326,24 @@ Cohesion: 0.12
 Nodes (9): domain_profile(), DomainRegistryError, _img2_home(), _installed_plugin_domains(), _load_module(), registered_domains(), claim(), _validate() (+1 more)
 
 ### Community 169 - "camera_fitting_types.py"
-Cohesion: 0.12
-Nodes (20): AspectDescriptor, CameraFitDescriptor, ConvergenceDiagnostic, DegenerateCorrespondencesError, _finite_scalar(), FitCameraParameters, FitDiagnostic, FovField (+12 more)
+Cohesion: 0.19
+Nodes (16): AspectDescriptor, CameraFitDescriptor, ConvergenceDiagnostic, _finite_scalar(), FitCameraParameters, FitDiagnostic, FovField, _is_numeric_sequence() (+8 more)
 
 ### Community 170 - "BindActuallyExcludes"
 Cohesion: 0.11
 Nodes (6): BindActuallyExcludes, BindReportsThePartition, column(), head_on_neck_with_hair(), TheHazardIsReal, weight_of()
 
 ### Community 171 - "img2threejs Upgrade Plan"
-Cohesion: 0.07
-Nodes (29): 10. Backward compatibility, 11. Risks and mitigations, 12. Open questions, 13. Research summary: best practices for maximum human likeness, 1. Problem statement, 2. Root-cause map (current files), 3. Design principles (must hold across the upgrade), 4.1 New artifact: `detailInventory` (+21 more)
+Cohesion: 0.11
+Nodes (18): 10. Backward compatibility, 11. Risks and mitigations, 12. Open questions, 13. Research summary: best practices for maximum human likeness, 1. Problem statement, 2. Root-cause map (current files), 3. Design principles (must hold across the upgrade), 4.1 New artifact: `detailInventory` (+10 more)
 
 ### Community 172 - "camera_fitting_solver.py"
-Cohesion: 0.17
-Nodes (19): has_degenerate_world_geometry(), project_landmark(), residual_components(), rms_reprojection_error(), _central_difference_jacobian(), fit_parameters(), _normal_equations(), _parameter_vector() (+11 more)
+Cohesion: 0.18
+Nodes (18): has_degenerate_world_geometry(), project_landmark(), residual_components(), rms_reprojection_error(), _central_difference_jacobian(), fit_parameters(), _normal_equations(), _parameter_vector() (+10 more)
 
 ### Community 173 - "img2threejs"
-Cohesion: 0.07
-Nodes (29): 1. Install the base skill, 2. Install the plugin harness, if needed, 3. Choose plugins — do not install everything by default, 4. Run a reconstruction in your agent, 5. Audit and maintain the installation, Atlas Cloud, Contributing, Copy-paste prompts for the GLB-reference route (+21 more)
+Cohesion: 0.10
+Nodes (21): Atlas Cloud, Contributing, Honesty about limits, How it works, Hyper3D, img2threejs, License, Live demos (+13 more)
 
 ### Community 174 - "6. Recipes"
 Cohesion: 0.07
@@ -1358,35 +1351,35 @@ Nodes (28): 10. Rules for motion, 1. The budget, 2. What strong pages do with mo
 
 ### Community 175 - "Components"
 Cohesion: 0.07
-Nodes (28): Buttons, Cards / Containers, Check List, Colors, Components, Design System: SPN-Transporte, Do:, Do's and Don'ts (+20 more)
+Nodes (29): Buttons, Cards / Containers, Check List, Colors, Components, Design System: SPN-Transporte, Do:, Do's and Don'ts (+21 more)
 
-### Community 176 - "img2threejs/README.md"
-Cohesion: 0.10
-Nodes (15): GLB-reference character prompt — animation, Read this before using it, The prompt, GLB-reference character prompt — polish, Read this before using it, The prompt, GLB-reference character prompt — build, Read this before using it (+7 more)
+### Community 176 - "GLB_CHARACTER_ANIMATION_PROMPT.md"
+Cohesion: 0.17
+Nodes (10): GLB-reference character prompt — animation, Read this before using it, The prompt, GLB-reference character prompt — polish, Read this before using it, The prompt, GLB-reference character prompt — build, Read this before using it (+2 more)
 
 ### Community 177 - "check_pair"
-Cohesion: 0.10
-Nodes (6): check_pair(), classify_relation(), mirror_point(), mirror_vector(), TheConvention, TheHandDefect
+Cohesion: 0.08
+Nodes (8): check_pair(), classify_relation(), mirror_point(), mirror_vector(), sagittal_symmetry_error(), TheConvention, TheHandDefect, WholeFigureSanity
 
 ### Community 178 - "medial_lateral_bias"
 Cohesion: 0.10
 Nodes (10): compare_bias(), medial_lateral_bias(), TheFootDefect, Gates Reference (full contract), integrations/mesh3d/generate_reference_mesh.py — optional, external, Left and right, scripts/character_audit.sh, _shared/chirality.py (no CLI) (+2 more)
 
 ### Community 179 - "targets.py"
-Cohesion: 0.15
-Nodes (14): _harness_version(), _img2_home(), _parse_semver(), path_escapes(), _plugin_targets(), _range_satisfied(), _read_json(), reference_target() (+6 more)
+Cohesion: 0.21
+Nodes (11): _harness_version(), _img2_home(), _parse_semver(), path_escapes(), _plugin_targets(), _range_satisfied(), _read_json(), resolve_target() (+3 more)
 
 ### Community 180 - "CorrectionLoopTest"
 Cohesion: 0.10
 Nodes (3): budget_exceeded(), CorrectionLoopTest, _it()
 
 ### Community 181 - "divine_eye.py"
-Cohesion: 0.11
-Nodes (12): _blown_fraction(), blowout_parity(), edge_overlap(), evaluate(), flat_fraction(), global_ssim(), load_luma(), main() (+4 more)
+Cohesion: 0.03
+Nodes (48): Added — reconstruction-fidelity upgrades (folded into 1.3), bbox_of(), bilateral_symmetry_error(), color_is_gated(), load_mask(), mask_is_inverted(), per_part_color_delta(), proportion_delta() (+40 more)
 
 ### Community 182 - "joint_loops.py"
-Cohesion: 0.15
-Nodes (11): analyze_joint_loops(), count_loops_at_joint(), _dot(), _format_summary(), main(), _norm(), _sub(), _triangles() (+3 more)
+Cohesion: 0.16
+Nodes (9): analyze_joint_loops(), count_loops_at_joint(), _dot(), _norm(), _sub(), _triangles(), GateBehaviour, limb() (+1 more)
 
 ### Community 183 - "gate"
 Cohesion: 0.12
@@ -1397,12 +1390,12 @@ Cohesion: 0.12
 Nodes (10): Canonical row, Future ingestion seam, Normalized spec-record vocabulary, Required fields and stable types, taper_risk(), component(), DefaultDescriptor, station() (+2 more)
 
 ### Community 185 - "append_review.py"
-Cohesion: 0.15
-Nodes (20): feature_gate_failures(), feature_review_policy(), feature_targets_for_pass(), is_number(), clamp_score(), is_remote_or_virtual_path(), load_json_argument(), load_spec() (+12 more)
+Cohesion: 0.21
+Nodes (15): clamp_score(), is_remote_or_virtual_path(), load_json_argument(), load_spec(), main(), pass_acceptance(), pass_order(), pass_specific_evidence() (+7 more)
 
 ### Community 186 - "carve_visual_hull"
-Cohesion: 0.15
-Nodes (8): _boundary_surface(), carve_visual_hull(), CarveConventions, CarveGeometry, CarveHonesty, descriptor(), disc_mask(), solid_mask()
+Cohesion: 0.11
+Nodes (14): _boundary_surface(), carve_visual_hull(), _is_number(), _mask_lookup(), _sample_mask(), _validate_mask(), _validate_vector(), validate_visual_hull_descriptor() (+6 more)
 
 ### Community 187 - "geometry_integrity.py"
 Cohesion: 0.15
@@ -1421,32 +1414,32 @@ Cohesion: 0.07
 Nodes (26): Border Radius Scale, Brand & Accent, Breakpoints, Collapsing Strategy, Colors, Decorative Depth, Do, Do's and Don'ts (+18 more)
 
 ### Community 191 - "mn"
-Cohesion: 0.10
-Nodes (8): bi(), Je(), mn(), oi(), Q(), Qe(), tn(), Cursor, Target Highlight and Click Point
+Cohesion: 0.12
+Nodes (4): Je(), mn(), tn(), Cursor, Target Highlight and Click Point
 
 ### Community 192 - "bo"
-Cohesion: 0.10
-Nodes (10): bl(), bo(), Bs(), gs(), hi(), So(), update(), vo() (+2 more)
+Cohesion: 0.06
+Nodes (15): ba(), bl(), bo(), Bs(), co(), ei(), gs(), hi() (+7 more)
 
 ### Community 193 - "resolve_pipeline_routing"
-Cohesion: 0.15
-Nodes (8): classification_from_cs2_manifest(), _explicit_classification(), _fallback_classification(), _normalize_classification(), resolve_pipeline_routing(), validate_pipeline_routing(), classification(), PipelineRoutingTests
+Cohesion: 0.14
+Nodes (10): classification_from_cs2_manifest(), _explicit_classification(), _fallback_classification(), _normalize_classification(), resolve_pipeline_routing(), validate_pipeline_routing(), validate_cs2_contract(), validate_pipeline_routing_contract() (+2 more)
 
 ### Community 194 - "run_gates.py"
-Cohesion: 0.16
-Nodes (13): _check_exit_agreement(), domain_owner_plugin(), domain_rig_step_ids(), domain_step_ids(), gate_runner_argv(), GateExecutionError, _img2_home(), _installed_plugins_with_gates() (+5 more)
+Cohesion: 0.17
+Nodes (11): _check_exit_agreement(), domain_rig_step_ids(), domain_step_ids(), gate_runner_argv(), GateExecutionError, _img2_home(), _installed_plugins_with_gates(), parse_gate_run_envelope() (+3 more)
 
 ### Community 195 - "turntable_gate.py"
-Cohesion: 0.14
-Nodes (10): analyze_angles(), _format_summary(), main(), silhouette_area_fraction(), _format_summary(), main(), _parse_capture(), _centered_block() (+2 more)
+Cohesion: 0.12
+Nodes (11): analyze_angles(), _format_summary(), main(), silhouette_area_fraction(), _format_summary(), _load_mask(), main(), _parse_capture() (+3 more)
 
 ### Community 196 - "_write_plugin"
 Cohesion: 0.15
 Nodes (6): MalformedRegistryFailsLoudOnlyWhenAskedFor, NoRegistryResolvesToTheReferenceTargetOnly, PluginTargetResolution, _target_step(), TargetsTestBase, _write_plugin()
 
 ### Community 197 - "Responsive Design"
-Cohesion: 0.08
-Nodes (25): Assess Adaptation Challenge, Breakpoints: Content-Driven, Content Adaptation, Desktop Adaptation (Mobile → Desktop), Detect Input Method, Not Just Screen Size, Email Adaptation (Web → Email), Implement Adaptations, Layout Adaptation Patterns (+17 more)
+Cohesion: 0.06
+Nodes (32): Assess Adaptation Challenge, Breakpoints: Content-Driven, Content Adaptation, Desktop Adaptation (Mobile → Desktop), Detect Input Method, Not Just Screen Size, Email Adaptation (Web → Email), Implement Adaptations, Layout Adaptation Patterns (+24 more)
 
 ### Community 198 - "app-draw.mjs"
 Cohesion: 0.12
@@ -1458,11 +1451,11 @@ Nodes (24): 0.1 — Name the broken subject, 0.2 — Capture it on video, at thr
 
 ### Community 200 - "validate_chirality"
 Cohesion: 0.11
-Nodes (7): find_pairs(), pair_stem(), side_of(), validate_chirality(), NamingPairs, SpecLevelGate, Gates (do not skip)
+Nodes (7): find_pairs(), pair_stem(), side_of(), validate_chirality(), NamingPairs, SpecLevelGate, Left and right
 
 ### Community 201 - ".normal"
-Cohesion: 0.09
-Nodes (11): Candy/anodized colour washes to blue under a bright env — and prose can fight the reference, Common Failure Pattern, Lighting-Pass Requirements, Material And Lighting Realism, Material & colour lessons — real-object reconstructions (2026-07: BMX + M9 Doppler), Material-Pass Requirements, Screenshot Review, Required artifacts (+3 more)
+Cohesion: 0.08
+Nodes (12): Acceptance order, Browser capture contract, Character scene contract, Coordinate, unit and rig contract, Migration map, Required artifacts, Required character capture batch, Route selection (+4 more)
 
 ### Community 202 - "derive_anatomy"
 Cohesion: 0.10
@@ -1470,27 +1463,27 @@ Nodes (7): apply_to_spec(), derive_anatomy(), missing_for_heads(), nearest_suppo
 
 ### Community 203 - "base_material"
 Cohesion: 0.15
-Nodes (8): is_textureless(), validate_textureless(), base_material(), Declaration, EmittedFactory, _minimal_spec(), quality_first_spec(), QualityBar
+Nodes (9): is_textureless(), validate_look_dev_targets(), validate_textureless(), base_material(), Declaration, EmittedFactory, _minimal_spec(), quality_first_spec() (+1 more)
 
 ### Community 204 - "hashlib"
 Cohesion: 0.14
 Nodes (7): canonical_module_hash(), _dependents_of(), get_module(), invalidate_attached(), module_cache_key(), put_module(), ModuleCacheTests
 
-### Community 205 - "pairwise_penetration.py"
-Cohesion: 0.14
-Nodes (12): analyze_meshes(), analyze_pair(), _bounds(), _boxes_overlap(), build_indices(), _crossings(), _DirectionIndex, _format_summary() (+4 more)
+### Community 205 - "_DirectionIndex"
+Cohesion: 0.29
+Nodes (3): _crossings(), _DirectionIndex, point_inside()
 
 ### Community 206 - "text"
-Cohesion: 0.13
-Nodes (25): Constraints, Failure modes, Flow, /impeccable hooks, Routing, Triage findings, base(), first() (+17 more)
+Cohesion: 0.10
+Nodes (20): image(), texture(), Constraints, Failure modes, Flow, /impeccable hooks, Routing, Triage findings (+12 more)
 
 ### Community 207 - "getOne"
 Cohesion: 0.21
 Nodes (25): clock(), credit(), creditRequired(), creditsPath(), dims(), esc(), getAll(), getOne() (+17 more)
 
-### Community 209 - "workflow_state.py"
-Cohesion: 0.21
-Nodes (18): emit_local_state(), main(), _anchor_index(), _entries(), _format_command(), load_state(), next_entry(), _pending() (+10 more)
+### Community 209 - "spec"
+Cohesion: 0.09
+Nodes (5): ForwardReference, HelperEmission, SaturationIsReported, spec(), UnresolvableDeclarations
 
 ### Community 210 - "head_image"
 Cohesion: 0.14
@@ -1520,13 +1513,9 @@ Nodes (23): 1. Visual Theme & Atmosphere, 2. Color Palette & Roles, 3. Typograph
 Cohesion: 0.14
 Nodes (13): band_profile(), find_landmarks(), landmark_bands(), main(), normalise(), percentile(), read_glb_positions(), apply() (+5 more)
 
-### Community 217 - "verify"
-Cohesion: 0.19
-Nodes (6): verify(), failures_of(), HonestyWhenThereIsNothingToCheck, LegalAdditions, MeshSetChanges, payload()
-
-### Community 218 - "icosphere"
-Cohesion: 0.15
-Nodes (5): DegenerateInput, icosphere(), IndexEncodings, Performance, punch_through()
+### Community 217 - "objectness.py"
+Cohesion: 0.12
+Nodes (12): _bbox(), cosine(), descriptor(), main(), objectness_similarity(), _resample_bbox(), _to_gray(), diag_bar() (+4 more)
 
 ### Community 219 - "onboard.md"
 Cohesion: 0.09
@@ -1537,23 +1526,23 @@ Cohesion: 0.09
 Nodes (23): 0. How generation works, 1.1 Prerequisite: workspace, 1.2 Prerequisite: seed test, 1.3 Explore the app, 1.4 Write the spec file, 1. Planning, 2.1 Inputs, 2.2 Generate one scenario (+15 more)
 
 ### Community 221 - "load_or_build_index"
-Cohesion: 0.29
-Nodes (7): _cache_path(), IndexRequest, load_or_build_index(), CacheLifecycleTest, make_profile(), SourceIngestionTest, write_fixture_source()
+Cohesion: 0.19
+Nodes (11): _cache_path(), _index_config(), IndexRequest, load_or_build_index(), CacheLifecycleTest, make_profile(), make_record(), RecordContractTest (+3 more)
 
-### Community 222 - "diagnose_render.py"
+### Community 222 - "load_image"
 Cohesion: 0.16
-Nodes (11): load_mask(), main(), mask_is_inverted(), per_part_color_delta(), proportion_delta(), record_tier1_result(), render_hash(), run_tier1() (+3 more)
+Nodes (15): blit(), composite_over_checker(), create_sheet(), fill_rect(), load_image(), main(), paeth_predictor(), read_png() (+7 more)
 
 ### Community 223 - "run"
 Cohesion: 0.16
 Nodes (5): Accepted, HardErrors, MissingIsWarnedNotIgnored, proud(), run()
 
 ### Community 224 - "Scripts Cheatsheet"
-Cohesion: 0.09
-Nodes (21): Executed geometry gates before browser capture, Forge subdivision runtime validation, Hair, Hair libraries (no CLI), Input and evidence hardening, Reference comparison and baselines, Scripts Cheatsheet, stage1_intake/extract_hair_evidence.py (+13 more)
+Cohesion: 0.06
+Nodes (35): Character geometry pipeline, Executed geometry gates before browser capture, Forge subdivision runtime validation, Hair, Hair libraries (no CLI), Input and evidence hardening, Off-axis and placement gates, Reference comparison and baselines (+27 more)
 
 ### Community 225 - "reference_vision.py"
-Cohesion: 0.24
+Cohesion: 0.25
 Nodes (14): build_parser(), _category_payload(), command_depth(), command_health(), command_landmarks(), command_prefetch(), command_segment(), _device_name() (+6 more)
 
 ### Community 226 - "Imagery"
@@ -1565,28 +1554,28 @@ Cohesion: 0.10
 Nodes (20): count(), bevel (bo goc), chip, Confidence, contour (edge outline / toon rim), decal, Detail Inventory, emissive (+12 more)
 
 ### Community 228 - "TRELLIS.2 → img2threejs: what transfers, what must not"
-Cohesion: 0.10
-Nodes (20): 0. Thesis, 10. The answer to the question, 2. Transferable ideas, and where each lands, 3. The Structured 3D Spec (S3S), 4. Hybrid geometry system, 5. Stage separation, 6.1 What is there now, 6.2 The loop to build (+12 more)
+Cohesion: 0.18
+Nodes (10): 0. Thesis, 10. The answer to the question, 3. The Structured 3D Spec (S3S), 4. Hybrid geometry system, 5. Stage separation, 8. Concrete file-level change list, Modified, New (+2 more)
 
 ### Community 229 - "_normalize_initial_camera"
-Cohesion: 0.16
-Nodes (7): CameraInitialization, _is_positive_dimension(), LandmarkCorrespondence, _normalize_correspondence(), normalize_fit_input(), _normalize_initial_camera(), NormalizedFitInput
+Cohesion: 0.15
+Nodes (8): CameraInitialization, _is_positive_dimension(), LandmarkCorrespondence, _normalize_correspondence(), normalize_fit_input(), _normalize_initial_camera(), NormalizedFitInput, Problem
 
 ### Community 230 - "check_admission"
-Cohesion: 0.16
-Nodes (6): check_admission(), largest_component_fraction(), _centered_block(), fn(), ReferenceAdmissionTest, write_rgb_png()
+Cohesion: 0.08
+Nodes (14): _dct_2d(), _dct_matrix(), hamming(), normalized_similarity(), phash(), phash_from_image(), to_grayscale_downsampled(), check_admission() (+6 more)
 
 ### Community 231 - "derive_geometry.py"
 Cohesion: 0.16
 Nodes (9): _col_span(), derive_from_image(), derive_lathe_profile(), main(), _row_span(), circle_mask(), LatheProfileTest, rect_mask() (+1 more)
 
-### Community 232 - "freeze"
-Cohesion: 0.17
-Nodes (6): freeze(), CountsAreCheckedIndependentlyOfHashes, IndexBufferChanges, JsonRoundTripStability, mesh_of(), TheDefectThisCatches
+### Community 232 - "extract_gradient_stops.py"
+Cohesion: 0.14
+Nodes (7): extract_gradient_stops(), hue_name(), main(), _median(), sample_banded_stops(), GradientStopsTest, write_rgb_png()
 
 ### Community 233 - "SkinBinding"
 Cohesion: 0.15
-Nodes (7): BlendReport, _check_shape(), _dense_field(), main(), _reduce(), SkinBinding, weld_coincident()
+Nodes (7): blend_weights(), BlendReport, _check_shape(), _dense_field(), SkinBinding, weld_coincident(), InteriorVerticesAreNeverTouched
 
 ### Community 234 - "The Toolkit"
 Cohesion: 0.10
@@ -1596,17 +1585,13 @@ Nodes (20): Animate complex properties, Assess What "Extraordinary" Means Here, 
 Cohesion: 0.15
 Nodes (21): applyPlaceholderDimensions(), beginEditPin(), buildAnnotationsForCapture(), buildPinElement(), cancelEditingPin(), clampPlaceholderSize(), finalizeEditingPin(), initAnnotOverlay() (+13 more)
 
-### Community 236 - "rl"
-Cohesion: 0.13
-Nodes (13): adopt(), collectTargets(), constructor(), getRoot(), il(), nl(), reconcileAdditions(), rl() (+5 more)
-
 ### Community 237 - "analyse_view"
 Cohesion: 0.13
 Nodes (6): analyse_view(), _bbox(), _luma(), BandedCoverage, Shading, ThresholdIsNotATautology
 
-### Community 238 - "compare"
-Cohesion: 0.13
-Nodes (5): _bbox_corners(), compare(), sample(), BboxConvention, InteriorDifference
+### Community 238 - "RigHierarchyEmission"
+Cohesion: 0.10
+Nodes (3): rig_is_bone_track(), RigHierarchyEmission, raw_geometry()
 
 ### Community 239 - "synthesise_gait_tracks"
 Cohesion: 0.13
@@ -1632,25 +1617,25 @@ Nodes (20): 1. Name Browser Sessions Semantically, 2. Always Clean Up, 3. Delete
 Cohesion: 0.11
 Nodes (13): buildDir, here, lines, MATERIAL_EVIDENCE_KEYS, out, outfile, source, base64 (+5 more)
 
-### Community 245 - "bo"
-Cohesion: 0.15
-Nodes (19): bo(), bx(), Dx(), ef(), gx(), hh(), Ho(), Hr() (+11 more)
+### Community 245 - "Oo"
+Cohesion: 0.12
+Nodes (21): ax(), bd(), Bx(), dh(), Dx(), fr(), gc(), Ho() (+13 more)
 
 ### Community 246 - "img2threejs.mjs"
 Cohesion: 0.23
 Nodes (17): checkLinks(), cmdDoctor(), cmdInstall(), commands, compareVersions(), detectHosts(), die(), EXIT (+9 more)
 
-### Community 247 - "image_hash.py"
-Cohesion: 0.18
-Nodes (8): _dct_2d(), _dct_matrix(), hamming(), normalized_similarity(), phash(), phash_from_image(), to_grayscale_downsampled(), ImageHashTest
+### Community 247 - "synth_clip"
+Cohesion: 0.19
+Nodes (4): payload_of(), PayloadValidation, synth_clip(), TheScaleTripwire
 
 ### Community 248 - "decimate"
 Cohesion: 0.16
 Nodes (8): _add(), build_lod_plan(), decimate(), cost(), _error(), _quadric(), _triangles(), Decimation
 
-### Community 249 - "vertex_region_gate.py"
-Cohesion: 0.18
-Nodes (10): classify(), collect_vertices(), evaluate(), _hex_to_rgb(), _load_json(), main(), measure(), project() (+2 more)
+### Community 249 - "analyze_mesh"
+Cohesion: 0.16
+Nodes (5): analyze_mesh(), CleanMesh, IndexEncodings, Performance, SamplingHonesty
 
 ### Community 250 - "Any"
 Cohesion: 0.13
@@ -1661,28 +1646,28 @@ Cohesion: 0.11
 Nodes (18): AI & LLM Platforms, Automotive, Awesome DESIGN.md, Backend, Database & DevOps, Collection, Contributing, Design & Creative Tools, Developer Tools & IDEs (+10 more)
 
 ### Community 252 - "Divine Eye Microscope — four-tier fidelity review"
-Cohesion: 0.12
-Nodes (16): setViewOffset(), Medium term, Acceptance criteria, Active zoom in Three.js, Aggregation, Audit first — what is already here, Colour microscope, Corollary — a dark ratio cannot separate material from shadow on a concave part (+8 more)
+Cohesion: 0.08
+Nodes (17): evaluate_features(), is_gating(), threshold_for(), PerFeatureTests, Active zoom in Three.js, Aggregation, Audit first — what is already here, Colour microscope (+9 more)
 
 ### Community 253 - "ho"
 Cohesion: 0.14
 Nodes (6): ho, Exit, The contract (read once), Examples, Inspecting Element Attributes, Receding hero
 
-### Community 254 - "hue_zone_parity"
-Cohesion: 0.15
-Nodes (8): Added — reconstruction-fidelity upgrades (folded into 1.3), _banded_median_lab(), _foreground_hsv_stats(), hue_zone_parity(), specular_wash(), HueZoneParityTest, SpecularWashTest, v1.3 — Quality & efficiency (Divine Eye)
+### Community 254 - "animate.md"
+Cohesion: 0.13
+Nodes (13): Accessibility and control, Choose material by meaning, Find the job, Set the motion thesis, Timing and easing, Verify, Visitor mode, Build for the emotional moment (+5 more)
 
 ### Community 255 - "SourceIngestionError"
-Cohesion: 0.16
-Nodes (14): CollectionProfile, _configured_project_path(), _configured_sources(), ConfiguredSource, _content_root(), _fingerprint(), _hidden_source(), _index_fingerprints() (+6 more)
+Cohesion: 0.18
+Nodes (13): _configured_project_path(), _configured_sources(), ConfiguredSource, _content_root(), _fingerprint(), _hidden_source(), _index_fingerprints(), IndexFingerprints (+5 more)
 
 ### Community 256 - "analyze_turntable"
 Cohesion: 0.25
 Nodes (4): analyze_turntable(), _blob(), _low_contrast_gradient(), TurntableGateTest
 
 ### Community 257 - "blend_weights"
-Cohesion: 0.18
-Nodes (7): blend_weights(), DoesNotMutateItsInput, Fixture, InteriorVerticesAreNeverTouched, RadiusScalesWithHeight, slots(), WriteAfterAllReads
+Cohesion: 0.24
+Nodes (3): DoesNotMutateItsInput, Fixture, RadiusScalesWithHeight
 
 ### Community 258 - "Version details"
 Cohesion: 0.11
@@ -1709,32 +1694,32 @@ Cohesion: 0.12
 Nodes (17): toggle(), 1. Read the screenshot (if present), 2. Wrap the element, 3. Load the action's reference, 4. Plan three variants: identity first, then mode, then axes, 5. Apply the freeform prompt (if present), 6. Deliver variants, 7. Parameters (composition-sized, 0-4 per variant) (+9 more)
 
 ### Community 264 - ".add"
-Cohesion: 0.16
-Nodes (8): $a(), finalize(), ga, Ll(), ol(), reconcileRemovals(), Rr(), ys()
+Cohesion: 0.17
+Nodes (7): $a(), ga, Ll(), ol(), reconcileRemovals(), Rr(), ys()
 
 ### Community 265 - "Changelog"
-Cohesion: 0.12
-Nodes (16): [1.0.0] - 2026-07-15, [1.1.0] - 2026-07-15, [1.4.3] — 2026-07-30, [1.5.2] — 2026-08-25, Added, Added, Added, Added (+8 more)
+Cohesion: 0.10
+Nodes (19): [1.0.0] - 2026-07-15, [1.1.0] - 2026-07-15, [1.4.0] — 2026-07-25, [1.4.1] — 2026-07-26, [1.4.3] — 2026-07-30, Added, Added, Added (+11 more)
 
 ### Community 266 - "Part 1 — The principles this work produced"
 Cohesion: 0.12
 Nodes (16): A gate nothing invokes reports a clean verdict forever, Claims are not measurements — including other people's, H — Hardening and plumbing, K — From `kimodo` (NVIDIA Toronto AI Lab), Measure before recommending, P — Producers (four gates can never pass without them), Part 1 — The principles this work produced, Part 2 — The backlog (+8 more)
 
 ### Community 267 - "fit_camera_to_correspondences"
-Cohesion: 0.20
-Nodes (8): _camera_parameters_payload(), fit_camera_to_correspondences(), _solver_limits(), CameraFittingContractTest, FixtureCamera, FixtureCorrespondence, KnownCameraCase, make_known_camera_case()
+Cohesion: 0.18
+Nodes (9): SolverLimits, _camera_parameters_payload(), fit_camera_to_correspondences(), _solver_limits(), CameraFittingContractTest, FixtureCamera, FixtureCorrespondence, KnownCameraCase (+1 more)
 
 ### Community 268 - "morph_targets.py"
 Cohesion: 0.18
 Nodes (7): build_morph_set(), corrective_from_bend(), _format_summary(), main(), make_morph_target(), MorphTargets, distance_to_joint()
 
-### Community 269 - "next_required_evidence"
-Cohesion: 0.20
-Nodes (5): next_required_evidence(), pass_specific_evidence(), spec_has_hair(), OrchestratorWiring, EvidenceWiring
+### Community 269 - "Components"
+Cohesion: 0.13
+Nodes (15): **`agent-console-card`**, **`announcement-bar`**, **`blog-filter-chip`**, **`button-pill-outline`**, **`button-primary`**, **`button-secondary`**, **`capability-card`**, Components (+7 more)
 
-### Community 270 - "VoxelGrid"
-Cohesion: 0.18
-Nodes (6): bind(), _bounds(), geodesic_field(), _triangles(), VoxelGrid, Voxelization
+### Community 270 - "partition_for_binding"
+Cohesion: 0.05
+Nodes (19): bind(), _bounds(), euclidean_bind(), geodesic_field(), partition_for_binding(), is_rigid(), ride(), _triangles() (+11 more)
 
 ### Community 271 - "test_glb_rig_reference.py"
 Cohesion: 0.18
@@ -1769,8 +1754,8 @@ Cohesion: 0.12
 Nodes (16): 1. Start Tracing Before the Problem, 2. Clean Up Old Traces, Analyzing Performance, Basic Usage, Best Practices, Capturing Evidence, Debugging Failed Actions, Limitations (+8 more)
 
 ### Community 279 - "Material creation recipes"
-Cohesion: 0.12
-Nodes (15): Bare metal, Common classification failures, Current Three.js implementation pattern, Fabric and leather, Hair and fur, How to read the numbers, Material creation recipes, Painted metal (+7 more)
+Cohesion: 0.18
+Nodes (11): transmission(), Bare metal, Fabric and leather, Glass and gemstones, Hair and fur, Material creation recipes, Painted metal, Plastic and rubber (+3 more)
 
 ### Community 280 - "test_glb_reference.py"
 Cohesion: 0.16
@@ -1778,7 +1763,7 @@ Nodes (6): _chunk_type_name(), parse_glb(), GlbContainerRefusesDuplicateBinChunk
 
 ### Community 281 - "geometry_for"
 Cohesion: 0.16
-Nodes (5): resolve_instanced_cluster_base(), geometry_for(), GeometryNotImplementedError, PrimitiveRegistration, EmittedGeometryTest
+Nodes (5): geometry_for(), GeometryNotImplementedError, json_literal(), PrimitiveRegistration, EmittedGeometryTest
 
 ### Community 282 - "correspondence"
 Cohesion: 0.23
@@ -1789,20 +1774,20 @@ Cohesion: 0.17
 Nodes (7): GateReport, Checks, Entry Atomicity, Impeccable Manual Edit Applier, Input Contract, Output Contract, Workflow
 
 ### Community 286 - "with_decimation"
-Cohesion: 0.17
-Nodes (3): EmissionTest, ValidationTest, with_decimation()
+Cohesion: 0.16
+Nodes (4): EmissionTest, load_fixture(), ValidationTest, with_decimation()
 
 ### Community 287 - "write_rgb_png"
-Cohesion: 0.19
-Nodes (4): block(), DegenerateEvidenceTest, DivineEyeIntegrationTest, write_rgb_png()
+Cohesion: 0.26
+Nodes (3): block(), DivineEyeIntegrationTest, write_rgb_png()
 
 ### Community 288 - "_freeze_manifest"
 Cohesion: 0.20
 Nodes (5): _freeze_manifest(), G11MeshParityTest, _mesh(), _post_rig_meshes(), _pre_rig_meshes()
 
-### Community 289 - "Stylized 3D Hair for Three.js"
-Cohesion: 0.12
-Nodes (15): 1. Requirement classification, 3. Zenonia hair analysis, 5. Parameter contract, 6. Acceptance and diagnosis, 7. Ordered implementation backlog, Background warning, Fixed hero view, Hair/face constraints (+7 more)
+### Community 289 - "6. Acceptance and diagnosis"
+Cohesion: 0.33
+Nodes (6): 6. Acceptance and diagnosis, Background warning, Fixed hero view, Pixel/feature review, Side-by-side and semantic review, Two orbit views
 
 ### Community 290 - "The study"
 Cohesion: 0.12
@@ -1813,24 +1798,24 @@ Cohesion: 0.14
 Nodes (9): cli, commits, gitEnv, installed(), realGit, repo, root, skills() (+1 more)
 
 ### Community 292 - "color_metrics.py"
-Cohesion: 0.19
-Nodes (6): ciede2000(), delta_e_rgb(), _lin(), srgb_to_lab(), f(), ColorMetricsTest
+Cohesion: 0.13
+Nodes (13): ciede2000(), delta_e_rgb(), _lin(), srgb_to_lab(), compare_material_crops(), _expected_mismatch(), _features(), _grid() (+5 more)
 
 ### Community 293 - "probe_glb.py"
 Cohesion: 0.24
 Nodes (7): _accessor_bounds(), _buffer_view_bytes(), main(), _merge_bounds(), probe_glb(), sha256(), assess_semantic_decomposition()
 
-### Community 294 - "partition_for_binding"
-Cohesion: 0.21
-Nodes (4): partition_for_binding(), is_rigid(), ride(), ThePartition
+### Community 294 - "self_intersection.py"
+Cohesion: 0.24
+Nodes (7): analyze_meshes(), _as_point(), _error_result(), _format_summary(), _load_meshes(), main(), _triangles()
 
-### Community 295 - "validate_rig_payload.py"
-Cohesion: 0.29
-Nodes (8): distance(), finite_number(), main(), matrix16(), validate(), vector3(), payload(), ValidateRigPayloadTest
+### Community 295 - "yi"
+Cohesion: 0.23
+Nodes (11): ai(), fi(), gi(), Ki, mi(), ni(), ri(), Sa() (+3 more)
 
-### Community 296 - "test_geodesic_skinning.py"
-Cohesion: 0.19
-Nodes (5): box(), merge(), Reporting, torso_with_hanging_arm(), WeightInvariants
+### Community 296 - "fixture_spec"
+Cohesion: 0.22
+Nodes (3): EmittedSourceTypechecks, fixture_spec(), GradientEmission
 
 ### Community 298 - "SculptEchoFailureMatrixBase"
 Cohesion: 0.22
@@ -1841,7 +1826,7 @@ Cohesion: 0.13
 Nodes (14): CHARACTER_BIN_DIR, CHARACTER_CELL_SIZES_JSON, CHARACTER_CODEC, CHARACTER_CODEC_IMPORT, CHARACTER_CROSS_SECTIONS, CHARACTER_DIFFUSE, CHARACTER_OUT_PREFIX, CHARACTER_REGIONS_JSON (+6 more)
 
 ### Community 300 - "Character Pipeline"
-Cohesion: 0.13
+Cohesion: 0.12
 Nodes (15): Appendix B — File map (this project's instance), Appendix C — Open item on this character, Applicability gate — GLB is optional, check for it before anything else, Character Pipeline, Stage 0 — Intake, Stage 1 — Cross-section loft (the code-only floor), Stage 2 — Implicit surface reconstruction (Surface Nets), Stage 3 — Compact TypeScript encoding (no binary asset ships) (+7 more)
 
 ### Community 301 - "Generate Report"
@@ -1857,40 +1842,36 @@ Cohesion: 0.13
 Nodes (15): number(), Badges & Status, Buttons, Cards & Containers, Code, Components, Documentation Components, Font Family (+7 more)
 
 ### Community 304 - "3D Graphics Terminology For Object Sculpt Specs"
-Cohesion: 0.15
-Nodes (13): anisotropy(), clearcoat(), transmission(), Glass and gemstones, 7. PBR: what to take from TRELLIS.2, 3D Graphics Terminology For Object Sculpt Specs, Animation, Physics, And Destruction, Geometry And Topology (+5 more)
+Cohesion: 0.29
+Nodes (6): 3D Graphics Terminology For Object Sculpt Specs, Animation, Physics, And Destruction, Geometry And Topology, Lighting And Rendering, Surface Local Features, Writing Rule
 
 ### Community 305 - "Hair"
 Cohesion: 0.14
 Nodes (13): Hair, Primitives, Representation tiers, Stage 1 — `extract_hair_evidence.py`, Stage 2 — `hair_profile.py`, Stage 3 — `standProud` and the clearance march, Stage 4 — the gates, Stage 5 — rigging (+5 more)
 
-### Community 306 - "check_intake_correctness.py"
-Cohesion: 0.18
-Nodes (4): decide(), expose_assumptions(), main(), IntakeCorrectnessTest
+### Community 306 - "tokenize"
+Cohesion: 0.21
+Nodes (9): _accent_companion(), _primary_tokens(), tokenize(), _tokenizer_config(), _tokenizer_settings(), TokenizerConfig, TokenizerSettings, _with_accent_companions() (+1 more)
 
 ### Community 307 - "test_camera_fitting_safety.py"
-Cohesion: 0.35
+Cohesion: 0.38
 Nodes (6): base_camera(), base_correspondences(), camera_with_dimensions(), CameraFittingSafetyTest, FixtureCamera, FixtureCorrespondence
 
 ### Community 308 - "build_glb"
 Cohesion: 0.22
 Nodes (4): BinChunk, build_glb(), pack_glb(), translation_matrix()
 
-### Community 309 - "test_sculpt_echo_roundtrip.py"
-Cohesion: 0.23
-Nodes (7): _git_status(), _node_available(), _restore_additional_directories(), _restore_link(), SculptEchoRoundTrip, _snapshot_additional_directories(), _snapshot_link()
-
 ### Community 311 - "md_links.py"
-Cohesion: 0.22
-Nodes (7): load_baseline(), main(), main(), changed_files(), files_from_args(), report(), strip_frontmatter_lines()
+Cohesion: 0.06
+Nodes (20): anchors_of(), check_text(), load_baseline(), main(), slugify(), check_text(), looks_like_delim(), main() (+12 more)
 
 ### Community 312 - "lint.mjs"
 Cohesion: 0.14
 Nodes (13): APP_LEVEL, appMode, args, asJson, byId, EXT, files, findings (+5 more)
 
-### Community 313 - "getPoint"
-Cohesion: 0.24
-Nodes (13): extractPoints(), getCurveLengths(), getLength(), getLengths(), getPoint(), getPointAt(), getPoints(), getPointsHoles() (+5 more)
+### Community 313 - "compare_region_passes.py"
+Cohesion: 0.33
+Nodes (8): _aligned_pixels(), compare_capture(), _iou(), _load(), main(), _mask_from_id(), _resolve(), _similarity()
 
 ### Community 314 - "Codex MCP configuration"
 Cohesion: 0.15
@@ -1900,29 +1881,21 @@ Nodes (12): Chrome DevTools MCP, Codex MCP configuration, Context7, Default rout
 Cohesion: 0.15
 Nodes (13): 0. Why this pipeline exists, 1. The measurement vocabulary, 2. Classification thresholds, 3. Naming and the honesty flag, 4. The loop rule — corrected, Appendix — the failures behind the rules, G10 is a visual gate and needs a harness, img2threejs 1.5.2 — Character Rigging & Animation Pipeline (+5 more)
 
-### Community 316 - "validate_tier"
-Cohesion: 0.21
-Nodes (3): validate_tier(), TierFloorTest, Triangle budget: tessellation tiers and decimation
+### Community 316 - "subdivision.py"
+Cohesion: 0.09
+Nodes (9): capsule_source_face_count(), resolve_instanced_cluster_base(), segments_for_spec(), tier_for_target_triangles(), validate_tier(), import_forge_modules(), TierFloorTest, TierSelectionTest (+1 more)
 
 ### Community 317 - "run_corpus"
 Cohesion: 0.24
 Nodes (5): calibrate(), run_corpus(), separation(), _signal_stats(), CalibrateEyeTest
 
-### Community 318 - "largest_component"
-Cohesion: 0.23
-Nodes (4): bbox_of(), largest_component(), BboxOfTest, MaskIsRobustToStrayForeground
-
-### Community 319 - "evaluate_features"
-Cohesion: 0.22
-Nodes (4): evaluate_features(), is_gating(), threshold_for(), PerFeatureTests
+### Community 319 - "5. Track B - Character / figurine reconstruction (v1.2.0)"
+Cohesion: 0.18
+Nodes (11): 5.10 Honesty about 100 percent, 5.1 Domain detection, 5.2 New reference: `grimoire/character/reconstruction.md`, 5.3 Anatomy data model, 5.4 New script: `forge/stage1_intake/extract_landmarks.py`, 5.5 Generator and pipeline, 5.6 Character feature gates, 5.7 Track B acceptance criteria (+3 more)
 
 ### Community 320 - "validate_file"
 Cohesion: 0.26
 Nodes (4): _is_vec(), validate_file(), validate_profile(), RenderProfileTest
-
-### Community 322 - "PrimitiveWatertightnessTest"
-Cohesion: 0.15
-Nodes (4): build_probe_spec(), compile_generated_module(), _ground_blade_descriptor(), PrimitiveWatertightnessTest
 
 ### Community 323 - "Pipeline"
 Cohesion: 0.15
@@ -1931,14 +1904,6 @@ Nodes (12): (a) Fit a parametric template to landmarks, (b) Camera match, (c) De
 ### Community 324 - "Image Analysis Protocol"
 Cohesion: 0.15
 Nodes (12): Domain specializations (apply after this pass), Image Analysis Protocol, Layer 1 — Identification & classification, Layer 2 — Overall form & silhouette, Layer 3 — Macro → meso → micro decomposition, Layer 4 — Spatial relationships (scene-graph), Layer 5 — Materials & surface (PBR), Layer 6 — Color & finish (+4 more)
-
-### Community 325 - "md_tables.py"
-Cohesion: 0.24
-Nodes (5): check_text(), looks_like_delim(), split_row(), iter_lines(), TableTests
-
-### Community 326 - "Generate Report"
-Cohesion: 0.14
-Nodes (13): 1. Accessibility (VoiceOver / TalkBack), 2. Performance, 3. Appearance & Theming, 4. Platform Conformance (CRITICAL), 5. Adaptivity, Audit Health Score, Detailed Findings by Severity, Diagnostic Scan (+5 more)
 
 ### Community 327 - "optimize.md"
 Cohesion: 0.15
@@ -1976,13 +1941,9 @@ Nodes (12): Host skills, Install, Installing and using plugins, Plugin gates, Th
 Cohesion: 0.41
 Nodes (8): cache_key(), file_sha256(), get_cached(), load_manifest(), manifest_path_for(), put_cached(), save_manifest(), main()
 
-### Community 336 - "UniformGrid"
-Cohesion: 0.24
-Nodes (3): brute_force_query(), UniformGrid, GridHash
-
-### Community 339 - "check_text"
-Cohesion: 0.26
-Nodes (4): anchors_of(), check_text(), slugify(), LinkTests
+### Community 339 - "Exception"
+Cohesion: 0.22
+Nodes (4): DegenerateCorrespondencesError, InsufficientCorrespondencesError, InvalidCameraDimensionsError, InvalidInitialCameraError
 
 ### Community 340 - "reference/critique.md"
 Cohesion: 0.17
@@ -1993,16 +1954,16 @@ Cohesion: 0.17
 Nodes (11): Assess Current State, Code Simplification, Content Simplification, Document Removed Complexity, Information Architecture, Interaction Simplification, Layout Simplification, Plan Simplification (+3 more)
 
 ### Community 342 - "Scan mode (approach C: auto-extract, then confirm descriptive language)"
-Cohesion: 0.17
-Nodes (12): Component translation rules, Scan mode (approach C: auto-extract, then confirm descriptive language), Schema, Step 1: Find the design assets, Step 2: Auto-extract what can be auto-extracted, Step 2b: Stage the frontmatter, Step 3: Ask the user for qualitative language, Step 4: Write DESIGN.md (+4 more)
+Cohesion: 0.18
+Nodes (11): Component translation rules, Scan mode (approach C: auto-extract, then confirm descriptive language), Schema, Step 1: Find the design assets, Step 2: Auto-extract what can be auto-extracted, Step 3: Ask the user for qualitative language, Step 4: Write DESIGN.md, Step 4b: Write .impeccable/design.json sidecar (extensions only) (+3 more)
 
 ### Community 343 - "Hardening Dimensions"
 Cohesion: 0.17
 Nodes (11): Accessibility Resilience, Assess Hardening Needs, Edge Cases & Boundary Conditions, Error Handling, Hardening Dimensions, Input Validation & Sanitization, Internationalization (i18n), Performance Resilience (+3 more)
 
-### Community 344 - "Init flow"
-Cohesion: 0.17
-Nodes (12): Completion gate, Init flow, Step 1: Load current state, Step 2: Explore the project, Step 3: Interview for product truth, Step 4: Write PRODUCT.md, Step 5: Record workflow defaults, Step 6: Wrap up or resume (+4 more)
+### Community 344 - "New visual work"
+Cohesion: 0.08
+Nodes (25): Completion gate, Init flow, Step 1: Load current state, Step 2: Explore the project, Step 3: Interview for product truth, Step 4: Write PRODUCT.md, Step 5: Record workflow defaults, Step 6: Wrap up or resume (+17 more)
 
 ### Community 345 - "Commands"
 Cohesion: 0.17
@@ -2012,9 +1973,9 @@ Nodes (12): Commands, Core, DevTools, Emulation, Keyboard, Mouse, Navigation, Ne
 Cohesion: 0.17
 Nodes (11): 1. What the study measured, 2. The roles, 3. Proportion, 4. Surfaces without lines or shadows, 5. Colour fields, 6. Dark pages, 7. Colour and photographs, 8. Contrast (+3 more)
 
-### Community 347 - "2. Hairstyle taxonomy and route selection"
-Cohesion: 0.18
-Nodes (11): alphaTest(), 2. Hairstyle taxonomy and route selection, Clustered anime/spiky locks, Curve-tube locks, Groomed individual strands, Hair cards, Hybrid route selected for Zenonia, Ribbon or strip locks (+3 more)
+### Community 347 - "Stylized 3D Hair for Three.js"
+Cohesion: 0.09
+Nodes (22): alphaTest(), 1. Requirement classification, 2. Hairstyle taxonomy and route selection, 3. Zenonia hair analysis, 4. Three.js design recipe, 7. Ordered implementation backlog, Build order, Clustered anime/spiky locks (+14 more)
 
 ### Community 348 - "GLB_ANIMATED_CHARACTER_PROMPT.md"
 Cohesion: 0.24
@@ -2024,13 +1985,17 @@ Nodes (5): Build — reference image to a gated procedural model, Polish — a b
 Cohesion: 0.53
 Nodes (7): _is_number(), _validate_finite(), _validate_operation(), _validate_positive(), _validate_primitive(), validate_sdf_descriptor(), _validate_vector()
 
-### Community 353 - "Character geometry pipeline"
-Cohesion: 0.18
-Nodes (8): euclidean_bind(), Character geometry pipeline, stage3_build/morph_targets.py and stage3_build/decimate.py, stage3_build/uv_unwrap.py, stage3_build/visual_hull.py, stage4_review/joint_loops.py, stage4_review/pairwise_penetration.py, stage5_rig/geodesic_skinning.py
+### Community 353 - "Components"
+Cohesion: 0.22
+Nodes (9): Buttons, Cards, Components, Editorial Surfaces, Forms & Tags, Hero Bands, Newsletter / CTA / Footer, Spec & Race Surfaces (+1 more)
 
 ### Community 355 - ".test_g8_catches_a_skating_gait"
 Cohesion: 0.24
 Nodes (4): G8FootContactTest, G9JointScaleTest, _idle_clip(), _walk_clip()
+
+### Community 357 - "DenseAccumulation"
+Cohesion: 0.19
+Nodes (3): DenseAccumulation, slots(), WriteAfterAllReads
 
 ### Community 359 - "Nielsen's 10 Heuristics"
 Cohesion: 0.18
@@ -2076,9 +2041,13 @@ Nodes (10): Automatic CLI releases, Before you open an issue, Contributing to im
 Cohesion: 0.20
 Nodes (10): 1. Install the skill, 2. Restart your agent and try it, 3. Add a plugin (only if you need one), 4. Update and uninstall, 5. Manual install (no CLI), 6. When something is off, 7. Other coding agents, Install img2threejs (+2 more)
 
-### Community 371 - "silhouette_iou"
-Cohesion: 0.33
-Nodes (5): bilateral_symmetry_error(), silhouette_iou(), make_mask(), SilhouetteIouTest, SymmetryErrorTest
+### Community 371 - "Three.js material rendering reference"
+Cohesion: 0.25
+Nodes (7): Common classification failures, Current Three.js implementation pattern, How to read the numbers, Required controlled renders, Research source hierarchy, Source-backed Three.js contract, Three.js material rendering reference
+
+### Community 373 - "feature_gate_failures"
+Cohesion: 0.50
+Nodes (5): feature_gate_failures(), feature_review_policy(), feature_targets_for_pass(), is_number(), _shared/feature_acceptance_policy.py
 
 ### Community 377 - "load_fixture"
 Cohesion: 0.31
@@ -2091,6 +2060,10 @@ Nodes (9): AI Vision Scorecard, Browser Screenshot Feedback, Capture Rule, Compa
 ### Community 379 - "node/package.json"
 Cohesion: 0.20
 Nodes (9): description, devDependencies, esbuild, playwright, esbuild, name, private, type (+1 more)
+
+### Community 380 - "Quick start"
+Cohesion: 0.25
+Nodes (8): 1. Install the base skill, 2. Install the plugin harness, if needed, 3. Choose plugins — do not install everything by default, 4. Run a reconstruction in your agent, 5. Audit and maintain the installation, Copy-paste prompts for the GLB-reference route, Driving it harder, Quick start
 
 ### Community 381 - "clarify.md"
 Cohesion: 0.20
@@ -2109,16 +2082,16 @@ Cohesion: 0.20
 Nodes (10): 7.1 Rows, 7.2 Header, 7.3 Dividers, 7.4 Figures and alignment, 7.5 Ink inside rows, 7.6 Status pills, 7.7 Media, 7.8 Actions and paging (+2 more)
 
 ### Community 385 - "4. Three.js design recipe"
-Cohesion: 0.22
-Nodes (9): sheen(), Material recipe for smooth stylized skin, Measured proportions, Two findings this test surfaced, Worked Coverage Test — stylized imp / mini-dragon, 4. Three.js design recipe, Build order, Custom tapered ribbon-loft (+1 more)
+Cohesion: 0.20
+Nodes (11): anisotropy(), clearcoat(), sheen(), Material recipe for smooth stylized skin, Measured proportions, Two findings this test surfaced, Worked Coverage Test — stylized imp / mini-dragon, Material route (+3 more)
 
 ### Community 386 - "Mandatory image material analysis"
 Cohesion: 0.22
 Nodes (8): 1. Inputs, 2. Observation before classification, 3. Hypothesis record, 4. Lookup and evidence reconciliation, 5. Map and shader authoring, 6. Controlled validation views, 7. Gate policy, Mandatory image material analysis
 
-### Community 387 - "segments_for_spec"
-Cohesion: 0.28
-Nodes (3): segments_for_spec(), tier_for_target_triangles(), TierSelectionTest
+### Community 387 - "doctor.md"
+Cohesion: 0.25
+Nodes (7): Monorepo notes, Opting out of the boot check, Step 1: Run the pass, Step 2: Act by severity, Step 3: Deprecated fields are binding, Step 4: Do not overclaim on truth drift, What this owns, and what it does not
 
 ### Community 388 - "derive_character_rig"
 Cohesion: 0.33
@@ -2128,13 +2101,17 @@ Nodes (7): derive_character_rig(), bone_parent(), explicit_tip(), joint_of(), mo
 Cohesion: 0.22
 Nodes (8): Ask For Better Input, Catalogued items: get the real identity before authoring, Character / Human Suitability, Complex Object Detail Standard, Conditional, Object Image Validation Rubric, Pass, Reject
 
-### Community 394 - "Standard character pipeline contract — 1.5 beta + 1.5 alpha"
-Cohesion: 0.22
-Nodes (8): Acceptance order, Browser capture contract, Character scene contract, Coordinate, unit and rig contract, Migration map, Required character capture batch, Route selection, Standard character pipeline contract — 1.5 beta + 1.5 alpha
+### Community 394 - "md"
+Cohesion: 0.33
+Nodes (7): md(), xl(), Step 2b: Stage the frontmatter, Image Treatment, Radius Scale, Shapes, Overview
 
-### Community 396 - "Impeccable Asset Producer"
-Cohesion: 0.22
-Nodes (7): Core Rule, Decision Comps, Impeccable Asset Producer, Input Contract, Output Contract, Review handoff, The job
+### Community 395 - "Material And Lighting Realism"
+Cohesion: 0.29
+Nodes (6): Candy/anodized colour washes to blue under a bright env — and prose can fight the reference, Common Failure Pattern, Lighting-Pass Requirements, Material And Lighting Realism, Material-Pass Requirements, Screenshot Review
+
+### Community 396 - "Colors"
+Cohesion: 0.33
+Nodes (6): Brand & Accent, Colors, Gradient System, Semantic, Surface & Background, Text & Rules
 
 ### Community 397 - "Common Cognitive Load Violations"
 Cohesion: 0.22
@@ -2144,9 +2121,9 @@ Nodes (9): 1. The Wall of Options, 2. The Memory Bridge, 3. The Hidden Navigatio
 Cohesion: 0.22
 Nodes (9): Color & materials, Components & controls, iOS platform, Layout & structure, Motion, The iOS slop test, Touch targets, Typography (+1 more)
 
-### Community 399 - "Operate mode depth (and Read notes)"
-Cohesion: 0.22
-Nodes (9): Color, Components, Layout, Motion, Operate mode depth (and Read notes), Product constraints, Product permissions, The product slop test (+1 more)
+### Community 399 - "impeccable/SKILL.md"
+Cohesion: 0.08
+Nodes (21): Before you finish, Scope is sovereign, The amplification, The skeleton test, Why it reads flat, Craft floor, Refuse, Verify (+13 more)
 
 ### Community 400 - "Shape"
 Cohesion: 0.22
@@ -2172,9 +2149,17 @@ Nodes (9): 1. Write the argument first, 2. The two-line headline, 3. Headline sh
 Cohesion: 0.22
 Nodes (8): 1. How to look, 2. The score, 3. Caps, 4. Writing the critique, 5. What to fix first, 6. When to stop, Contents, Critique — judging the render
 
+### Community 406 - "extract_hair_evidence"
+Cohesion: 0.25
+Nodes (3): extract_hair_evidence(), HonestyAboutWhatWasNotSeen, RealReferenceViews
+
 ### Community 407 - "multi_pass.py"
 Cohesion: 0.46
 Nodes (4): default_pass_records(), record_pass(), _sha256(), validate_pass_records()
+
+### Community 413 - "GeneratorEmission"
+Cohesion: 0.20
+Nodes (4): vertex_paint(), GeneratorEmission, MalformedDeclaration, _painted_spec()
 
 ### Community 414 - "Action-Ready Procedural Models"
 Cohesion: 0.25
@@ -2212,6 +2197,14 @@ Nodes (6): Application contract, Future pipeline wiring, Hard limits, img2threej
 Cohesion: 0.29
 Nodes (6): Anchoring — the rule that keeps effects alive through a rebuild, For an object rather than a character, Report, The measuring machinery already exists — call it, don't rebuild it, The prompt, VFX — the effects layer for a character that already moves
 
+### Community 424 - "Colors"
+Cohesion: 0.33
+Nodes (6): Brand & Accent, Colors, Hairlines, Semantic, Surface, Text
+
+### Community 428 - "6. The localized correction loop"
+Cohesion: 0.40
+Nodes (5): 6.1 What is there now, 6.2 The loop to build, 6.3 There is already a working implementation — promote it, 6.4 Four rules that were learned the expensive way, 6. The localized correction loop
+
 ### Community 429 - "write_png"
 Cohesion: 0.33
 Nodes (3): pixel(), shaded(), write_png()
@@ -2219,6 +2212,10 @@ Nodes (3): pixel(), shaded(), write_png()
 ### Community 430 - "conforming_build_passes"
 Cohesion: 0.29
 Nodes (3): conforming_build_passes(), ConformingSpecIsUnaffected, PluginSuppliedPassOrderIsValidatedIdentically
+
+### Community 431 - "RigMilestone0"
+Cohesion: 0.15
+Nodes (3): build_three_bone_arm_spec(), RigMilestone0, RigMilestone0TemplateOrdering
 
 ### Community 433 - "Character Reconstruction"
 Cohesion: 0.29
@@ -2232,9 +2229,9 @@ Nodes (6): A domain plugin may raise these floors, Complexity Scoring, Pre-Spec 
 Cohesion: 0.29
 Nodes (6): Animation contract — 1.5.2, Gates — nothing ships until all pass, Hard rules, one line each, Stage order and the script that owns each, The one rule, What this does not solve
 
-### Community 436 - "Off-axis and placement gates"
-Cohesion: 0.29
-Nodes (7): Off-axis and placement gates, runtime/scripts/export_mesh_geometry.mjs, stage4_review/attachment_anchor.py, stage4_review/self_intersection.py, stage4_review/swept_arc_gate.py, stage4_review/turntable_gate.py, stage4_review/vertex_region_gate.py
+### Community 436 - "Token Cost Analysis"
+Cohesion: 0.40
+Nodes (5): Character reconstruction cost, One render-review cycle in isolation, Token Cost Analysis, What this buys you, Where the tokens go per full object reconstruction
 
 ### Community 437 - "Cognitive Load Assessment"
 Cohesion: 0.29
@@ -2260,21 +2257,25 @@ Nodes (6): GLB animated-character prompt, How to use it, Related, The prompt, Wh
 Cohesion: 0.33
 Nodes (6): 1.1 Geometry — O-Voxel ("omni-voxel"), 1.2 Compression — Sparse Compression VAE, 1.3 Stage decomposition — from the source, not the README, 1.4 PBR, 1.5 What must not transfer, 1. What TRELLIS.2 actually does
 
+### Community 444 - "Typography"
+Cohesion: 0.40
+Nodes (5): Font Family, Hierarchy, Note on Font Substitutes, Principles, Typography
+
 ### Community 455 - "Surface Topology Classification"
 Cohesion: 0.33
 Nodes (5): Common mistake, Decision tree, Surface Topology Classification, The six classes, Worked examples
 
 ### Community 456 - "Attachment And Joint Correctness"
-Cohesion: 0.33
-Nodes (5): Attachment And Joint Correctness, Attachment Contract, Generator Rule, Problem, Screenshot Review
+Cohesion: 0.40
+Nodes (4): Attachment And Joint Correctness, Attachment Contract, Generator Rule, Screenshot Review
 
 ### Community 457 - "GLB character pipeline (opt-in)"
 Cohesion: 0.33
 Nodes (5): Environment, GLB character pipeline (opt-in), Install, Use, What's here
 
-### Community 458 - "bolder.md"
-Cohesion: 0.33
-Nodes (5): Before you finish, Scope is sovereign, The amplification, The skeleton test, Why it reads flat
+### Community 458 - "9. Prioritised roadmap"
+Cohesion: 0.50
+Nodes (4): 9. Prioritised roadmap, Major architectural, Quick wins — days, no architecture change, Top 10 by impact
 
 ### Community 459 - "app.json"
 Cohesion: 0.33
@@ -2296,21 +2297,29 @@ Nodes (5): Chain resolution, Design targets, worked, Primitives, Stage R4 — Ac
 Cohesion: 0.40
 Nodes (5): Force-measured — lock the build to what the GLB actually measures, The prompt, What "force" means, and what "1:1" refers to, What the GLB cannot hand over — say this before the review, not after, Why the usual quality gate is the wrong instrument here
 
-### Community 465 - "validate_visual_hull_descriptor"
-Cohesion: 0.80
-Nodes (4): _is_number(), _validate_mask(), _validate_vector(), validate_visual_hull_descriptor()
+### Community 465 - "Layout"
+Cohesion: 0.50
+Nodes (4): Grid & Container, Layout, Spacing System, Whitespace Philosophy
 
 ### Community 466 - "Stage R — 1.5.2 implementation contract"
 Cohesion: 0.40
 Nodes (4): Honesty rules that are load-bearing, Sampled-clip payload (the only animation input format), Shared numeric conventions, Stage R — 1.5.2 implementation contract
 
+### Community 467 - "Responsive Behavior"
+Cohesion: 0.50
+Nodes (4): Breakpoints, Collapsing Strategy, Responsive Behavior, Touch Targets
+
+### Community 469 - "[1.5.2] — 2026-08-25"
+Cohesion: 0.67
+Nodes (3): [1.5.2] — 2026-08-25, Added, Fixed
+
+### Community 471 - "reference_target"
+Cohesion: 0.20
+Nodes (3): reference_target(), ReferenceTargetEnvelopeParity, ReferenceTargetKindParity
+
 ### Community 473 - "Procedural rigging contract — 1.5-alpha"
 Cohesion: 0.40
 Nodes (4): Payload ownership, Pose probes before likeness, Procedural rigging contract — 1.5-alpha, Runtime invariants
-
-### Community 474 - "Adaptation Strategies"
-Cohesion: 0.40
-Nodes (5): Adaptation Strategies, Orientation & foldables, Phone → Tablet (iPad / large screens), Platform → platform (iOS ↔ Android), Web → native (porting a website or web app)
 
 ### Community 475 - "Impeccable Documenter"
 Cohesion: 0.40
@@ -2363,14 +2372,6 @@ Nodes (3): Gate (b) needs the mesh to actually carry geometry near the joint, Mi
 ### Community 493 - "Heuristics Scoring Guide"
 Cohesion: 0.50
 Nodes (4): Heuristics Scoring Guide, Issue Severity (P0–P3), Reference Material, Score Summary
-
-### Community 494 - "Operate"
-Cohesion: 0.50
-Nodes (3): Comps, Directions, Operate
-
-### Community 495 - "Persuade and Experience"
-Cohesion: 0.50
-Nodes (3): Comps, Directions, Persuade and Experience
 
 ### Community 496 - "builder"
 Cohesion: 0.50
@@ -2428,37 +2429,29 @@ Nodes (4): 8.1 Fields, 8.2 Settings layout, 8.3 Buttons, 8. Forms and settings
 Cohesion: 0.50
 Nodes (3): npx, playwright, @playwright/mcp
 
-### Community 510 - "[1.4.0] — 2026-07-25"
-Cohesion: 0.67
-Nodes (3): [1.4.0] — 2026-07-25, Added, Changed
-
-### Community 511 - "[1.4.1] — 2026-07-26"
-Cohesion: 0.67
-Nodes (3): [1.4.1] — 2026-07-26, Added, Changed
-
 ### Community 512 - "[1.5.1] — 2026-08-22"
 Cohesion: 0.67
 Nodes (3): [1.5.1] — 2026-08-22, Added, Fixed
 
 ## Knowledge Gaps
 - **19 isolated node(s):** `IMG2THREEJS_SHOWCASE_ROOT`, `CHARACTER_DIFFUSE`, `CHARACTER_OUT_PREFIX`, `CHARACTER_WORKDIR`, `CHARACTER_BIN_DIR` (+14 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 5927 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **176 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 5924 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **170 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `H — Hardening and plumbing` connect `Part 1 — The principles this work produced` to `workflow_state.py`, `applyMatrix4`, `scalp_exposure`?**
+- **Why does `H — Hardening and plumbing` connect `Part 1 — The principles this work produced` to `scalp_exposure`, `new_state`, `applyMatrix4`?**
   _High betweenness centrality (0.076) - this node is a cross-community bridge._
 - **What connects `IMG2THREEJS_SHOWCASE_ROOT`, `CHARACTER_DIFFUSE`, `CHARACTER_OUT_PREFIX` to the rest of the system?**
   _19 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `truck3d.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.01052257376466406 - nodes in this community are weakly interconnected._
-- **Why does `updateMatrixWorld()` connect `applyMatrix4` to `truck3d.js`, `Part 1 — The principles this work produced`, `constructor`, `update`, `GLB animated-character prompt`, `img2threejs 1.5.2 — Character Rigging & Animation Pipeline`?**
-  _High betweenness centrality (0.073) - this node is a cross-community bridge._
+  _Cohesion score 0.011402097320090995 - nodes in this community are weakly interconnected._
+- **Why does `scalp_exposure()` connect `scalp_exposure` to `math`, `Part 1 — The principles this work produced`, `ScalpField`, `Hair`, `medial_lateral_bias`, `json`, `_PointGrid`?**
+  _High betweenness centrality (0.074) - this node is a cross-community bridge._
 - **Should `json` be split into smaller, more focused modules?**
-  _Cohesion score 0.025686977299880526 - nodes in this community are weakly interconnected._
-- **Why does `scalp_exposure()` connect `scalp_exposure` to `math`, `Part 1 — The principles this work produced`, `ScalpField`, `Hair`, `medial_lateral_bias`, `_PointGrid`?**
-  _High betweenness centrality (0.071) - this node is a cross-community bridge._
-- **Should `rx` be split into smaller, more focused modules?**
-  _Cohesion score 0.03149888143176734 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.02284961415396198 - nodes in this community are weakly interconnected._
+- **Why does `updateMatrixWorld()` connect `applyMatrix4` to `truck3d.js`, `Part 1 — The principles this work produced`, `e`, `copy`, `GLB animated-character prompt`, `img2threejs 1.5.2 — Character Rigging & Animation Pipeline`?**
+  _High betweenness centrality (0.073) - this node is a cross-community bridge._
+- **Should `ox` be split into smaller, more focused modules?**
+  _Cohesion score 0.03679559611763002 - nodes in this community are weakly interconnected._

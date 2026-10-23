@@ -7,11 +7,12 @@
   <meta name="description" content="SPN-Transporte: familiengeführte Transportfirma mit Wurzeln im Motorsport und über 15 Jahren Erfahrung. Nahverkehr und Shuttle-Verkehre mit deutschsprachigen, regionalen Fahrern. Telefon 0151 14210193.">
   <meta name="theme-color" content="#000000">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="assets/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/saira-latin-wdth-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="modulepreload" href="assets/js/truck3d.js">
   <link rel="stylesheet" href="styles.css">
   <script>(function (c) {
+    c.add("js");
     if (!matchMedia("(prefers-reduced-motion: reduce)").matches) c.add("has-motion");
     if (window.WebGL2RenderingContext || window.WebGLRenderingContext) c.add("has-3d");
   })(document.documentElement.classList);</script>
@@ -21,15 +22,23 @@
 
   <header class="nav">
     <a class="nav__mark wordmark" href="#top" aria-label="SPN-Transporte, zum Seitenanfang">SPN-Transporte</a>
-    <nav aria-label="Hauptnavigation">
+    <nav id="hauptnavigation" aria-label="Hauptnavigation">
       <ul>
         <li><a href="#leistungen">Leistungen</a></li>
         <li><a href="#fuhrpark">Fuhrpark</a></li>
         <li><a href="#betrieb">Über uns</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
+      <!-- nur im Handy-Menü sichtbar -->
+      <div class="nav__reach">
+        <a class="nav__phone" href="tel:+4915114210193">0151&nbsp;14210193</a>
+        <a class="nav__mail" href="mailto:spn-transporte@t-online.de">spn-transporte@t-online.de</a>
+      </div>
     </nav>
     <a class="pill pill--red pill--small" href="tel:+4915114210193">Anrufen</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="hauptnavigation" aria-label="Menü öffnen">
+      <span></span><span></span>
+    </button>
   </header>
 
   <main id="inhalt">
@@ -45,8 +54,8 @@
           <h1 id="scene-title">Präzision aus dem Motorsport.<span>Zuverlässigkeit auf der Straße.</span></h1>
           <p class="scene__meta">Familiengeführt seit über 15 Jahren. Nahverkehr und Shuttle in Deutschland und Europa.</p>
           <div class="scene__actions">
-            <a class="pill pill--red" href="#kontakt">Tour anfragen</a>
-            <a class="pill pill--ghost" href="tel:+4915114210193">0151 14210193</a>
+            <a class="pill pill--red pill--go" href="#kontakt">Tour anfragen<svg class="pill__arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9.5M8.5 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="pill pill--ghost" href="tel:+4915114210193">0151&nbsp;14210193</a>
           </div>
         </div>
         <div class="scene__truck" aria-hidden="true">
@@ -63,7 +72,7 @@
     <section class="services" id="leistungen" aria-labelledby="services-title">
       <div class="wrap">
         <h2 id="services-title" class="section-title">Nahverkehr und Shuttle.<span>Mit Fahrern, die die Strecken kennen.</span></h2>
-        <div class="cards">
+        <div class="cards" data-tilt>
           <article class="card card--photo">
             <div class="card__text">
               <h3>Nahverkehr</h3>
@@ -142,7 +151,7 @@
         <h2 id="contact-title" class="section-title section-title--dark">Ihre Tour. Unser Fahrer.<span>Rufen Sie an oder schreiben Sie uns. Wir melden uns persönlich zurück.</span></h2>
         <div class="contact__grid">
           <div class="contact__direct">
-            <a class="contact__phone" href="tel:+4915114210193">0151 14210193</a>
+            <a class="contact__phone" href="tel:+4915114210193">0151&nbsp;14210193</a>
             <a class="contact__mail" href="mailto:spn-transporte@t-online.de">spn-transporte@<wbr>t-online.de</a>
             <div class="contact__hint">
               <p>Für ein schnelles Angebot helfen uns:</p>
@@ -157,7 +166,7 @@
           <form class="form" id="anfrage" novalidate>
             <div class="field">
               <label for="f-name">Name oder Firma</label>
-              <input id="f-name" name="name" autocomplete="organization" required aria-describedby="f-name-err">
+              <input id="f-name" name="name" type="text" autocomplete="organization" required aria-describedby="f-name-err">
               <p class="field__err" id="f-name-err" hidden>Bitte geben Sie einen Namen oder eine Firma an.</p>
             </div>
             <div class="field">
@@ -169,7 +178,7 @@
               <textarea id="f-msg" name="msg" rows="5" required aria-describedby="f-msg-err" placeholder="z. B. Pendelverkehr Werk → Lager, Mo–Fr, ab 1. November"></textarea>
               <p class="field__err" id="f-msg-err" hidden>Bitte beschreiben Sie kurz Ihre Tour.</p>
             </div>
-            <button type="submit" class="pill pill--red pill--submit">E-Mail vorbereiten</button>
+            <button type="submit" class="pill pill--red pill--submit pill--go">E-Mail vorbereiten<svg class="pill__arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h9.5M8.5 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
             <p class="form__note">Öffnet Ihr E-Mail-Programm mit der fertigen Nachricht. Über diese Seite werden keine Daten gespeichert.</p>
           </form>
         </div>
